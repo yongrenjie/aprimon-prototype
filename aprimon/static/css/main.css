@@ -56,16 +56,26 @@ h4 { margin-block-start: 1.33em; margin-block-end: 1.33em; font-size: 1.00em; fo
 h5 { margin-block-start: 1.67em; margin-block-end: 1.67em; font-size: 0.83em; font-weight: bold; }
 h6 { margin-block-start: 2.33em; margin-block-end: 2.33em; font-size: 0.67em; font-weight: bold; }
 
-table.collection {
+table.collection{
     font-size: 14px;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 input, select {
     font-family: "Source Sans Pro", sans-serif;
 }
 
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
 td.collection_entry {
+    border: 1px solid black;
+    border-collapse: collapse;
     vertical-align: middle;
     text-align: center;
     width: 40px;
+    height: 40px;
 }
