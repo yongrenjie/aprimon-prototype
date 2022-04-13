@@ -79,16 +79,17 @@ class Collection:
         pokemon_column = user_info["pokemon_column"]
         ball_columns = user_info["ball_columns"]
         verify_method = user_info["verify_method"]
-        data = tab.get_all_values()
+        data = tab.get_values(value_render_option='formula')
 
         # Function to check whether a spreadsheet value is present
         def is_present(verify_method, spreadsheet_value):
             if verify_method == 'checkbox':
-                # Checks for the presence of an image
-                return spreadsheet_value == 'TRUE'
+                # Checks for a ticked checkbox (which actually comes out as a
+                # boolean when we use value_render_option='formula')
+                return spreadsheet_value
             elif verify_method == 'image':
                 # Checks for the presence of an image
-                return 'IMAGE' in spreadsheet_value
+                return '=image(' in spreadsheet_value.lower()
             else:
                 raise ValueError(f'method {method} not supported')
 
@@ -113,6 +114,7 @@ class Collection:
                 available_balls = []
                 for ball, ball_column in zip(ALL_BALLS, ball_columns):
                     if is_present(verify_method, row[col_to_index(ball_column)]):
+                        print(f'found in {username}: {pokemon.canonical_name} - {ball}')
                         available_balls.append(ball)
                 # Create the entry
                 entry = Entry(pokemon, available_balls)

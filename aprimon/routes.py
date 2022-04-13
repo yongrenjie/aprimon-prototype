@@ -68,7 +68,7 @@ def display_collection():
     sort = request.args.get('sort')
     c1 = Collection.from_sheet(gc, username=me)
     c2 = Collection.from_sheet(gc, username=them)
-    diff = c1 - c2
+    diff = c2 - c1
     if diff.is_empty():
         return render_template('empty_collection.html', me=me, them=them)
     else:
