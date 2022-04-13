@@ -38,7 +38,7 @@ def check_not_none(form, field):
 class AprimonForm(FlaskForm):
     choices = [(0, "-- Select --")]
     choices = choices + [(user, user) for user in ALL_SPREADSHEETS.keys()]
-    my_username = SelectField(label='My username', choices=choices,
+    my_username = SelectField(label='Your username', choices=choices,
                               validators=[check_not_none])
     their_username = SelectField(label="Trading partner's username",
                                  choices=choices,
