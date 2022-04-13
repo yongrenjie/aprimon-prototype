@@ -78,7 +78,19 @@ class Collection:
         tab = sheet.worksheet(user_info["tab_name"])
         pokemon_column = user_info["pokemon_column"]
         ball_columns = user_info["ball_columns"]
+        verify_method = user_info["verify_method"]
         data = tab.get_all_values()
+
+        # Function to check whether a spreadsheet value is present
+        def is_present(verify_method, spreadsheet_value):
+            if verify_method == 'checkbox':
+                # Checks for the presence of an image
+                return spreadsheet_value == 'TRUE'
+            elif verify_method == 'image':
+                # Checks for the presence of an image
+                return 'IMAGE' in spreadsheet_value
+            else:
+                raise ValueError(f'method {method} not supported')
 
         # initialise dict of (national dex, [ball availability])
         collection = {}
@@ -100,7 +112,7 @@ class Collection:
             else:
                 available_balls = []
                 for ball, ball_column in zip(ALL_BALLS, ball_columns):
-                    if row[col_to_index(ball_column)] == 'TRUE':
+                    if is_present(verify_method, row[col_to_index(ball_column)]):
                         available_balls.append(ball)
                 # Create the entry
                 entry = Entry(pokemon, available_balls)

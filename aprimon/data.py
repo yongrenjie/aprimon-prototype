@@ -358,11 +358,13 @@ ALL_SPREADSHEETS = {
         "tab_name": "Aprimon",
         "pokemon_column": "C",
         "ball_columns": "FGHIJKLMNOP",
+        "verify_method": "checkbox",
     },
     "orthocresol_FAKE_SPREADSHEET": {
         "key": "1MnAY9sh3MM3Ts9Zrc-a6slPuFn42nsXSFXafMR_FCP0",
         "tab_name": "Aprimon",
         "pokemon_column": "C",
         "ball_columns": "FGHIJKLMNOP",
+        "verify_method": "checkbox",
     }
 }
