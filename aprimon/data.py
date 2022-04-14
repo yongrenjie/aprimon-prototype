@@ -367,6 +367,13 @@ ALL_POKEMON = {
 
 
 ALL_SPREADSHEETS = {
+    "OnePointPi": {
+        "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
+        "tab_name": "SwSh/Home",
+        "pokemon_column": "C",
+        "ball_columns": "NMFGHIJKLOP",
+        "verify_method": "checkbox",
+    },
     "orthocresol": {
         "key": "1gbRtsdIxN9X43mhyaMw5QTlPQodpwyzaGGyXqvClxho",
         "tab_name": "Aprimon",
