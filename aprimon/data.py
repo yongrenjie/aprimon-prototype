@@ -388,4 +388,11 @@ ALL_SPREADSHEETS = {
         "ball_columns": "FGHIJKLMNOP",
         "verify_method": "checkbox",
     },
+    "torithetaurus": {
+        "key": "1A_dV8DsEPnHP6fY8SvFYsHSBjD3RsXgmaK47wG7M3_E",
+        "tab_name": "HA Aprimons",
+        "pokemon_column": "C",
+        "ball_columns": "NMFGHIJKLOP",
+        "verify_method": "checkbox",
+    },
 }
