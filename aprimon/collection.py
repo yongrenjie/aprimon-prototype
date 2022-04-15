@@ -1,5 +1,6 @@
 import warnings
 from copy import deepcopy
+import re
 
 import gspread
 
@@ -15,13 +16,15 @@ def col_to_index(col):
 
 
 def get_pokemon(name):
+    search_string = re.sub('[^a-z]', '', name.lower())
+
     for pokemon in ALL_POKEMON.values():
-        if name in pokemon.all_names:
+        if search_string in pokemon.all_names:
             return pokemon
     # If we don't find it, then it should (in principle) be considered an
     # error. For now the function calling this catches the error and re-throws
     # a warning
-    raise KeyError(f"A Pokemon entry was not found for: '{name}'")
+    raise KeyError(f"A Pokemon entry was not found for: '{search_string}'")
 
 
 # one row of a Collection
@@ -65,15 +68,27 @@ class Collection:
                          if len(entry.balls) > 0}
         return Collection(filtered_data)
 
-
     @classmethod
-    def from_sheet(cls, gc, username):
+    def read(cls, gc, username):
         try:
             user_info = ALL_SPREADSHEETS[username]
         except KeyError:
             raise KeyError(f"User /u/{username}'s spreadsheet was not registered")
 
+        if user_info['type'] == 'grid':
+            return cls.from_grid(gc, username)
+        elif user_info['type'] == 'list':
+            return cls.from_list(gc, username)
+        else:
+            raise ValueError(f'invalid entry for type: {type}')
+
+
+    @classmethod
+    def from_grid(cls, gc, username):
+        """Read Aprimon data from a grid-like spreadsheet, usually the main tab
+        showing the entire collection"""
         # Read data from spreadsheet into a list of lists
+        user_info = ALL_SPREADSHEETS[username]
         sheet = gc.open_by_key(user_info["key"])
         tab = sheet.worksheet(user_info["tab_name"])
         pokemon_column = user_info["pokemon_column"]
@@ -108,13 +123,12 @@ class Collection:
             try:
                 pokemon = get_pokemon(name_in_spreadsheet)
             except KeyError:
-                warnings.warn(f'pokemon {name_in_spreadsheet} was not found')
-                pass
+                warnings.warn(f'pokemon <{name_in_spreadsheet}> was not found')
             else:
                 available_balls = []
                 for ball, ball_column in zip(ALL_BALLS, ball_columns):
                     if is_present(verify_method, row[col_to_index(ball_column)]):
-                        print(f'found in {username}: {pokemon.canonical_name} - {ball}')
+                        # print(f'found in {username}: {pokemon.canonical_name} - {ball}')
                         available_balls.append(ball)
                 # Create the entry
                 entry = Entry(pokemon, available_balls)
@@ -127,6 +141,42 @@ class Collection:
 
         return Collection(collection).remove_empty()
 
+
+    @classmethod
+    def from_list(cls, gc, username):
+        """Read Aprimon data from a list-like tab, typically on-hands"""
+        user_info = ALL_SPREADSHEETS[username]
+        sheet = gc.open_by_key(user_info["key"])
+        tab = sheet.worksheet(user_info["tab_name"])
+        pokemon_column = user_info["pokemon_column"]
+        ball_column = user_info["ball_column"]
+        data = tab.get_values(value_render_option='formula')
+
+        print(user_info)
+
+        collection = {}
+        for row in data:
+            # Grab the name of the Pokemon in the spreadsheet
+            name_in_spreadsheet = row[col_to_index(pokemon_column)].lower()
+            name_in_spreadsheet = " ".join(name_in_spreadsheet.split())
+
+            # Check it against ALL_POKEMON to see if a match is found
+            try:
+                pokemon = get_pokemon(name_in_spreadsheet)
+            except KeyError:
+                warnings.warn(f'pokemon <{name_in_spreadsheet}> was not found')
+            else:
+                ball = row[col_to_index(ball_column)].lower()
+                if ball in ALL_BALLS:
+                    # print(f'found in {username}: {pokemon.canonical_name} - {ball}')
+                    entry = Entry(pokemon, [ball])
+                    if pokemon.national_dex in collection:
+                        collection[pokemon.national_dex] = entry + collection[pokemon.national_dex]
+                    else:
+                        collection[pokemon.national_dex] = entry
+
+        return Collection(collection).remove_empty()
+        
 
     # c1 + c2 gives you the aprimon which are in either c1 or c2
     def __add__(self, other):

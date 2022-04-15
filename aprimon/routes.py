@@ -3,7 +3,6 @@ from wtforms import SelectField, SubmitField
 from wtforms.validators import ValidationError
 from flask import render_template, redirect, url_for, request
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 
 import warnings
 import os
@@ -14,15 +13,17 @@ from aprimon.collection import Collection
 from aprimon.data import ALL_SPREADSHEETS
 
 
+# Initialise Google Sheets API access
 try:
+    # read credentials from the default filepath, which is
+    # ~/.config/gspread/service_account.json
     gc = gspread.service_account()
 except FileNotFoundError:
-    scopes = ['https://spreadsheets.google.com/feeds']
-    json_creds = os.getenv("GOOGLE_SHEETS_CREDS_JSON")
-    creds_dict = json.loads(json_creds)
+    # read in the credentials from an environment variable (which is a secret
+    # on Heroku)
+    creds_dict = json.loads(os.getenv("GOOGLE_SHEETS_CREDS_JSON"))
     creds_dict["private_key"] = creds_dict["private_key"].replace("\\\\n", "\n")
-    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scopes)
-    gc = gspread.authorize(creds)
+    gc = gspread.service_account_from_dict(creds_dict)
 
 
 def check_usernames_unequal(form, field):
@@ -66,8 +67,8 @@ def display_collection():
     me = request.args.get('me')
     them = request.args.get('them')
     sort = request.args.get('sort')
-    c1 = Collection.from_sheet(gc, username=me)
-    c2 = Collection.from_sheet(gc, username=them)
+    c1 = Collection.read(gc, username=me)
+    c2 = Collection.read(gc, username=them)
     diff = c2 - c1
     if diff.is_empty():
         return render_template('empty_collection.html', me=me, them=them)
