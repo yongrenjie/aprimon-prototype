@@ -180,23 +180,45 @@ class Collection:
 
     # c1 + c2 gives you the aprimon which are in either c1 or c2
     def __add__(self, other):
-        sum_data = deepcopy(self.data)
-        for national_dex, other_entry in other.data.items():
-            if national_dex in sum_data:
-                sum_data[national_dex] = sum_data[national_dex] + other_entry
+        if isinstance(other, Collection):
+            sum_data = deepcopy(self.data)
+            for national_dex, other_entry in other.data.items():
+                if national_dex in sum_data:
+                    sum_data[national_dex] = sum_data[national_dex] + other_entry
+                else:
+                    sum_data[national_dex] = other_entry
+            return Collection(sum_data).remove_empty()
+        elif isinstance(other, Entry):
+            sum_data = deepcopy(self.data)
+            nat_dex = other.pokemon.national_dex
+            if nat_dex in sum_data:
+                sum_data[nat_dex] = sum_data[nat_dex] + entry
             else:
-                sum_data[national_dex] = other_entry
-        return Collection(sum_data).remove_empty()
+                sum_data[nat_dex] = entry
+            return Collection(sum_data).remove_empty()
+        else:
+            return NotImplemented
 
 
     # c1 - c2 gives you the aprimon which are in c1 but not in c2.
     def __sub__(self, other):
-        difference_data = deepcopy(self.data)
-        for national_dex, other_entry in other.data.items():
-            if national_dex in difference_data:
-                difference_data[national_dex] = difference_data[national_dex] - other_entry
-            # No need to do anything if it's not in the original dataset
-        return Collection(difference_data).remove_empty()
+        if isinstance(other, Collection):
+            difference_data = deepcopy(self.data)
+            for national_dex, other_entry in other.data.items():
+                if national_dex in difference_data:
+                    difference_data[national_dex] = difference_data[national_dex] - other_entry
+                # No need to do anything if it's not in the original dataset
+            return Collection(difference_data).remove_empty()
+        elif isinstance(other, Entry):
+            difference_data = deepcopy(self.data)
+            nat_dex = other.pokemon.national_dex
+            if nat_dex in difference_data:
+                difference_data[nat_dex] = difference_data[nat_dex] - entry
+            else:
+                difference_data[nat_dex] = entry
+            return Collection(difference_data).remove_empty()
+        else:
+            return NotImplemented
 
 
     def get_entries(self, sort="name"):

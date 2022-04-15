@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>These are the Aprimon which your trading partner (/u/{{ them }}) has and you (/u/{{ me }}) don't</p>
+<p>These are the Aprimon which /u/{{ them }} has and /u/{{ me }} doesn't</p>
+
+<p><a href="{{ url_for('display_collection', me=them, them=me, sort=sort) }}">Swap the two users around</a></p>
+
+<p><a href="{{ url_for('start_form') }}">Return to main page</a></p>
 
 <table class="collection">
     <tr>

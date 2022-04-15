@@ -67,11 +67,22 @@ def display_collection():
     me = request.args.get('me')
     them = request.args.get('them')
     sort = request.args.get('sort')
-    c1 = Collection.read(gc, username=me)
-    c2 = Collection.read(gc, username=them)
+
+    # Read in the spreadsheets
+    try:
+        c1 = Collection.read(gc, username=me)
+    except gspread.exceptions.WorksheetNotFound:
+        return render_template('not_found.html', user=me)
+
+    try:
+        c2 = Collection.read(gc, username=them)
+    except gspread.exceptions.WorksheetNotFound:
+        return render_template('not_found.html', user=them)
+
+    # Calculate the diff
     diff = c2 - c1
     if diff.is_empty():
         return render_template('empty_collection.html', me=me, them=them)
     else:
         return render_template('display_collection.html', me=me, them=them,
-                               entries=diff.get_entries(sort=sort))
+                               sort=sort, entries=diff.get_entries(sort=sort))

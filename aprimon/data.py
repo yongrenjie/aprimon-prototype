@@ -415,7 +415,7 @@ ALL_SPREADSHEETS = {
     "torithetaurus (on-hands)": {
         "type": "list",
         "key": "1A_dV8DsEPnHP6fY8SvFYsHSBjD3RsXgmaK47wG7M3_E",
-        "tab_name": "On-Hands",
+        "tab_name": "On-Hands ",
         "pokemon_column": "B",
         "ball_column": "A",
     },
