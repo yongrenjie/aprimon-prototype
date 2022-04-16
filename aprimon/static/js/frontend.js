@@ -93,6 +93,7 @@ function calculateAprimon() {
         user2_data = {
             "list": $("textarea#user2a-textarea").val().split(/\r?\n/),
         }
+        console.log(user2_data)
     }
     else {
         user2_data = {

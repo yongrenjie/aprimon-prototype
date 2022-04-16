@@ -173,6 +173,35 @@ class Collection:
                         collection[pokemon.national_dex] = entry
 
         return Collection(collection).remove_empty()
+
+
+    @classmethod
+    def from_manual(cls, lines):
+        """lines: list of str, each one being of the form <BALL> <SPECIES>"""
+        collection = {}
+
+        for line in lines:
+            print(line)
+            try:
+                [ball, name] = line.split(maxsplit=1)
+            except ValueError:
+                continue
+
+            ball = ball.lower()
+            try:
+                pokemon = get_pokemon(name)
+            except KeyError:
+                warnings.warn(f'pokemon <{name}> was not found')
+            else:
+                if ball in ALL_BALLS:
+                    entry = Entry(pokemon, [ball])
+                    if pokemon.national_dex in collection:
+                        collection[pokemon.national_dex] = entry + collection[pokemon.national_dex]
+                    else:
+                        collection[pokemon.national_dex] = entry
+
+        print(collection)
+        return Collection(collection).remove_empty()
         
 
     # c1 + c2 gives you the aprimon which are in either c1 or c2

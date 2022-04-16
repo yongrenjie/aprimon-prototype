@@ -44,20 +44,16 @@ def _calculate_aprimon():
     if "username" in j['user1']:
         c1 = Collection.read(gc, ALL_SPREADSHEETS[j['user1']['username']][game])
     elif "list" in j['user1']:
-        # c1 = Collection.from_manual(j['user1']['list'])
-        c1 = Collection({})
+        c1 = Collection.from_manual(j['user1']['list'])
     if "extra_list" in j['user1']:
-        # c1 = c1 + Collection.from_manual(j['user1']['extra_list'])
-        pass
+        c1 = c1 + Collection.from_manual(j['user1']['extra_list'])
 
     if "username" in j['user2']:
         c2 = Collection.read(gc, ALL_SPREADSHEETS[j['user2']['username']][game])
     elif "list" in j['user2']:
-        # c2 = Collection.from_manual(j['user2']['list'])
-        c2 = Collection({})
+        c2 = Collection.from_manual(j['user2']['list'])
     if "extra_list" in j['user2']:
-        # c2 = c2 + Collection.from_manual(j['user2']['extra_list'])
-        pass
+        c2 = c2 + Collection.from_manual(j['user2']['extra_list'])
 
     diff = c2 - c1
     return jsonify({"aprimon": diff.to_list()})
