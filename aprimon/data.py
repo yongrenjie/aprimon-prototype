@@ -374,6 +374,14 @@ ALL_POKEMON = {
 
 
 ALL_SPREADSHEETS = {
+    "makkudooru": {
+        "type": "grid",
+        "key": "16pb9ZvaaiXSUAMRhGL32KSlAvZpdCbwwfOQek_6mU9E",
+        "tab_name": "Aprimons",
+        "pokemon_column": "C",
+        "ball_columns": "NMFGHIJKLOP",
+        "verify_method": "checkbox",
+    },
     "OnePointPi": {
         "type": "grid",
         "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
