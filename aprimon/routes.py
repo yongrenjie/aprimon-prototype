@@ -1,10 +1,6 @@
-from flask_wtf import FlaskForm
-from wtforms import SelectField, SubmitField
-from wtforms.validators import ValidationError
-from flask import render_template, redirect, url_for, request
+from flask import render_template, request, jsonify
 import gspread
 
-import warnings
 import os
 import json
 
@@ -26,63 +22,42 @@ except FileNotFoundError:
     gc = gspread.service_account_from_dict(creds_dict)
 
 
-def check_usernames_unequal(form, field):
-    if (form.my_username.data and form.their_username.data
-            and form.my_username.data == form.their_username.data):
-        raise ValidationError('Must choose different usernames')
-
-def check_not_none(form, field):
-    if field.data == '0':
-        raise ValidationError('Must choose a username')
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
-class AprimonForm(FlaskForm):
-    choices = [(0, "-- Select --")]
-    choices = choices + [(user, user) for user in ALL_SPREADSHEETS.keys()]
-    my_username = SelectField(label='Your username', choices=choices,
-                              validators=[check_not_none])
-    their_username = SelectField(label="Trading partner's username",
-                                 choices=choices,
-                                 validators=[check_not_none, check_usernames_unequal])
-    sort_by = SelectField(label="Sort results by",
-                          choices=[("dex", "National Dex number"),
-                                   ("name", "Alphabetical")])
-    submit = SubmitField('Submit')
+@app.route('/_all_users', methods=['GET'])
+def _all_users():
+    game = request.args.get('game')
+    all_users = sorted([user for user in ALL_SPREADSHEETS.keys()
+                        if game in ALL_SPREADSHEETS[user]],
+                       key=(lambda u: u.lower()))
+    return jsonify({"allUsers": all_users})
 
 
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/index', methods=['GET', 'POST'])
-def start_form():
-    form = AprimonForm()
-    if form.validate_on_submit():
-        return redirect(url_for('display_collection',
-                                me=form.my_username.data,
-                                them=form.their_username.data,
-                                sort=form.sort_by.data))
-    return render_template('start_form.html', form=form)
+@app.route('/_calculate_aprimon', methods=['POST'])
+def _calculate_aprimon():
+    j = request.get_json()
+    game = j['game']
 
+    if "username" in j['user1']:
+        c1 = Collection.read(gc, ALL_SPREADSHEETS[j['user1']['username']][game])
+    elif "list" in j['user1']:
+        # c1 = Collection.from_manual(j['user1']['list'])
+        c1 = Collection({})
+    if "extra_list" in j['user1']:
+        # c1 = c1 + Collection.from_manual(j['user1']['extra_list'])
+        pass
 
-@app.route('/display_collection')
-def display_collection():
-    me = request.args.get('me')
-    them = request.args.get('them')
-    sort = request.args.get('sort')
+    if "username" in j['user2']:
+        c2 = Collection.read(gc, ALL_SPREADSHEETS[j['user2']['username']][game])
+    elif "list" in j['user2']:
+        # c2 = Collection.from_manual(j['user2']['list'])
+        c2 = Collection({})
+    if "extra_list" in j['user2']:
+        # c2 = c2 + Collection.from_manual(j['user2']['extra_list'])
+        pass
 
-    # Read in the spreadsheets
-    try:
-        c1 = Collection.read(gc, username=me)
-    except gspread.exceptions.WorksheetNotFound:
-        return render_template('not_found.html', user=me)
-
-    try:
-        c2 = Collection.read(gc, username=them)
-    except gspread.exceptions.WorksheetNotFound:
-        return render_template('not_found.html', user=them)
-
-    # Calculate the diff
     diff = c2 - c1
-    if diff.is_empty():
-        return render_template('empty_collection.html', me=me, them=them)
-    else:
-        return render_template('display_collection.html', me=me, them=them,
-                               sort=sort, entries=diff.get_entries(sort=sort))
+    return jsonify({"aprimon": diff.to_list()})

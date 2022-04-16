@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Aprimon v2</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='js/frontend.js') }}" type="module"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/button.css') }}">
+    </head>
+
+
+    <body>
+        <div id="game">
+            <div id="left-sprite" class="top-sprite centered-content"></div>
+            <input type="radio" name="game-radio" value="swsh" id="game-radio-swsh" checked />
+            <label for="game-radio-swsh">Sw/Sh</label>
+            <input type="radio" name="game-radio" value="bdsp" id="game-radio-bdsp" />
+            <label for="game-radio-bdsp">BD/SP</label>
+            <!-- <input type="radio" name="game-radio" value="sv" id="game-radio-sv" /> -->
+            <!-- <label for="game-radio-sv">S/V</label> -->
+            <div id="right-sprite" class="top-sprite centered-content"></div>
+        </div>
+
+        <div id="user-info">
+            <div id="user1">
+                <div class="twocols"><b>You</b></div>
+
+                <div>Spreadsheet</div>
+                <div id="user1a-choice">
+                    <select name="user1a-select" id="user1a-select"></select>
+                    <div class="user1a-text">
+                        <textarea rows="6" id="user1a-textarea"></textarea>
+                        <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+                    </div>
+                </div>
+
+                <div>Any extras?</div>
+                <div><input type="checkbox" id="user1-extra">
+                    <div id="user1b">
+                        <textarea rows="6" id="user1b-textarea"></textarea><br />
+                        <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+                    </div>
+                </div>
+            </div>
+            <div id="filters">
+                <div>Sort by</div>
+                <div>
+                    <input type="radio" name="sort-radio" value="dex" id="sort-radio-dex" checked></input>
+                    <label for="sort-radio-dex">National Dex number</label>
+                    <br />
+                    <input type="radio" name="sort-radio" value="alpha" id="sort-radio-alpha" checked></input>
+                    <label for="sort-radio-alpha">Alphabetical</label>
+                </div>
+
+                <div>Filter generations</div>
+                <div id="filter-generations">
+                    <div class="centered-content"><input type="checkbox" id="gen1" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="gen2" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="gen3" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="gen4" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="gen5" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="gen6" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="gen7" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="gen8" checked></div>
+                    <div class="small-text centered-content">1</div>
+                    <div class="small-text centered-content">2</div>
+                    <div class="small-text centered-content">3</div>
+                    <div class="small-text centered-content">4</div>
+                    <div class="small-text centered-content">5</div>
+                    <div class="small-text centered-content">6</div>
+                    <div class="small-text centered-content">7</div>
+                    <div class="small-text centered-content">8</div>
+                </div>
+
+                <div>Filter balls</div>
+                <div id="filter-balls">
+                    <div class="centered-content"><input type="checkbox" id="ball-beast" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-dream" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-fast" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-friend" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-heavy" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-level" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-love" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-lure" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-moon" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-safari" checked></div>
+                    <div class="centered-content"><input type="checkbox" id="ball-sport" checked></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/beast.png"  width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/dream.png"  width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/fast.png"   width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/friend.png" width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/heavy.png"  width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/level.png"  width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/love.png"   width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/lure.png"   width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/moon.png"   width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/safari.png" width="23px" /></div>
+                    <div class="small-text centered-content"><img src="/static/sprites/sport.png"  width="23px" /></div>
+                </div>
+            </div>
+            <div id="user2">
+                <div class="twocols"><b>Your trading partner</b></div>
+
+                <div>Spreadsheet</div>
+                <div id="user2a-choice">
+                    <select name="user2a-select" id="user2a-select"></select>
+                    <div class="user2a-text">
+                        <textarea rows="6" id="user2a-textarea"></textarea>
+                        <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+                    </div>
+                </div>
+
+                <div>Any extras?</div>
+                <div>
+                    <input type="checkbox" id="user2-extra">
+                    <div id="user2b">
+                        <textarea rows="6" id="user2b-textarea"></textarea>
+                        <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="submit">
+            <input id="submit-button" type="button" value="Submit">
+        </div>
+
+        <div id="loading">
+            <img src="/static/porygon.gif" height="100%" />
+        </div>
+
+        <div id="results">
+            <div id="results_aprimon"></div>
+            <div id="results_textarea"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+/* (mostly) shamelessly stolen from https://codepen.io/JiveDig/pen/jbdJXR */
+
+#game {
+    height: 60px;
+	display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.top-sprite {
+    width: 70px;
+}
+
+#game input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+#game label {
+	background-color: #e4e4e4;
+	color: rgba(0, 0, 0, 0.6);
+    font-size: 18px;
+	line-height: 1;
+	text-align: center;
+	padding: 8px 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+	margin-right: -1px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.1s ease-in-out;
+}
+
+#game label:hover {
+	cursor: pointer;
+}
+
+#game input:checked + label {
+	background-color: #a5dc86;
+	box-shadow: none;
+    font-weight: bold;
+}
+
+#game label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+#game label:last-of-type {
+	border-radius: 0 4px 4px 0;
+}

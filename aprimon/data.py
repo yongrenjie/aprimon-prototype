@@ -28,19 +28,29 @@ class Pokemon:
         self.all_names = [self.display_name.lower(), self.canonical_name, *other_names]
         self.national_dex = national_dex
         # Shortcut for indicating availability -- pass True (or False) instead
-        # of a list of True/False
+        # of a dictionary of True/False
         if swsh is True:
-            self.swsh = [True for _ in range(len(ALL_BALLS))]
+            self.swsh = {ball: True for ball in ALL_BALLS}
         elif swsh is False:
-            self.swsh = [False for _ in range(len(ALL_BALLS))]
+            self.swsh = {ball: False for ball in ALL_BALLS}
         else:
             self.swsh = swsh
         if bdsp is True:
-            self.bdsp = [True for _ in range(len(ALL_BALLS))]
+            self.bdsp = {ball: True for ball in ALL_BALLS}
         elif bdsp is False:
-            self.bdsp = [False for _ in range(len(ALL_BALLS))]
+            self.bdsp = {ball: False for ball in ALL_BALLS}
         else:
             self.bdsp = bdsp
+
+
+    def to_dict(self):
+        return {
+            "canonical_name": self.canonical_name,
+            "display_name": self.display_name,
+            "national_dex": self.national_dex,
+            "swsh": self.swsh,
+            "bdsp": self.bdsp,
+        }
 
 
 ALL_POKEMON = {
@@ -375,56 +385,78 @@ ALL_POKEMON = {
 
 ALL_SPREADSHEETS = {
     "makkudooru": {
-        "type": "grid",
-        "key": "16pb9ZvaaiXSUAMRhGL32KSlAvZpdCbwwfOQek_6mU9E",
-        "tab_name": "Aprimons",
-        "pokemon_column": "C",
-        "ball_columns": "NMFGHIJKLOP",
-        "verify_method": "checkbox",
+        "swsh": {
+            "type": "grid",
+            "key": "16pb9ZvaaiXSUAMRhGL32KSlAvZpdCbwwfOQek_6mU9E",
+            "tab_name": "Aprimons",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
     },
     "OnePointPi": {
-        "type": "grid",
-        "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
-        "tab_name": "SwSh/Home",
-        "pokemon_column": "C",
-        "ball_columns": "NMFGHIJKLOP",
-        "verify_method": "checkbox",
+        "swsh": {
+            "type": "grid",
+            "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
+            "tab_name": "SwSh/Home",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
+        "bdsp": {
+            "type": "grid",
+            "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
+            "tab_name": "BDSP",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
     },
     "OnePointPi (on-hands)": {
-        "type": "list",
-        "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
-        "tab_name": "On-Hand SwSh",
-        "pokemon_column": "E",
-        "ball_column": "C",
+        "swsh": {
+            "type": "list",
+            "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
+            "tab_name": "On-Hand SwSh",
+            "pokemon_column": "E",
+            "ball_column": "C",
+        },
     },
     "orthocresol": {
-        "type": "grid",
-        "key": "1gbRtsdIxN9X43mhyaMw5QTlPQodpwyzaGGyXqvClxho",
-        "tab_name": "Aprimon",
-        "pokemon_column": "C",
-        "ball_columns": "FGHIJKLMNOP",
-        "verify_method": "checkbox",
+        "swsh": {
+            "type": "grid",
+            "key": "1gbRtsdIxN9X43mhyaMw5QTlPQodpwyzaGGyXqvClxho",
+            "tab_name": "Aprimon",
+            "pokemon_column": "C",
+            "ball_columns": "FGHIJKLMNOP",
+            "verify_method": "checkbox",
+        },
     },
     "orthocresol (on-hands)": {
-        "type": "list",
-        "key": "1MnAY9sh3MM3Ts9Zrc-a6slPuFn42nsXSFXafMR_FCP0",
-        "tab_name": "On-hands",
-        "pokemon_column": "A",
-        "ball_column": "C",
+        "swsh": {
+            "type": "list",
+            "key": "1MnAY9sh3MM3Ts9Zrc-a6slPuFn42nsXSFXafMR_FCP0",
+            "tab_name": "On-hands",
+            "pokemon_column": "A",
+            "ball_column": "C",
+        },
     },
     "torithetaurus": {
-        "type": "grid",
-        "key": "1A_dV8DsEPnHP6fY8SvFYsHSBjD3RsXgmaK47wG7M3_E",
-        "tab_name": "HA Aprimons",
-        "pokemon_column": "C",
-        "ball_columns": "NMFGHIJKLOP",
-        "verify_method": "checkbox",
+        "swsh": {
+            "type": "grid",
+            "key": "1A_dV8DsEPnHP6fY8SvFYsHSBjD3RsXgmaK47wG7M3_E",
+            "tab_name": "HA Aprimons",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
     },
     "torithetaurus (on-hands)": {
-        "type": "list",
-        "key": "1A_dV8DsEPnHP6fY8SvFYsHSBjD3RsXgmaK47wG7M3_E",
-        "tab_name": "On-Hands ",
-        "pokemon_column": "B",
-        "ball_column": "A",
+        "swsh": {
+            "type": "list",
+            "key": "1A_dV8DsEPnHP6fY8SvFYsHSBjD3RsXgmaK47wG7M3_E",
+            "tab_name": "On-Hands ",
+            "pokemon_column": "B",
+            "ball_column": "A",
+        },
     },
 }

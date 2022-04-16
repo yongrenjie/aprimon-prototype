@@ -33,6 +33,7 @@ class Entry:
         self.pokemon = pokemon   # entries of ALL_POKEMON
         self.balls = set(balls)  # set of string
 
+
     def __add__(self, other):
         # check if both Pokemon are the same
         if self.pokemon.canonical_name != other.pokemon.canonical_name:
@@ -42,6 +43,7 @@ class Entry:
         new_balls = self.balls | other.balls
         return Entry(self.pokemon, new_balls)
 
+
     def __sub__(self, other):
         # check if both Pokemon are the same
         if self.pokemon.canonical_name != other.pokemon.canonical_name:
@@ -50,6 +52,12 @@ class Entry:
                             f" and {other.pokemon.canonical_name}.")
         new_balls = self.balls - other.balls
         return Entry(self.pokemon, new_balls)
+
+
+    def to_dict(self):
+        data = self.pokemon.to_dict()
+        data['balls'] = list(self.balls)
+        return data
 
 
 # a full Collection
@@ -69,26 +77,20 @@ class Collection:
         return Collection(filtered_data)
 
     @classmethod
-    def read(cls, gc, username):
-        try:
-            user_info = ALL_SPREADSHEETS[username]
-        except KeyError:
-            raise KeyError(f"User /u/{username}'s spreadsheet was not registered")
-
+    def read(cls, gc, user_info):
         if user_info['type'] == 'grid':
-            return cls.from_grid(gc, username)
+            return cls.from_grid(gc, user_info)
         elif user_info['type'] == 'list':
-            return cls.from_list(gc, username)
+            return cls.from_list(gc, user_info)
         else:
             raise ValueError(f'invalid entry for type: {type}')
 
 
     @classmethod
-    def from_grid(cls, gc, username):
+    def from_grid(cls, gc, user_info):
         """Read Aprimon data from a grid-like spreadsheet, usually the main tab
         showing the entire collection"""
         # Read data from spreadsheet into a list of lists
-        user_info = ALL_SPREADSHEETS[username]
         sheet = gc.open_by_key(user_info["key"])
         tab = sheet.worksheet(user_info["tab_name"])
         pokemon_column = user_info["pokemon_column"]
@@ -128,7 +130,6 @@ class Collection:
                 available_balls = []
                 for ball, ball_column in zip(ALL_BALLS, ball_columns):
                     if is_present(verify_method, row[col_to_index(ball_column)]):
-                        # print(f'found in {username}: {pokemon.canonical_name} - {ball}')
                         available_balls.append(ball)
                 # Create the entry
                 entry = Entry(pokemon, available_balls)
@@ -143,16 +144,13 @@ class Collection:
 
 
     @classmethod
-    def from_list(cls, gc, username):
+    def from_list(cls, gc, user_info):
         """Read Aprimon data from a list-like tab, typically on-hands"""
-        user_info = ALL_SPREADSHEETS[username]
         sheet = gc.open_by_key(user_info["key"])
         tab = sheet.worksheet(user_info["tab_name"])
         pokemon_column = user_info["pokemon_column"]
         ball_column = user_info["ball_column"]
         data = tab.get_values(value_render_option='formula')
-
-        print(user_info)
 
         collection = {}
         for row in data:
@@ -168,7 +166,6 @@ class Collection:
             else:
                 ball = row[col_to_index(ball_column)].lower()
                 if ball in ALL_BALLS:
-                    # print(f'found in {username}: {pokemon.canonical_name} - {ball}')
                     entry = Entry(pokemon, [ball])
                     if pokemon.national_dex in collection:
                         collection[pokemon.national_dex] = entry + collection[pokemon.national_dex]
@@ -229,34 +226,5 @@ class Collection:
         else:
             raise ValueError('invalid sorting method: supported methods are "name" or "dex"')
 
-
-    def pretty_print(self):
-        # remove empty rows
-        stripped = {national_dex: balls for national_dex, balls in self.data.items()
-                    if len(balls) != 0}
-
-        # determine longest display name
-        longest_name = max(stripped.keys(), key=(lambda nd: len(ALL_POKEMON[nd].display_name)))
-        name_width = len(longest_name)
-
-        def print_one_entry(national_dex, available_balls):
-            s = ""
-            s += f"{ALL_POKEMON[national_dex].display_name:{name_width}}"
-            s += " |  "
-            for ball in ALL_BALLS:
-                ball_width = len(ball)
-                if ball in available_balls:
-                    s += f"{uppercase_first(ball):{ball_width}} "
-                else:
-                    s += " " * (ball_width + 1)
-            return s
-
-        lines = [print_one_entry(pokemon, available_balls)
-                 for pokemon, available_balls in stripped.items()]
-        return "\n".join(lines)
-
-
-    def print_as_text(self):
-        for national_dex, available_balls in self.data.items():
-            for ball in available_balls:
-                print(f'{uppercase_first(ball)} {ALL_POKEMON[national_dex].display_name}')
+    def to_list(self):
+        return [entry.to_dict() for entry in self.data.values()]
