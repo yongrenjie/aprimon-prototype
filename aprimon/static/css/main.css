@@ -109,6 +109,11 @@ div#results {
     font-size: 80%;
 }
 
+div#warning {
+    font-size: 70%;
+    color: red;
+}
+
 div#filters {
     border: 1.5px solid #444444;
     border-radius: 4px;

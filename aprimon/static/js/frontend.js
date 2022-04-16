@@ -3,6 +3,8 @@ const SELECT_AN_ENTRY = "-- select --"
 const MANUALLY_LIST_APRIMON = "(manually list Aprimon...)"
 
 function populateUserDropdowns() {
+    let user1a_prev_selected = $("select#user1a-select").val();
+    let user2a_prev_selected = $("select#user2a-select").val();
     $.ajax({
         type: "GET",
         url: "/_all_users",
@@ -20,6 +22,12 @@ function populateUserDropdowns() {
             for (let user of allUsers) {
                 $("#user1a-select").append("<option>" + user + "</option>");
                 $("#user2a-select").append("<option>" + user + "</option>");
+            }
+            if (allUsers.includes(user1a_prev_selected)) {
+                $("#user1a-select").val(user1a_prev_selected).trigger('change');
+            }
+            if (allUsers.includes(user2a_prev_selected)) {
+                $("#user2a-select").val(user2a_prev_selected).trigger('change');
             }
         }
     });
