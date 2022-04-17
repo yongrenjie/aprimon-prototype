@@ -277,6 +277,32 @@ changeGame();
 $("#game>input").on("click", changeGame);
 
 
+function swapUsers() {
+    // spreadsheet
+    let p = $("select#user1a-select").val();
+    let q = $("select#user2a-select").val();
+    $("#user1a-select").val(q).trigger('change');
+    $("#user2a-select").val(p).trigger('change');
+    // manual list
+    p = $("textarea#user1a-textarea").val();
+    q = $("textarea#user2a-textarea").val();
+    $("textarea#user1a-textarea").val(q);
+    $("textarea#user2a-textarea").val(p);
+    // extras checkbox
+    p = $("input#user1-extra").is(":checked");
+    q = $("input#user2-extra").is(":checked");
+    $("input#user1-extra").prop("checked", q);
+    $("input#user2-extra").prop("checked", p);
+    // extras list
+    p = $("textarea#user1b-textarea").val();
+    q = $("textarea#user2b-textarea").val();
+    $("textarea#user1b-textarea").val(q);
+    $("textarea#user2b-textarea").val(p);
+    // update whether textareas are displayed
+    showOrHideExtras();
+}
+$("input#swap-button").on("click", swapUsers);
+
 
 function makeSpriteImgTag(name) {
     return `<img src="static/sprites/${name}.png" />`;

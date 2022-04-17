@@ -11,6 +11,19 @@
 
 
     <body>
+        <div id="title">
+            <h1>Welcome!</h1>
+            <p>This website will (try to) determine what Aprimon you can request from a trading partner, i.e. what they have but you don't have.</p>
+            <ul>
+                <li><p>If you want the opposite (i.e. what you can offer them) please use the swap button and submit again</p></li>
+                <li><p><b>BDSP doesn't work for now</b>, I need to manually enter legality for each Pokemon.....</p></li>
+                <li><p>Please note that this only checks a spreadsheet for the presence of a ticked box &mdash; it doesn't do anything fancy such as looking for HA availability or pending trades. It is still your responsibility to check for this (if it matters to you, e.g. for genderless/monogender species), or even better, inform your trade partner if you don't have HA on something!</p></li>
+                <li><p>The comparison also combines entries from regional forms (e.g. Kanto and Alola Vulpix) and other things which can be crossbred (e.g. Basculin colours or Nidoran gender)</p></li>
+                <li><p>This is rather preliminary &mdash; if there are any issues please let me know &mdash; my Reddit username is <a href="https://reddit.com/u/orthocresol">/u/orthocresol</a>.</p></li>
+                <li><p>You can find the source code on <a href="https://github.com/yongrenjie/aprimon-prototype">GitHub</a> too (please feel free to submit issues or pull requests there if you are thus inclined!).</p></li>
+            </ul>
+        </div>
+
         <div id="game">
             <div id="left-sprite" class="top-sprite centered-content"></div>
             <input type="radio" name="game-radio" value="swsh" id="game-radio-swsh" checked />
@@ -22,11 +35,8 @@
             <div id="right-sprite" class="top-sprite centered-content"></div>
         </div>
 
-        <div id="warning">
-            please note BDSP doesn't work yet, I need to manually input the list of available Pokemon ._.
-        </div>
-
         <div id="user-info">
+
             <div id="user1">
                 <div class="twocols"><b>You</b></div>
 
@@ -34,7 +44,7 @@
                 <div id="user1a-choice">
                     <select name="user1a-select" id="user1a-select"></select>
                     <div class="user1a-text">
-                        <textarea rows="6" id="user1a-textarea"></textarea>
+                        <textarea rows="6" id="user1a-textarea"></textarea><br />
                         <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
                     </div>
                 </div>
@@ -47,6 +57,7 @@
                     </div>
                 </div>
             </div>
+            
             <div id="filters">
                 <div>Sort by</div>
                 <div>
@@ -103,6 +114,7 @@
                     <div class="small-text centered-content"><img src="/static/sprites/sport.png"  width="23px" /></div>
                 </div>
             </div>
+
             <div id="user2">
                 <div class="twocols"><b>Your trading partner</b></div>
 
@@ -110,7 +122,7 @@
                 <div id="user2a-choice">
                     <select name="user2a-select" id="user2a-select"></select>
                     <div class="user2a-text">
-                        <textarea rows="6" id="user2a-textarea"></textarea>
+                        <textarea rows="6" id="user2a-textarea"></textarea><br />
                         <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
                     </div>
                 </div>
@@ -119,21 +131,25 @@
                 <div>
                     <input type="checkbox" id="user2-extra">
                     <div id="user2b">
-                        <textarea rows="6" id="user2b-textarea"></textarea>
+                        <textarea rows="6" id="user2b-textarea"></textarea><br />
                         <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
                     </div>
                 </div>
-
             </div>
+
+
+            <div id="user1-error"></div>
+
+            <div id="buttons">
+                <div><input id="swap-button" type="button" value="<-- Swap -->"></div>
+                <div id="submit"><input id="submit-button" type="button" value="Submit"></div>
+                <div id="loading"><img src="/static/porygon.gif" height="100%" /></div>
+            </div>
+
+            <div id="user1-error"></div>
         </div>
 
-        <div id="submit">
-            <input id="submit-button" type="button" value="Submit">
-        </div>
 
-        <div id="loading">
-            <img src="/static/porygon.gif" height="100%" />
-        </div>
 
         <div id="results">
             <div id="results_aprimon"></div>
