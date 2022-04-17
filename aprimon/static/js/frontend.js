@@ -140,6 +140,10 @@ function calculateAprimon() {
             // recalculation when changing filters
             window.collection = response['aprimon'];
             displayCollection();
+            // scroll down to the table
+            $('html, body').animate({
+                scrollTop: $("div#results_aprimon").offset().top
+            }, 700);
         },
     });
 }
