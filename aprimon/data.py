@@ -459,4 +459,14 @@ ALL_SPREADSHEETS = {
             "ball_column": "A",
         },
     },
+    "DuchessofArkham": {
+        "swsh": {
+            "type": "grid",
+            "key": "1qyJetnnFIIgQQFbb__WsXy7XzEz8CpK9VZaa5u4gZlI",
+            "tab_name": "Aprimons",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
+    },
 }
