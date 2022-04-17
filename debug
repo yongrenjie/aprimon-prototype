@@ -1,1 +1,2 @@
-FLASK_ENV=development FLASK_APP=main.py flask run --port 5555
+#!/usr/bin/env bash
+FLASK_ENV=development FLASK_APP=aprimon.py flask run --port 5555
