@@ -94,7 +94,7 @@ class Collection:
         sheet = gc.open_by_key(user_info["key"])
         tab = sheet.worksheet(user_info["tab_name"])
         pokemon_column = user_info["pokemon_column"]
-        ball_columns = user_info["ball_columns"]
+        ball_column = user_info["ball_column"]
         verify_method = user_info["verify_method"]
         data = tab.get_values(value_render_option='formula')
 
@@ -106,7 +106,7 @@ class Collection:
                 return spreadsheet_value
             elif verify_method == 'image':
                 # Checks for the presence of an image
-                return '=image(' in spreadsheet_value.lower()
+                return 'image' in spreadsheet_value.lower()
             else:
                 raise ValueError(f'method {method} not supported')
 
@@ -128,7 +128,7 @@ class Collection:
                 warnings.warn(f'pokemon <{name_in_spreadsheet}> was not found')
             else:
                 available_balls = []
-                for ball, ball_column in zip(ALL_BALLS, ball_columns):
+                for ball, ball_column in zip(ALL_BALLS, ball_column):
                     if is_present(verify_method, row[col_to_index(ball_column)]):
                         available_balls.append(ball)
                 # Create the entry
