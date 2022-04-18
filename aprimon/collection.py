@@ -155,7 +155,13 @@ class Collection:
         tab = sheet.worksheet(user_info["tab_name"])
         pokemon_column = user_info["pokemon_column"]
         ball_column = user_info["ball_column"]
-        data = tab.get_values(value_render_option='formula')
+        # Control whether to read in raw formula or whether to evaluate
+        # formulae (deals with some spreadsheet edge cases)
+        use_formula = user_info.get("use_formula", True)
+        if use_formula:
+            data = tab.get_values(value_render_option='formula')
+        else:
+            data = tab.get_values()
 
         collection = {}
         for row in data:

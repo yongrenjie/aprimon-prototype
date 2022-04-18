@@ -435,7 +435,7 @@ ALL_SPREADSHEETS = {
     "orthocresol (on-hands)": {
         "swsh": {
             "type": "list",
-            "key": "1MnAY9sh3MM3Ts9Zrc-a6slPuFn42nsXSFXafMR_FCP0",
+            "key": "1gbRtsdIxN9X43mhyaMw5QTlPQodpwyzaGGyXqvClxho",
             "tab_name": "On-hands",
             "pokemon_column": "A",
             "ball_column": "C",
