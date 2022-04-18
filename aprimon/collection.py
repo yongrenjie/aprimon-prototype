@@ -96,14 +96,24 @@ class Collection:
         pokemon_column = user_info["pokemon_column"]
         ball_columns = user_info["ball_columns"]
         verify_method = user_info["verify_method"]
-        data = tab.get_values(value_render_option='formula')
+        # Control whether to read in raw formula or whether to evaluate
+        # formulae (deals with some spreadsheet edge cases)
+        use_formula = user_info.get("use_formula", True)
+        if use_formula:
+            data = tab.get_values(value_render_option='formula')
+        else:
+            data = tab.get_values()
 
         # Function to check whether a spreadsheet value is present
         def is_present(verify_method, spreadsheet_value):
             if verify_method == 'checkbox':
-                # Checks for a ticked checkbox (which actually comes out as a
-                # boolean when we use value_render_option='formula')
-                return spreadsheet_value
+                # Checks for a ticked checkbox
+                if use_formula:
+                    # value_render_option='formula' directly returns booleans
+                    return spreadsheet_value
+                else:
+                    # the default option returns strings
+                    return spreadsheet_value == "TRUE"
             elif verify_method == 'image':
                 # Checks for the presence of an image
                 return '=image(' in spreadsheet_value.lower()
@@ -165,6 +175,7 @@ class Collection:
                 warnings.warn(f'pokemon <{name_in_spreadsheet}> was not found')
             else:
                 ball = row[col_to_index(ball_column)].lower()
+                ball = ball.split()[0]   # cover for e.g. 'Beast Ball'
                 if ball in ALL_BALLS:
                     entry = Entry(pokemon, [ball])
                     if pokemon.national_dex in collection:

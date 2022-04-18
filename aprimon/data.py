@@ -374,7 +374,8 @@ ALL_POKEMON = {
     874: Pokemon("Stonjourner", "stonjourner", [], 874, swsh=True, bdsp=False),
     875: Pokemon("Eiscue", "eiscue", [], 875, swsh=True, bdsp=False),
     876: Pokemon("Indeedee", "indeedee",
-                 ["indeedeef", "indeedeem"],
+                 ["indeedeef", "indeedeefemale",
+                  "indeedeem", "indeedeemale"],
                  876, swsh=True, bdsp=False),
     877: Pokemon("Morpeko", "morpeko", [], 877, swsh=True, bdsp=False),
     878: Pokemon("Cufant", "cufant", [], 878, swsh=True, bdsp=False),
@@ -469,4 +470,25 @@ ALL_SPREADSHEETS = {
             "verify_method": "checkbox",
         },
     },
+    "rufusdrumknott": {
+        "swsh": {
+            "type": "grid",
+            "key": "1Jgn4ldAC2QUwVU-zauqm2FlJiMUhkhWpxw_rNNWVwzo",
+            "tab_name": "Master Sheet",
+            "pokemon_column": "B",
+            "ball_columns": "NMDIGEHFJLK",
+            "verify_method": "checkbox",
+            "use_formula": False,
+        },
+    },
+    "rufusdrumknott (on-hands)": {
+        "swsh": {
+            "type": "list",
+            "key": "1Jgn4ldAC2QUwVU-zauqm2FlJiMUhkhWpxw_rNNWVwzo",
+            "tab_name": "On-hands",
+            "pokemon_column": "A",
+            "ball_column": "C",
+        },
+    },
+
 }
