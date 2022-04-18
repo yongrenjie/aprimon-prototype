@@ -7,10 +7,6 @@ import gspread
 from aprimon.data import ALL_BALLS, ALL_SPREADSHEETS, ALL_POKEMON
 
 
-def uppercase_first(ball):
-    return ball[0].upper() + ball[1:]
-
-
 def col_to_index(col):
     return ord(col.lower()) - ord('a')
 
@@ -21,18 +17,18 @@ def get_pokemon(name):
     for pokemon in ALL_POKEMON.values():
         if search_string in pokemon.all_names:
             return pokemon
-    # If we don't find it, then it should (in principle) be considered an
-    # error. For now the function calling this catches the error and re-throws
-    # a warning
+
+    # Not found -- raise a KeyError and let the caller deal with it. Often this
+    # is not actually an error because there are things like column headers in
+    # spreadsheets, which are not actually Pokemon names.
     raise KeyError(f"A Pokemon entry was not found for: '{search_string}'")
 
 
-# one row of a Collection
 class Entry:
+    """An Entry represents one Pokemon in a collection of Aprimon."""
     def __init__(self, pokemon, balls):
         self.pokemon = pokemon   # entries of ALL_POKEMON
         self.balls = set(balls)  # set of string
-
 
     def __add__(self, other):
         # check if both Pokemon are the same
@@ -43,7 +39,6 @@ class Entry:
         new_balls = self.balls | other.balls
         return Entry(self.pokemon, new_balls)
 
-
     def __sub__(self, other):
         # check if both Pokemon are the same
         if self.pokemon.canonical_name != other.pokemon.canonical_name:
@@ -53,24 +48,28 @@ class Entry:
         new_balls = self.balls - other.balls
         return Entry(self.pokemon, new_balls)
 
-
     def to_dict(self):
         data = self.pokemon.to_dict()
         data['balls'] = list(self.balls)
         return data
 
 
-# a full Collection
 class Collection:
+    """A Collection represents a set of Aprimon.
+
+    It's essentially a dictionary with some extra methods; however, subclassing
+    dict is slightly tricky in Python so it's probably easier to just wrap it
+    with a container."""
+
     def __init__(self, data):
         self.data = data
-        # dictionary of {int: set(string)} as shown below
 
     def is_empty(self):
+        """Checks if a Collection is empty"""
         return not self.data
 
-
     def remove_empty(self):
+        """Removes empty Entries from the collection"""
         filtered_data = {national_dex: entry
                          for national_dex, entry in self.data.items()
                          if len(entry.balls) > 0}
@@ -84,7 +83,6 @@ class Collection:
             return cls.from_list(gc, user_info)
         else:
             raise ValueError(f'invalid entry for type: {type}')
-
 
     @classmethod
     def from_grid(cls, gc, user_info):
@@ -123,8 +121,6 @@ class Collection:
         # initialise dict of (national dex, [ball availability])
         collection = {}
 
-        print(user_info)
-
         # Parse the spreadsheet
         for row in data:
             # Grab the name of the Pokemon in the spreadsheet
@@ -151,7 +147,6 @@ class Collection:
                     collection[pokemon.national_dex] = entry
 
         return Collection(collection).remove_empty()
-
 
     @classmethod
     def from_list(cls, gc, user_info):
@@ -185,14 +180,12 @@ class Collection:
 
         return Collection(collection).remove_empty()
 
-
     @classmethod
     def from_manual(cls, lines):
         """lines: list of str, each one being of the form <BALL> <SPECIES>"""
         collection = {}
 
         for line in lines:
-            print(line)
             try:
                 [ball, name] = line.split(maxsplit=1)
             except ValueError:
@@ -211,12 +204,11 @@ class Collection:
                     else:
                         collection[pokemon.national_dex] = entry
 
-        print(collection)
         return Collection(collection).remove_empty()
         
-
-    # c1 + c2 gives you the aprimon which are in either c1 or c2
     def __add__(self, other):
+        """c1 + c2 gives you the aprimon which are in either c1 or c2;
+        basically a set union."""
         if isinstance(other, Collection):
             sum_data = deepcopy(self.data)
             for national_dex, other_entry in other.data.items():
@@ -236,9 +228,10 @@ class Collection:
         else:
             return NotImplemented
 
-
-    # c1 - c2 gives you the aprimon which are in c1 but not in c2.
     def __sub__(self, other):
+        """c1 - c2 gives you the aprimon which are in c1 but not in c2;
+        basically a set difference, or the relative complement of c1 with
+        respect to c2."""
         if isinstance(other, Collection):
             difference_data = deepcopy(self.data)
             for national_dex, other_entry in other.data.items():
@@ -257,14 +250,7 @@ class Collection:
         else:
             return NotImplemented
 
-
-    def get_entries(self, sort="name"):
-        if sort == "name":
-            return list(sorted(self.data.values(), key=(lambda e: e.pokemon.display_name)))
-        elif sort == "dex":
-            return list(sorted(self.data.values(), key=(lambda e: e.pokemon.national_dex)))
-        else:
-            raise ValueError('invalid sorting method: supported methods are "name" or "dex"')
-
     def to_list(self):
+        """Returns a list of all the Entries, which can be serialised as JSON
+        and sent back to the frontend."""
         return [entry.to_dict() for entry in self.data.values()]
