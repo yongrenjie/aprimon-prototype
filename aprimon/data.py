@@ -490,5 +490,23 @@ ALL_SPREADSHEETS = {
             "ball_column": "C",
         },
     },
-
+    "supersmerfy": {
+        "swsh": {
+            "type": "grid",
+            "key": "1KZjJwUBjgIyuM0XO8XuCsYwwKxPpJ8qJq1bMw5w5MgM",
+            "tab_name": "My Aprimons",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
+    },
+    "supersmerfy (on-hands)": {
+        "swsh": {
+            "type": "list",
+            "key": "1KZjJwUBjgIyuM0XO8XuCsYwwKxPpJ8qJq1bMw5w5MgM",
+            "tab_name": "On-Hands",
+            "pokemon_column": "E",
+            "ball_column": "C",
+        },
+    },
 }
