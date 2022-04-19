@@ -221,6 +221,7 @@ th {
 }
 
 tr.collection-row {
+    min-height: 45px;
     height: 45px;
 }
 
@@ -229,7 +230,13 @@ td.collection-entry {
     border-collapse: collapse;
     vertical-align: middle;
     text-align: center;
+    min-width: 45px;
     width: 45px;
+}
+
+img.constrained-height {
+    max-height: 40px;
+    height: auto;
 }
 
 .centered-content {

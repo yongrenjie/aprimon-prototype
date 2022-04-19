@@ -354,7 +354,7 @@ function makeSpriteImgTag(name) {
 }
 
 function makeSpriteImgTagSmall(name) {
-    return `<img src="static/sprites/${name}.png" max-height="40px" />`;
+    return `<img src="static/sprites/${name}.png" class="constrained-height" />`;
 }
 
 
