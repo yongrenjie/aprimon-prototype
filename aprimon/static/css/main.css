@@ -148,6 +148,7 @@ div#submit {
 
 div#loading {
     height: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
