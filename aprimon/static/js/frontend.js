@@ -50,7 +50,7 @@ function showOrHideExtras() {
     // display link to spreadsheet underneath the dropdown
     function showSpreadsheetLink(divSelector, key) {
         $(divSelector).show();
-        $(divSelector).html(`<a href="https://docs.google.com/spreadsheets/d/${key}/edit">(view on Google Sheets)</a>`);
+        $(divSelector).html(`<a target="_blank" href="https://docs.google.com/spreadsheets/d/${key}/edit">(view on Google Sheets)</a>`);
     }
 
     // if user1 is a real spreadsheet
