@@ -43,15 +43,17 @@
                 <div>Spreadsheet</div>
                 <div id="user1a-choice">
                     <select name="user1a-select" id="user1a-select"></select>
-                    <div class="user1a-text">
+                    <div id="user1a-text" class="initially-hidden">
                         <textarea rows="6" id="user1a-textarea"></textarea><br />
                         <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
                     </div>
+                    <div id="user1a-sheet-link" class="small-text initially-hidden"></div>
                 </div>
 
-                <div>Any extras?</div>
-                <div><input type="checkbox" id="user1-extra">
-                    <div id="user1b">
+                <div id="user1b-text" class="initially-hidden">Any extras?</div>
+                <div id="user1b" class="initially-hidden">
+                    <input type="checkbox" id="user1-extra">
+                    <div id="user1b-textarea">
                         <textarea rows="6" id="user1b-textarea"></textarea><br />
                         <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
                     </div>
@@ -121,16 +123,17 @@
                 <div>Spreadsheet</div>
                 <div id="user2a-choice">
                     <select name="user2a-select" id="user2a-select"></select>
-                    <div class="user2a-text">
+                    <div id="user2a-text" class="initially-hidden">
                         <textarea rows="6" id="user2a-textarea"></textarea><br />
                         <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
                     </div>
+                    <div id="user2a-sheet-link" class="small-text initially-hidden"></div>
                 </div>
 
-                <div>Any extras?</div>
-                <div>
+                <div id="user2b-text" class="initially-hidden">Any extras?</div>
+                <div id="user2b" class="initially-hidden">
                     <input type="checkbox" id="user2-extra">
-                    <div id="user2b">
+                    <div id="user2b-textarea">
                         <textarea rows="6" id="user2b-textarea"></textarea><br />
                         <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
                     </div>

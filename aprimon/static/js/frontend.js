@@ -14,19 +14,23 @@ function populateUserDropdowns() {
         dataType: "json",
         contentType: "application/json",
         success: function (response) {
-            let allUsers = response["allUsers"];
-            allUsers.unshift(SELECT_AN_ENTRY);
-            allUsers.push(MANUALLY_LIST_APRIMON);
+            // Store as global variable
+            window.allUsers = response["allUsers"];
+
+            let listOfUsernames = Object.keys(allUsers);
+            listOfUsernames.unshift(SELECT_AN_ENTRY);
+            listOfUsernames.push(MANUALLY_LIST_APRIMON);
             $("#user1a-select").html("");
             $("#user2a-select").html("");
-            for (let user of allUsers) {
+            for (let user of listOfUsernames) {
                 $("#user1a-select").append("<option>" + user + "</option>");
                 $("#user2a-select").append("<option>" + user + "</option>");
             }
-            if (allUsers.includes(user1a_prev_selected)) {
+            // Preserve username choices when switching games (if available)
+            if (listOfUsernames.includes(user1a_prev_selected)) {
                 $("#user1a-select").val(user1a_prev_selected).trigger('change');
             }
-            if (allUsers.includes(user2a_prev_selected)) {
+            if (listOfUsernames.includes(user2a_prev_selected)) {
                 $("#user2a-select").val(user2a_prev_selected).trigger('change');
             }
         }
@@ -37,33 +41,67 @@ $("#game>input").on("click", populateUserDropdowns);
 
 
 function showOrHideExtras() {
-    // User 1
-    if ($("input#user1-extra").is(":checked")) {
+    if (window.allUsers === undefined) return;
+
+    // get values of user1 and user2
+    const user1 = $("select#user1a-select").val();
+    const user2 = $("select#user2a-select").val();
+
+    // display link to spreadsheet underneath the dropdown
+    function showSpreadsheetLink(divSelector, key) {
+        $(divSelector).show();
+        $(divSelector).html(`<a href="https://docs.google.com/spreadsheets/d/${key}/edit">(view on Google Sheets)</a>`);
+    }
+
+    // if user1 is a real spreadsheet
+    if (user1 in window.allUsers) {
+        // Hide the manual-entry textarea
+        $("div#user1a-text").hide();
+        // Show the spreadsheet
+        showSpreadsheetLink("div#user1a-sheet-link", window.allUsers[user1]);
+        // Prompt for extras
+        $("div#user1b-text").show();
         $("div#user1b").show();
+        if ($("input#user1-extra").is(":checked")) {
+            $("div#user1b-textarea").show();
+        }
+        else {
+            $("div#user1b-textarea").hide();
+        }
     }
     else {
+        if (user1 == MANUALLY_LIST_APRIMON) {
+            $("div#user1a-text").show();
+        }
+        else {
+            $("div#user1a-text").hide();
+        }
+        $("div#user1a-sheet-link").hide();
+        $("div#user1b-text").hide();
         $("div#user1b").hide();
     }
-    // User 1 textbox
-    if ($("select#user1a-select").val() == MANUALLY_LIST_APRIMON) {
-        $("div.user1a-text").show();
-    }
-    else {
-        $("div.user1a-text").hide();
-    }
-    // User 2
-    if ($("input#user2-extra").is(":checked")) {
+    if (user2 in window.allUsers) {
+        $("div#user2a-text").hide();
+        showSpreadsheetLink("div#user2a-sheet-link", window.allUsers[user2]);
+        $("div#user2b-text").show();
         $("div#user2b").show();
+        if ($("input#user2-extra").is(":checked")) {
+            $("div#user2b-textarea").show();
+        }
+        else {
+            $("div#user2b-textarea").hide();
+        }
     }
     else {
+        if (user2 == MANUALLY_LIST_APRIMON) {
+            $("div#user2a-text").show();
+        }
+        else {
+            $("div#user2a-text").hide();
+        }
+        $("div#user2a-sheet-link").empty();
+        $("div#user2b-text").hide();
         $("div#user2b").hide();
-    }
-    // User 2 textbox
-    if ($("select#user2a-select").val() == MANUALLY_LIST_APRIMON) {
-        $("div.user2a-text").show();
-    }
-    else {
-        $("div.user2a-text").hide();
     }
 }
 showOrHideExtras();  // on page load

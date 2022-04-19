@@ -205,3 +205,8 @@ td.collection-entry {
     align-items: center;
     justify-content: center;
 }
+
+.initially-hidden {
+    /* generally, divs with this class are shown/hidden using JS */
+    display: none;
+}
