@@ -154,9 +154,17 @@
 
 
 
-        <div id="results">
-            <div id="results_aprimon"></div>
-            <div id="results_textarea"></div>
+        <div id="results">   <!-- display: flex -->
+            <div id="results-wrapper"> <!-- margin-left: auto; margin-right: auto -->
+                <div id="results-aprimon"></div>
+                <div id="results-selector" class="initially-hidden">
+                    <ul>
+                        <li>Exciting things are coming to this part...</li>
+                        <li>...soon&trade;</li>
+                    </ul>
+                    <textarea readonly id="results-selector-textarea"></textarea>
+                </div>
+            </div>
         </div>
     </body>
 </html>

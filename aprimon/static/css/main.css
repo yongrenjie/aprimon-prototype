@@ -105,10 +105,6 @@ div#user1, div#user2 {
     align-content: start;
 }
 
-div#results {
-    display: flex;
-}
-
 .small-text {
     font-size: 80%;
 }
@@ -169,6 +165,41 @@ div#filter-balls {
 
 div.twocols {
     grid-column: 1 / span 2;
+}
+
+
+div#results {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+div#results-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    column-gap: 40px;
+    align-items: start;
+}
+
+div#results-aprimon {
+    min-width: 700px;
+    flex-grow: 2;
+}
+
+div#results-selector {
+    min-width: 350px;
+    flex-grow: 1;
+    position: sticky;
+    top: 0px;
+    height: 95vh;
+}
+
+textarea#results-selector-textarea {
+    width: 100%;
+    height: calc(95% - 45px);
+    resize: none;
 }
 
 /* TABLE STYLING */

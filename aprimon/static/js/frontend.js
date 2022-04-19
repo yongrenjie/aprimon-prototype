@@ -180,7 +180,7 @@ function calculateAprimon() {
             displayCollection();
             // scroll down to the table
             $('html, body').animate({
-                scrollTop: $("div#results_aprimon").offset().top
+                scrollTop: $("div#results-aprimon").offset().top
             }, 700);
         },
     });
@@ -277,7 +277,7 @@ function displayCollection() {
         for (let ball of ALL_BALLS) {
             if ($("input#ball-" + ball).is(":checked")) {
                 if (entry.balls.includes(ball)) {
-                    row = row + `<td class="collection-entry">${makeSpriteImgTag(ball)}</td>`;
+                    row = row + `<td class="collection-entry" id="${ball}-${entry.canonical_name}">${makeSpriteImgTag(ball)}</td>`;
                 }
                 else {
                     row = row + `<td class="collection-entry"></td>`;
@@ -288,7 +288,10 @@ function displayCollection() {
         h = h + row;
     }
     h = h + "</table>";
-    $("div#results_aprimon").html(h);
+    $("div#results-aprimon").html(h);
+    $("div#results-aprimon-container").show();
+    
+    $("div#results-selector").show();
 }
 $("div#filter-generations input").each(function () {
     $(this).on("click", displayCollection);
