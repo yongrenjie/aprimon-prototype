@@ -62,7 +62,7 @@ ALL_POKEMON = {
                 ["sandshrewa", "sandshrewalola", "asandshrew", "alolansandshrew"
                  "sandshrewk", "sandshrewkanto", "ksandshrew", "kantosandshrew"],
                 27, swsh=True, bdsp=False),
-    29: Pokemon("Nidoran♀", "nidoran-f",
+    29: Pokemon("Nidoran", "nidoran-f",
                 ["nidoranm", "nidoranf", "nidoran"],
                 29, swsh=True, bdsp=False),
     37: Pokemon("Vulpix", "vulpix", 

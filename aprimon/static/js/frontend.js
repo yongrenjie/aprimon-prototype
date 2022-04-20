@@ -47,7 +47,7 @@ $("#game>input").on("click", populateUserDropdowns);
 
 function showOrHideExtras() {
     // Show or hide UI elements (e.g. textareas for manual Aprimon entry) based on user-selected values {{{1
-    if (window.allUsers === undefined) return;
+    if (typeof window.allUsers === "undefined") return;
 
     // Get values of user1 and user2 dropdowns
     const user1 = $("select#user1a-select").val();
@@ -185,6 +185,9 @@ function calculateAprimon() {
             // store the aprimon list as a global variable to avoid unnecessary
             // recalculation when changing filters
             window.collection = response['aprimon'];
+            // clear any prior selections
+            window.selectedAprimon = [];
+            // show the table
             displayCollection();
             // scroll down to the table
             $('html, body').animate({
@@ -210,9 +213,6 @@ function displayCollection() {
     //     "bdsp": {"beast": True, "dream", True, ...},
     //     "balls": ["beast", "dream", ...]
     // }
-
-    // Determine sort type
-    let sort_type = $("input[name='sort-radio']:checked").val();
 
     // Initialise collection to display. Note that this is different from
     // window.collection which is unfiltered
@@ -261,16 +261,9 @@ function displayCollection() {
         entry.balls = entry.balls.filter(ball => entry[game][ball]);
     }
 
-    // Remove empty entries
-    collection_to_show = collection_to_show.filter(entry => entry.balls.length != 0)
-
-    // Sort
-    if (sort_type == "dex") {
-        collection_to_show = collection_to_show.sort((e1, e2) => e1.national_dex - e2.national_dex);
-    }
-    else if (sort_type == "alpha") {
-        collection_to_show = collection_to_show.sort((e1, e2) => e1.display_name.localeCompare(e2.display_name));
-    }
+    // Remove empty entries and sort
+    collection_to_show = collection_to_show.filter(entry => entry.balls.length != 0);
+    sortCollection(collection_to_show);
 
     // Construct text
     let h = '<table class="collection"><tr class="collection-row"><th>ND</th><th>Pokémon</th><th>Sprite</th>';
@@ -286,12 +279,19 @@ function displayCollection() {
         row = row + `<td class="collection-entry"><b>${entry.display_name}</b></td>`;
         row = row + `<td class="collection-entry">${makeSpriteImgTagSmall(entry.canonical_name)}</td>`;
         for (let ball of ALL_BALLS) {
+            const canonical_id = `${ball}-${entry.canonical_name}`; // dream-togepi
             if ($("input#ball-" + ball).is(":checked")) {
                 if (entry.balls.includes(ball)) {
-                    row = row + `<td class="collection-entry" id="${ball}-${entry.canonical_name}">${makeSpriteImgTag(ball)}</td>`;
+                    const index = getIndexOfSelectedAprimon(entry.canonical_name);
+                    if (index !== -1 && window.selectedAprimon[index].balls.includes(ball)) {
+                        row = row + `<td class="collection-entry active-entry selected" id="${canonical_id}">${makeSpriteImgTag(ball)}</td>`;
+                    }
+                    else {
+                        row = row + `<td class="collection-entry active-entry unselected" id="${canonical_id}">${makeSpriteImgTag(ball)}</td>`;
+                    }
                 }
                 else {
-                    row = row + `<td class="collection-entry"></td>`;
+                    row = row + `<td class="collection-entry inactive-entry"></td>`;
                 }
             }
         }
@@ -303,6 +303,7 @@ function displayCollection() {
     $("div#results-aprimon-container").show();
     
     $("div#results-selector").show();
+    makeTableDynamic();
     // }}}1
 }
 // When changing any of the generation filters
@@ -316,6 +317,104 @@ $("div#filter-balls input").each(function () {
 // When changing any of the sort types
 $("input#sort-radio-dex").on("click", displayCollection);
 $("input#sort-radio-alpha").on("click", displayCollection);
+
+
+function makeTableDynamic() {
+    // Create dynamic behaviour for table cells {{{1
+
+    $(".active-entry").each(function (index, element) {
+        $(this).on("click", function () {
+            updateSelection($(this).attr("id"));
+        });
+    });
+    // }}}1
+}
+
+function updateSelection(canonical_id) {
+    // Add or remove an Aprimon from the selection {{{1
+
+    // Parse the ID to get ball and Pokemon name
+    let ball;
+    let canonical_name;
+    let splits = canonical_id.split("-");
+    if (splits.length == 2) {
+        ball = splits[0];
+        canonical_name = splits[1];
+    }
+    else {
+        ball = splits[0];
+        canonical_name = splits.slice(1).join("-");
+    }
+
+    // Check if selection already contains an entry for the Pokemon
+    let entry_index = getIndexOfSelectedAprimon(canonical_name);
+
+    if (entry_index === -1) {
+        // Case 1: Not found. Add a new entry
+
+        // Find the correct entry from global collection
+        let entry_to_be_added;
+        for (let entry of window.collection) {
+            if (entry.canonical_name === canonical_name) {
+                // Deepcopy it and modify the ball list
+                entry_to_be_added = JSON.parse(JSON.stringify(entry));
+                entry_to_be_added.balls = [ball];
+                break;
+            }
+        }
+        // Add it to the selection
+        window.selectedAprimon.push(entry_to_be_added);
+        console.log(`turning on: ${canonical_id}`);
+        $("td#" + canonical_id).addClass("selected");
+        $("td#" + canonical_id).removeClass("unselected");
+    }
+
+    else {
+        // Case 2: An entry was found. Check whether the ball is inside
+        let existing_entry = window.selectedAprimon[entry_index];
+        let ball_index = existing_entry.balls.indexOf(ball);
+        
+        if (ball_index == -1) {
+            // Case 2a. An entry was found but the ball wasn't there. Add it
+            existing_entry.balls.push(ball);
+            existing_entry.balls.sort();
+            console.log(`turning on: ${canonical_id}`);
+            $("td#" + canonical_id).addClass("selected");
+            $("td#" + canonical_id).removeClass("unselected");
+        }
+        else {
+            // Case 2b. An entry was found and the ball was inside. Remove it
+            console.log(`turning off: ${canonical_id}`);
+            existing_entry.balls.splice(ball_index, 1);
+            $("td#" + canonical_id).addClass("unselected");
+            $("td#" + canonical_id).removeClass("selected");
+            // Check if it was the last ball remaining...
+            if (existing_entry.balls.length == 0) {
+                window.selectedAprimon.splice(entry_index, 1);
+            }
+        }
+    }
+
+    // Update the textarea
+    updateSelectionText();
+    // }}}1
+}
+
+
+function updateSelectionText() {
+    // Update textarea
+    let s = "";
+    sortCollection(window.selectedAprimon);
+    for (let entry of window.selectedAprimon) {
+        for (let ball of entry.balls) {
+            s = s + `${capitaliseFirst(ball)} ${entry.display_name}\n`;
+        }
+    }
+    $("textarea#results-selector-textarea").val(s);
+}
+// When changing any of the sort types
+$("input#sort-radio-dex").on("click", updateSelectionText);
+$("input#sort-radio-alpha").on("click", updateSelectionText);
 
 
 function changeGameSprites() {
@@ -392,8 +491,39 @@ function getGame() {
 }
 
 
+function getSortMode() {
+    return $("input[name='sort-radio']:checked").val();
+}
+
+
 function capitaliseFirst(str) {
     return str.slice(0, 1).toUpperCase() + str.slice(1);
+}
+
+
+function getIndexOfSelectedAprimon(canonical_name) {
+    if (typeof window.selectedAprimon === "undefined") return -1;
+    return window.selectedAprimon.findIndex((e) => e.canonical_name === canonical_name);
+}
+
+
+function sortCollection(collection) {
+    // Sorts in-place!
+    
+    let sortMode = getSortMode();
+    if (sortMode == "dex") {
+        collection.sort((a1, a2) => a1.national_dex - a2.national_dex);
+    }
+    else if (sortMode == "alpha") {
+        collection.sort((a1, a2) => a1.display_name.localeCompare(a2.display_name));
+    }
+
+    // sort the balls within each entry too
+    for (let entry of collection) {
+        entry.balls.sort();
+    }
+
+    console.log(collection);
 }
 
 

@@ -242,6 +242,19 @@ td.collection-entry {
     width: 45px;
 }
 
+td.selected {
+    background-color: #4fc957;
+}
+
+td.unselected {
+    background-color: none;
+}
+
+td.inactive-entry {
+    background-color: #707070;
+}
+
+
 img.constrained-height {
     max-height: 40px;
     height: auto;
