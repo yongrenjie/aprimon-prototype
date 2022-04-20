@@ -105,6 +105,14 @@ div#user1, div#user2 {
     align-content: start;
 }
 
+div#user1 {
+    background-color: #daebf5;
+}
+
+div#user2 {
+    background-color: #f2d9d5;
+}
+
 .small-text {
     font-size: 80%;
 }

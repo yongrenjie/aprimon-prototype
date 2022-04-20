@@ -2,7 +2,9 @@ const ALL_BALLS = ["beast", "dream", "fast", "friend", "heavy", "level", "love",
 const SELECT_AN_ENTRY = "-- select --"
 const MANUALLY_LIST_APRIMON = "(manually list Aprimon...)"
 
+
 function populateUserDropdowns() {
+    // Populate dropdown menus with registered users {{{1
     let user1a_prev_selected = $("select#user1a-select").val();
     let user2a_prev_selected = $("select#user2a-select").val();
     $.ajax({
@@ -35,96 +37,107 @@ function populateUserDropdowns() {
             }
         }
     });
+    // }}}1
 }
+// On page load
 populateUserDropdowns();
+// When changing the game at the top
 $("#game>input").on("click", populateUserDropdowns);
 
 
 function showOrHideExtras() {
+    // Show or hide UI elements (e.g. textareas for manual Aprimon entry) based on user-selected values {{{1
     if (window.allUsers === undefined) return;
 
-    // get values of user1 and user2
+    // Get values of user1 and user2 dropdowns
     const user1 = $("select#user1a-select").val();
     const user2 = $("select#user2a-select").val();
 
-    // display link to spreadsheet underneath the dropdown
+    // Helper function to display link to spreadsheet underneath the dropdown
     function showSpreadsheetLink(divSelector, key) {
         $(divSelector).show();
         $(divSelector).html(`<a target="_blank" href="https://docs.google.com/spreadsheets/d/${key}/edit">(view on Google Sheets)</a>`);
     }
 
-    // if user1 is a real spreadsheet
+    // If user1 is a real spreadsheet
     if (user1 in window.allUsers) {
-        // Hide the manual-entry textarea
+        // Hide the manual entry textarea
         $("div#user1a-text").hide();
         // Show the spreadsheet
         showSpreadsheetLink("div#user1a-sheet-link", window.allUsers[user1]);
         // Prompt for extras
         $("div#user1b-text").show();
         $("div#user1b").show();
-        if ($("input#user1-extra").is(":checked")) {
-            $("div#user1b-textarea").show();
-        }
-        else {
-            $("div#user1b-textarea").hide();
-        }
+        // Show the extras textarea if the input is checked
+        $("div#user1b-textarea").toggle(!!$("input#user1-extra").is(":checked"));
     }
-    else {
-        if (user1 == MANUALLY_LIST_APRIMON) {
-            $("div#user1a-text").show();
-        }
-        else {
-            $("div#user1a-text").hide();
-        }
+    else if (user1 == MANUALLY_LIST_APRIMON) {
+        // Show the manual entry textarea
+        $("div#user1a-text").show();
+        // Hide everything else
         $("div#user1a-sheet-link").hide();
         $("div#user1b-text").hide();
         $("div#user1b").hide();
     }
+    else {
+        // Nothing selected, just hide everything
+        $("div#user1a-text").hide();
+        $("div#user1a-sheet-link").hide();
+        $("div#user1b-text").hide();
+        $("div#user1b").hide();
+    }
+
+    // Same for user2
     if (user2 in window.allUsers) {
+        // Hide the manual entry textarea
         $("div#user2a-text").hide();
+        // Show the spreadsheet
         showSpreadsheetLink("div#user2a-sheet-link", window.allUsers[user2]);
+        // Prompt for extras
         $("div#user2b-text").show();
         $("div#user2b").show();
-        if ($("input#user2-extra").is(":checked")) {
-            $("div#user2b-textarea").show();
-        }
-        else {
-            $("div#user2b-textarea").hide();
-        }
+        // Show the extras textarea if the input is checked
+        $("div#user2b-textarea").toggle(!!$("input#user2-extra").is(":checked"));
     }
-    else {
-        if (user2 == MANUALLY_LIST_APRIMON) {
-            $("div#user2a-text").show();
-        }
-        else {
-            $("div#user2a-text").hide();
-        }
+    else if (user2 == MANUALLY_LIST_APRIMON) {
+        // Show the manual entry textarea
+        $("div#user2a-text").show();
+        // Hide everything else
         $("div#user2a-sheet-link").empty();
         $("div#user2b-text").hide();
         $("div#user2b").hide();
     }
+    else {
+        // Nothing selected, just hide everything
+        $("div#user2a-text").hide();
+        $("div#user2a-sheet-link").empty();
+        $("div#user2b-text").hide();
+        $("div#user2b").hide();
+    }
+    // }}}1
 }
-showOrHideExtras();  // on page load
-$("input#user1-extra").on("click", showOrHideExtras);
+// On page load
+showOrHideExtras();
+// When changing the dropdown menus
 $("select#user1a-select").on("change", showOrHideExtras);
-$("input#user2-extra").on("click", showOrHideExtras);
 $("select#user2a-select").on("change", showOrHideExtras);
+// When clicking the 'extras' checkboxes
+$("input#user1-extra").on("click", showOrHideExtras);
+$("input#user2-extra").on("click", showOrHideExtras);
 
 
 function calculateAprimon() {
+    // Send the AJAX query to calculate the Aprimon difference {{{1
+
     // Determine user 1 type
     let user1 = $("select#user1a-select").val();
     let user1_data;
     if (user1 == SELECT_AN_ENTRY) return;
     else if (user1 == MANUALLY_LIST_APRIMON) {
-        user1_data = {
-            "list": $("textarea#user1a-textarea").val().split(/\r?\n/),
-        }
+        user1_data = {"list": $("textarea#user1a-textarea").val().split(/\r?\n/)};
     }
     else {
-        user1_data = {
-            "username": user1,
-        };
+        user1_data = {"username": user1};
     }
     // Check for user 1 extras
     if ($("input#user1-extra").is(":checked")) {
@@ -136,15 +149,10 @@ function calculateAprimon() {
     let user2_data;
     if (user2 == SELECT_AN_ENTRY) return;
     else if (user2 == MANUALLY_LIST_APRIMON) {
-        user2_data = {
-            "list": $("textarea#user2a-textarea").val().split(/\r?\n/),
-        }
-        console.log(user2_data)
+        user2_data = {"list": $("textarea#user2a-textarea").val().split(/\r?\n/)};
     }
     else {
-        user2_data = {
-            "username": user2,
-        };
+        user2_data = {"username": user2};
     }
     // Check for user 2 extras
     if ($("input#user2-extra").is(":checked")) {
@@ -184,12 +192,15 @@ function calculateAprimon() {
             }, 700);
         },
     });
+    // }}}1
 }
+// When clicking the submit button
 $("input#submit-button").on("click", calculateAprimon);
 
 
 function displayCollection() {
-    // Very rudimentary for now -- should actually display a full table!
+    // Generate the table showing the Aprimon difference {{{1
+
     // Structure of each entry, as passed from the backend:
     // entry = {
     //     "canonical_name": str,
@@ -292,66 +303,84 @@ function displayCollection() {
     $("div#results-aprimon-container").show();
     
     $("div#results-selector").show();
+    // }}}1
 }
+// When changing any of the generation filters
 $("div#filter-generations input").each(function () {
     $(this).on("click", displayCollection);
 });
+// When changing any of the ball filters
 $("div#filter-balls input").each(function () {
     $(this).on("click", displayCollection);
 });
+// When changing any of the sort types
 $("input#sort-radio-dex").on("click", displayCollection);
 $("input#sort-radio-alpha").on("click", displayCollection);
 
 
-function changeGame() {
-    // Determine game
+function changeGameSprites() {
+    // Change the sprites around the game selector {{{1
+
+    // Determine which game was selected
     let game = getGame();
 
     if (game == "swsh") {
         $("#left-sprite").html(makeSpriteImgTag("zacian"));
         $("#right-sprite").html(makeSpriteImgTag("zamazenta"));
-        $("div#user1").css("background-color", "#daebf5");
-        $("div#user2").css("background-color", "#f2d9d5");
     }
     else if (game == "bdsp") {
         $("#left-sprite").html(makeSpriteImgTag("dialga"));
         $("#right-sprite").html(makeSpriteImgTag("palkia"));
     }
+    // }}}1
 }
-changeGame();
-$("#game>input").on("click", changeGame);
+// On page load
+changeGameSprites();
+// When game is changed
+$("#game>input").on("click", changeGameSprites);
 
 
 function swapUsers() {
-    // spreadsheet
+    // Swap the two users round {{{1
+
+    // Swap spreadsheet dropdown
     let p = $("select#user1a-select").val();
     let q = $("select#user2a-select").val();
     $("#user1a-select").val(q).trigger('change');
     $("#user2a-select").val(p).trigger('change');
-    // manual list
+    // Swap manual lists
     p = $("textarea#user1a-textarea").val();
     q = $("textarea#user2a-textarea").val();
     $("textarea#user1a-textarea").val(q);
     $("textarea#user2a-textarea").val(p);
-    // extras checkbox
+    // Swap extras checkbox
     p = $("input#user1-extra").is(":checked");
     q = $("input#user2-extra").is(":checked");
     $("input#user1-extra").prop("checked", q);
     $("input#user2-extra").prop("checked", p);
-    // extras list
+    // Swap extra lists
     p = $("textarea#user1b-textarea").val();
     q = $("textarea#user2b-textarea").val();
     $("textarea#user1b-textarea").val(q);
     $("textarea#user2b-textarea").val(p);
-    // update whether textareas are displayed
+    // Update UI
     showOrHideExtras();
+    // }}}1
 }
+// Whenever the swap button is clicked
 $("input#swap-button").on("click", swapUsers);
+
+
+
+//////////////////////
+// Helper functions //
+//////////////////////
 
 
 function makeSpriteImgTag(name) {
     return `<img src="static/sprites/${name}.png" />`;
 }
+
 
 function makeSpriteImgTagSmall(name) {
     return `<img src="static/sprites/${name}.png" class="constrained-height" />`;
@@ -362,9 +391,10 @@ function getGame() {
     return $("input[name='game-radio']:checked").val();
 }
 
+
 function capitaliseFirst(str) {
     return str.slice(0, 1).toUpperCase() + str.slice(1);
 }
 
 
-$("div#loading").hide();
+// vim: foldmethod=marker
