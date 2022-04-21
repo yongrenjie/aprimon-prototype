@@ -509,4 +509,38 @@ ALL_SPREADSHEETS = {
             "ball_column": "C",
         },
     },
+    "lean5316": {
+        "swsh": {
+            "type": "grid",
+            "key": "1fl6-6RIRVPN686S1I295LXv8TtacMcVWI7q3yKtbbVM",
+            "tab_name": "SpecialBalls SWSH",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLDE",
+            "verify_method": "image",
+        },
+        "bdsp": {
+            "type": "grid",
+            "key": "1fl6-6RIRVPN686S1I295LXv8TtacMcVWI7q3yKtbbVM",
+            "tab_name": "SpecialBalls BDSP",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLDE",
+            "verify_method": "image",
+        },
+    },
+    "lean5316 (on-hands)": {
+        "swsh": {
+            "type": "list",
+            "key": "1fl6-6RIRVPN686S1I295LXv8TtacMcVWI7q3yKtbbVM",
+            "tab_name": "On-Hands SWSH",
+            "pokemon_column": "C",
+            "ball_column": "E",
+        },
+        "bdsp": {
+            "type": "list",
+            "key": "1fl6-6RIRVPN686S1I295LXv8TtacMcVWI7q3yKtbbVM",
+            "tab_name": "On-Hands BDSP",
+            "pokemon_column": "C",
+            "ball_column": "E",
+        },
+    },
 }
