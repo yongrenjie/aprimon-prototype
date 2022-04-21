@@ -366,7 +366,6 @@ function updateSelection(canonical_id) {
         }
         // Add it to the selection
         window.selectedAprimon.push(entry_to_be_added);
-        console.log(`turning on: ${canonical_id}`);
         $("td#" + canonical_id).addClass("selected");
         $("td#" + canonical_id).removeClass("unselected");
     }
@@ -380,13 +379,11 @@ function updateSelection(canonical_id) {
             // Case 2a. An entry was found but the ball wasn't there. Add it
             existing_entry.balls.push(ball);
             existing_entry.balls.sort();
-            console.log(`turning on: ${canonical_id}`);
             $("td#" + canonical_id).addClass("selected");
             $("td#" + canonical_id).removeClass("unselected");
         }
         else {
             // Case 2b. An entry was found and the ball was inside. Remove it
-            console.log(`turning off: ${canonical_id}`);
             existing_entry.balls.splice(ball_index, 1);
             $("td#" + canonical_id).addClass("unselected");
             $("td#" + canonical_id).removeClass("selected");
@@ -475,6 +472,17 @@ function swapUsers() {
 $("input#swap-button").on("click", swapUsers);
 
 
+function selectAllAprimon() {
+    // Select all Aprimon from the list {{{1
+    $("td.unselected").each(function(index) {
+        updateSelection($(this).attr("id"));
+    });
+    // }}}1
+}
+// Whenever the select all button is clicked
+$("input#select-all-button").on("click", selectAllAprimon);
+
+
 
 //////////////////////
 // Helper functions //
@@ -527,8 +535,6 @@ function sortCollection(collection) {
     for (let entry of collection) {
         entry.balls.sort();
     }
-
-    console.log(collection);
 }
 
 

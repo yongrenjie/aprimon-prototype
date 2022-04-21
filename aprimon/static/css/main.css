@@ -250,6 +250,18 @@ td.unselected {
     background-color: none;
 }
 
+td.unselected:hover {
+    background-color: #d8f2d9;
+}
+ 
+/* make it fade */
+@supports (transition-property: background-color) {
+    td {
+        transition-property: background-color;
+        transition-duration: 0.2s;
+    }
+}
+
 td.inactive-entry {
     background-color: #707070;
 }
