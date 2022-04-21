@@ -186,8 +186,9 @@ function calculateAprimon() {
             // store the aprimon list as a global variable to avoid unnecessary
             // recalculation when changing filters
             window.collection = response['aprimon'];
-            // clear any prior selections
+            // clear any prior selections and the textarea
             window.selectedAprimon = [];
+            updateSelectionText();
             // show the table
             displayCollection();
             // scroll down to the table
@@ -403,15 +404,18 @@ function updateSelection(canonical_id) {
 
 
 function updateSelectionText() {
-    // Update textarea
+    // Update textarea {{{1
     let s = "";
+    let number = 0;
     sortCollection(window.selectedAprimon);
     for (let entry of window.selectedAprimon) {
         for (let ball of entry.balls) {
-            s = s + `${capitaliseFirst(ball)} ${entry.display_name}\n`;
+            number = number + 1;
+            s = s + `${number}. ${capitaliseFirst(ball)} ${entry.display_name}\n`;
         }
     }
     $("textarea#results-selector-textarea").val(s);
+    // }}}1
 }
 // When changing any of the sort types
 $("input#sort-radio-dex").on("click", updateSelectionText);
