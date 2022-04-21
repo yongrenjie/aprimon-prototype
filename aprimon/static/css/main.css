@@ -207,7 +207,7 @@ div#results-selector {
 
 textarea#results-selector-textarea {
     width: 100%;
-    height: calc(95% - 45px);
+    height: calc(95% - 100px);
     resize: none;
 }
 
@@ -281,4 +281,9 @@ img.constrained-height {
 .initially-hidden {
     /* generally, divs with this class are shown/hidden using JS */
     display: none;
+}
+
+ul#instructions li {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

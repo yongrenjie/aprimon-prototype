@@ -277,14 +277,14 @@ function displayCollection() {
     h = h + "</tr>\n";
     for (let entry of collection_to_show) {
         let row = '<tr class="collection-row">';
-        row = row + `<td class="collection-entry"><b>${entry.national_dex}</b></td>`;
-        row = row + `<td class="collection-entry"><b>${entry.display_name}</b></td>`;
-        row = row + `<td class="collection-entry">${makeSpriteImgTagSmall(entry.canonical_name)}</td>`;
+        row = row + `<td class="collection-entry active-row unselected" id="dex-${entry.canonical_name}"><b>${entry.national_dex}</b></td>`;
+        row = row + `<td class="collection-entry active-row unselected" id="name-${entry.canonical_name}"><b>${entry.display_name}</b></td>`;
+        row = row + `<td class="collection-entry active-row unselected" id="sprite-${entry.canonical_name}">${makeSpriteImgTagSmall(entry.canonical_name)}</td>`;
         for (let ball of ALL_BALLS) {
             const canonical_id = `${ball}-${entry.canonical_name}`; // dream-togepi
             if ($("input#ball-" + ball).is(":checked")) {
                 if (entry.balls.includes(ball)) {
-                    const index = getIndexOfSelectedAprimon(entry.canonical_name);
+                    const index = getIndexFromSelection(entry.canonical_name);
                     if (index !== -1 && window.selectedAprimon[index].balls.includes(ball)) {
                         row = row + `<td class="collection-entry active-entry selected" id="${canonical_id}">${makeSpriteImgTag(ball)}</td>`;
                     }
@@ -324,37 +324,61 @@ $("input#sort-radio-alpha").on("click", displayCollection);
 function makeTableDynamic() {
     // Create dynamic behaviour for table cells {{{1
 
+    // Individual Aprimon
     $(".active-entry").each(function (index, element) {
         $(this).on("click", function () {
-            updateSelection($(this).attr("id"));
+            toggleSelection($(this).attr("id"));
+        });
+    });
+
+    // Entire rows (by clicking on name/sprite)
+    $(".active-row").each(function (index, element) {
+        $(this).on("click", function () {
+            let [_, canonical_name] = parseCanonicalID($(this).attr("id"));
+            toggleSpeciesInSelection(canonical_name);
         });
     });
     // }}}1
 }
 
-function updateSelection(canonical_id) {
+
+function toggleSelection(canonical_id) {
     // Add or remove an Aprimon from the selection {{{1
 
     // Parse the ID to get ball and Pokemon name
-    let ball;
-    let canonical_name;
-    let splits = canonical_id.split("-");
-    if (splits.length == 2) {
-        ball = splits[0];
-        canonical_name = splits[1];
-    }
-    else {
-        ball = splits[0];
-        canonical_name = splits.slice(1).join("-");
-    }
+    let [ball, canonical_name] = parseCanonicalID(canonical_id);
 
     // Check if selection already contains an entry for the Pokemon
-    let entry_index = getIndexOfSelectedAprimon(canonical_name);
+    let entry_index = getIndexFromSelection(canonical_name);
 
     if (entry_index === -1) {
         // Case 1: Not found. Add a new entry
+        addToSelection(ball, canonical_name);
+    }
+    else {
+        // Case 2: An entry was found. Check whether the ball is inside
+        let existing_entry = window.selectedAprimon[entry_index];
+        if (existing_entry.balls.includes(ball)) {
+            // Case 2a. An entry was found and the ball was inside. Remove it
+            removeFromSelection(ball, canonical_name);
+        }
+        else {
+            // Case 2b. An entry was found but the ball wasn't there. Add it
+            addToSelection(ball, canonical_name);
+        }
+    }
+    // }}}1
+}
 
-        // Find the correct entry from global collection
+
+function addToSelection(ball, canonical_name) {
+    // Add an Aprimon to the selection list {{{1
+
+    // Check whether the species is already in the selected list
+    let entry_index = getIndexFromSelection(canonical_name);
+
+    if (entry_index === -1) {
+        // No it isn't. Find the correct entry from global collection
         let entry_to_be_added;
         for (let entry of window.collection) {
             if (entry.canonical_name === canonical_name) {
@@ -366,36 +390,94 @@ function updateSelection(canonical_id) {
         }
         // Add it to the selection
         window.selectedAprimon.push(entry_to_be_added);
-        $("td#" + canonical_id).addClass("selected");
-        $("td#" + canonical_id).removeClass("unselected");
     }
-
     else {
-        // Case 2: An entry was found. Check whether the ball is inside
+        // Yes it is. Just add the ball
         let existing_entry = window.selectedAprimon[entry_index];
-        let ball_index = existing_entry.balls.indexOf(ball);
         
-        if (ball_index == -1) {
-            // Case 2a. An entry was found but the ball wasn't there. Add it
+        if (!(existing_entry.balls.includes(ball))) {
             existing_entry.balls.push(ball);
             existing_entry.balls.sort();
-            $("td#" + canonical_id).addClass("selected");
-            $("td#" + canonical_id).removeClass("unselected");
         }
-        else {
-            // Case 2b. An entry was found and the ball was inside. Remove it
-            existing_entry.balls.splice(ball_index, 1);
-            $("td#" + canonical_id).addClass("unselected");
-            $("td#" + canonical_id).removeClass("selected");
-            // Check if it was the last ball remaining...
-            if (existing_entry.balls.length == 0) {
-                window.selectedAprimon.splice(entry_index, 1);
+    }
+
+    // Update table
+    $(`td#${ball}-${canonical_name}`).addClass("selected");
+    $(`td#${ball}-${canonical_name}`).removeClass("unselected");
+    updateRowHighlighting(canonical_name);
+    // Update the textarea
+    updateSelectionText();
+    // }}}1
+}
+
+
+function removeFromSelection(ball, canonical_name) {
+    // Remove an Aprimon from the selection list {{{1
+    
+    let entry_index = getIndexFromSelection(canonical_name);
+    if (entry_index == -1) return;
+
+    // Remove the ball from the list (if it's there)
+    let existing_entry = window.selectedAprimon[entry_index];
+    if (existing_entry.balls.includes(ball)) {
+        existing_entry.balls = existing_entry.balls.filter(b => b !== ball);
+
+        // Check if it was the last ball remaining and if so, remove the entire entry
+        if (existing_entry.balls.length == 0) {
+            window.selectedAprimon.splice(entry_index, 1);
+        }
+    }
+
+    // Update table
+    $(`td#${ball}-${canonical_name}`).removeClass("selected");
+    $(`td#${ball}-${canonical_name}`).addClass("unselected");
+    updateRowHighlighting(canonical_name);
+    // Update the textarea
+    updateSelectionText();
+    // }}}1
+}
+
+
+function updateRowHighlighting(canonical_name) {
+    // Changes the background of the the Pokemon name/sprite {{{1
+
+    function select() {
+        $(`td#dex-${canonical_name}`).addClass("selected");
+        $(`td#dex-${canonical_name}`).removeClass("unselected");
+        $(`td#name-${canonical_name}`).addClass("selected");
+        $(`td#name-${canonical_name}`).removeClass("unselected");
+        $(`td#sprite-${canonical_name}`).addClass("selected");
+        $(`td#sprite-${canonical_name}`).removeClass("unselected");
+    }
+    function deselect() {
+        $(`td#dex-${canonical_name}`).addClass("unselected");
+        $(`td#dex-${canonical_name}`).removeClass("selected");
+        $(`td#name-${canonical_name}`).addClass("unselected");
+        $(`td#name-${canonical_name}`).removeClass("selected");
+        $(`td#sprite-${canonical_name}`).addClass("unselected");
+        $(`td#sprite-${canonical_name}`).removeClass("selected");
+    }
+
+    let entry_index = getIndexFromSelection(canonical_name);
+    if (entry_index == -1) {
+        deselect();
+    }
+    else {
+        let existing_entry = window.selectedAprimon[entry_index];
+
+        for (let global_entry of window.collection) {
+            if (global_entry.canonical_name == canonical_name) {
+                if ((existing_entry.balls.length == global_entry.balls.length)
+                    && global_entry.balls.every(b => existing_entry.balls.includes(b))) {
+                    select();
+                }
+                else {
+                    deselect();
+                }
+                break;
             }
         }
     }
-
-    // Update the textarea
-    updateSelectionText();
     // }}}1
 }
 
@@ -472,23 +554,80 @@ function swapUsers() {
 $("input#swap-button").on("click", swapUsers);
 
 
-function selectAllAprimon() {
-    // Select all Aprimon from the list {{{1
+function addAllAprimonToSelection() {
+    // Add all Aprimon into the selection list {{{1
     $("td.unselected").each(function(index) {
-        updateSelection($(this).attr("id"));
+        toggleSelection($(this).attr("id"));
     });
     // }}}1
 }
 // Whenever the select all button is clicked
-$("input#select-all-button").on("click", selectAllAprimon);
+$("input#select-all-button").on("click", addAllAprimonToSelection);
 
+
+function removeAllAprimonFromSelection() {
+    // Remove all Aprimon from the selection list {{{1
+    $("td.selected").each(function(index) {
+        toggleSelection($(this).attr("id"));
+    });
+    // }}}1
+}
+// Whenever the clear all button is clicked
+$("input#clear-all-button").on("click", removeAllAprimonFromSelection);
+
+
+function toggleSpeciesInSelection(canonical_name) {
+    // Turns on or off one entire row in the table {{{1
+    let entry_index = getIndexFromSelection(canonical_name);
+    if (entry_index == -1) {
+        addSpeciesToSelection(canonical_name);
+    }
+    else {
+        let existing_entry = window.selectedAprimon[entry_index];
+        for (let global_entry of window.collection) {
+            if (global_entry.canonical_name == canonical_name) {
+                if ((existing_entry.balls.length == global_entry.balls.length)
+                    && global_entry.balls.every(b => existing_entry.balls.includes(b))) {
+                    removeSpeciesFromSelection(canonical_name);
+                }
+                else {
+                    addSpeciesToSelection(canonical_name);
+                }
+                break;
+            }
+        }
+    }
+    // }}}1
+}
+
+
+function addSpeciesToSelection(canonical_name) {
+    // Add all Apriballs of one species to the selection list {{{1
+    let index = getIndexFromGlobalCollection(canonical_name);
+
+    for (let ball of window.collection[index].balls) {
+        addToSelection(ball, canonical_name);
+    }
+    // }}}1
+}
+
+function removeSpeciesFromSelection(canonical_name) {
+    // Remove all Apriballs of one species from the selection list {{{1
+    // This could certainly be coded more efficiently, but whatever
+    let index = getIndexFromGlobalCollection(canonical_name);
+
+    for (let ball of window.collection[index].balls) {
+        removeFromSelection(ball, canonical_name);
+    }
+    // }}}1
+}
 
 
 //////////////////////
 // Helper functions //
 //////////////////////
 
-
+// {{{1
 function makeSpriteImgTag(name) {
     return `<img src="static/sprites/${name}.png" />`;
 }
@@ -514,9 +653,15 @@ function capitaliseFirst(str) {
 }
 
 
-function getIndexOfSelectedAprimon(canonical_name) {
+function getIndexFromSelection(canonical_name) {
     if (typeof window.selectedAprimon === "undefined") return -1;
     return window.selectedAprimon.findIndex((e) => e.canonical_name === canonical_name);
+}
+
+
+function getIndexFromGlobalCollection(canonical_name) {
+    if (typeof window.collection === "undefined") return -1;
+    return window.collection.findIndex((e) => e.canonical_name === canonical_name);
 }
 
 
@@ -536,6 +681,27 @@ function sortCollection(collection) {
         entry.balls.sort();
     }
 }
+
+
+function parseCanonicalID(canonical_id) {
+    // Parse a canonical ID ('dream-togepi') to get ball ('dream') and canonical Pokemon name ('togepi')
+    let ball;
+    let canonical_name;
+    let splits = canonical_id.split("-");
+    if (splits.length == 2) {
+        ball = splits[0];
+        canonical_name = splits[1];
+    }
+    else {
+        ball = splits[0];
+        canonical_name = splits.slice(1).join("-");
+    }
+
+    return [ball, canonical_name]
+}
+
+
+// }}}1
 
 
 // vim: foldmethod=marker
