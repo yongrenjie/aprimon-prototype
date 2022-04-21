@@ -543,4 +543,23 @@ ALL_SPREADSHEETS = {
             "ball_column": "E",
         },
     },
+    "UnusualDictionary": {
+        "swsh": {
+            "type": "grid",
+            "key": "1zw1xqpqACCIefQy3JLwfpFbk8tfb07YT9Kda2crRSZE",
+            "tab_name": "Aprimons",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
+    },
+    "UnusualDictionary (on-hands)": {
+        "swsh": {
+            "type": "list",
+            "key": "1zw1xqpqACCIefQy3JLwfpFbk8tfb07YT9Kda2crRSZE",
+            "tab_name": "SwSh / HOME On-Hands",
+            "pokemon_column": "E",
+            "ball_column": "C",
+        },
+    },
 }
