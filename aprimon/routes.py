@@ -33,9 +33,6 @@ def _all_users():
     all_users = {user: ALL_SPREADSHEETS[user][game]["key"]
                  for user in ALL_SPREADSHEETS.keys()
                  if game in ALL_SPREADSHEETS[user]}
-    # "sort" the dictionary by username (this is a 3.7+ feature)
-    all_users = {k: v for k, v in sorted(all_users.items(),
-                                         key=lambda item: item[0].lower())}
     return jsonify({"allUsers": all_users})
 
 
