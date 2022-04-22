@@ -556,7 +556,7 @@ $("input#swap-button").on("click", swapUsers);
 
 function addAllAprimonToSelection() {
     // Add all Aprimon into the selection list {{{1
-    $("td.unselected").each(function(index) {
+    $("td.active-entry.unselected").each(function(index) {
         toggleSelection($(this).attr("id"));
     });
     // }}}1
@@ -567,7 +567,7 @@ $("input#select-all-button").on("click", addAllAprimonToSelection);
 
 function removeAllAprimonFromSelection() {
     // Remove all Aprimon from the selection list {{{1
-    $("td.selected").each(function(index) {
+    $("td.active-entry.selected").each(function(index) {
         toggleSelection($(this).attr("id"));
     });
     // }}}1
