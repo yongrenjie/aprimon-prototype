@@ -611,6 +611,7 @@ function addSpeciesToSelection(canonical_name) {
     // }}}1
 }
 
+
 function removeSpeciesFromSelection(canonical_name) {
     // Remove all Apriballs of one species from the selection list {{{1
     // This could certainly be coded more efficiently, but whatever
@@ -621,6 +622,29 @@ function removeSpeciesFromSelection(canonical_name) {
     }
     // }}}1
 }
+
+
+function copyTextToClipboard() {
+    // Copy contents of textarea to clipboard {{{1
+    const text = $("textarea#results-selector-textarea").val();
+
+    if (text.length > 0) {
+        navigator.clipboard.writeText($("textarea#results-selector-textarea").val()).then(function() {
+            // clipboard successfully set
+            // for this line, see https://stackoverflow.com/a/6219703
+            $("span#copy-message").html("Copied").stop(true, true).show().fadeOut(700);
+        }, function() {
+            // clipboard write failed
+            $("span#copy-message").html("Failed to copy to clipboard - please do it manually").stop(true, true).show().fadeOut(700);
+        });
+    }
+    else {
+        $("span#copy-message").html("Selection empty").stop(true, true).show().fadeOut(700);
+    }
+    // }}}1
+}
+// Whenever the copy button is clicked
+$("input#copy-button").on("click", copyTextToClipboard);
 
 
 //////////////////////
