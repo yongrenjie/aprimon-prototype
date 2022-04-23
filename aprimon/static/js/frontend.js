@@ -21,8 +21,8 @@ function populateUserDropdowns() {
 
             let listOfUsernames = Object.keys(allUsers);
             listOfUsernames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+            listOfUsernames.unshift(MANUALLY_LIST_APRIMON);
             listOfUsernames.unshift(SELECT_AN_ENTRY);
-            listOfUsernames.push(MANUALLY_LIST_APRIMON);
             $("#user1a-select").html("");
             $("#user2a-select").html("");
             for (let user of listOfUsernames) {
