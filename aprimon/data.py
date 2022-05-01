@@ -570,4 +570,38 @@ ALL_SPREADSHEETS = {
             "ball_column": "C",
         },
     },
+    "aceinthetrashhole": {
+        "swsh": {
+            "type": "grid",
+            "key": "138yYDtEsbKTcAdTBxPwlnyfI16AEpT__4jwh65vXbQM",
+            "tab_name": "Aprimons - SwSh",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
+        "bdsp": {
+            "type": "grid",
+            "key": "138yYDtEsbKTcAdTBxPwlnyfI16AEpT__4jwh65vXbQM",
+            "tab_name": "Aprimons - BDSP",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
+    },
+    "aceinthetrashhole (on-hands)": {
+        "swsh": {
+            "type": "list",
+            "key": "138yYDtEsbKTcAdTBxPwlnyfI16AEpT__4jwh65vXbQM",
+            "tab_name": "On-Hands (Sw/Sh)",
+            "pokemon_column": "E",
+            "ball_column": "C",
+        },
+        "bdsp": {
+            "type": "list",
+            "key": "138yYDtEsbKTcAdTBxPwlnyfI16AEpT__4jwh65vXbQM",
+            "tab_name": "On-Hands (BD/SP)",
+            "pokemon_column": "E",
+            "ball_column": "C",
+        },
+    },
 }
