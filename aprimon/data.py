@@ -464,7 +464,15 @@ ALL_SPREADSHEETS = {
         "swsh": {
             "type": "grid",
             "key": "1qyJetnnFIIgQQFbb__WsXy7XzEz8CpK9VZaa5u4gZlI",
-            "tab_name": "Aprimons",
+            "tab_name": "SWSH/HOME",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
+        "bdsp": {
+            "type": "grid",
+            "key": "1qyJetnnFIIgQQFbb__WsXy7XzEz8CpK9VZaa5u4gZlI",
+            "tab_name": "BDSP",
             "pokemon_column": "C",
             "ball_columns": "NMFGHIJKLOP",
             "verify_method": "checkbox",
