@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-FLASK_ENV=development FLASK_APP=aprimon.py flask run --port 5555
+gunicorn -b "0.0.0.0:${PORT:=80}" aprimon:app --reload
