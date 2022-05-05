@@ -5,6 +5,10 @@ import re
 import gspread
 
 from aprimon.data import ALL_BALLS, ALL_SPREADSHEETS, ALL_POKEMON
+from aprimon.extra_data import MORE_SPREADSHEETS
+
+# Union operator, 3.9+ only
+ALL_SPREADSHEETS = ALL_SPREADSHEETS | MORE_SPREADSHEETS
 
 
 def col_to_index(col):
