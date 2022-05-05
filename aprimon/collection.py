@@ -8,7 +8,13 @@ from aprimon.data import ALL_BALLS, ALL_SPREADSHEETS, ALL_POKEMON
 
 
 def col_to_index(col):
-    return ord(col.lower()) - ord('a')
+    if len(col) == 1:
+        return ord(col.lower()) - ord('a')
+    elif len(col) == 2:
+        return col_to_index(col[1]) + (26 * (col_to_index(col[0]) + 1))
+    else:
+        raise ValueError("This function can't parse columns beyond ZZ. Why"
+                         " even is your spreadsheet so long?")
 
 
 def get_pokemon(name):
@@ -115,11 +121,20 @@ class Collection:
             elif verify_method == 'image':
                 # Checks for the presence of an image
                 return '=image(' in spreadsheet_value.lower()
+            elif verify_method == 'nonempty':
+                # Checks that the cell isn't empty
+                return spreadsheet_value is not None \
+                    and len(spreadsheet_value) > 0
             else:
                 raise ValueError(f'method {method} not supported')
 
         # initialise dict of (national dex, [ball availability])
         collection = {}
+
+        # check for commas in ball_columns and split it if so
+        COLUMN_DELIMITER = ','
+        if COLUMN_DELIMITER in ball_columns:
+            ball_columns = ball_columns.split(COLUMN_DELIMITER)
 
         # Parse the spreadsheet
         for row in data:

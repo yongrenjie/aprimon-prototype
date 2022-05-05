@@ -625,4 +625,25 @@ ALL_SPREADSHEETS = {
             "ball_column": "C",
         },
     },
+
+    "FinnTheCookie": {
+        "swsh": {
+            "type": "grid",
+            "key": "13TMcl_MO5zsnl0wi0cZHafab516OUw8dGG5iMiQlXhg",
+            "tab_name": "SpecialBalls",
+            "pokemon_column": "C",
+            "ball_columns": "AQ,AP,AI,AJ,AK,AL,AM,AN,AO,AG,AH",
+            "verify_method": "nonempty",
+            "use_formula": False,
+        },
+    },
+    "FinnTheCookie (on-hands)": {
+        "swsh": {
+            "type": "list",
+            "key": "13TMcl_MO5zsnl0wi0cZHafab516OUw8dGG5iMiQlXhg",
+            "tab_name": "On-Hands",
+            "pokemon_column": "C",
+            "ball_column": "E",
+        },
+    },
 }
