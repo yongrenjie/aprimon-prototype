@@ -570,6 +570,7 @@ ALL_SPREADSHEETS = {
             "ball_column": "C",
         },
     },
+
     "aceinthetrashhole": {
         "swsh": {
             "type": "grid",
@@ -600,6 +601,26 @@ ALL_SPREADSHEETS = {
             "type": "list",
             "key": "138yYDtEsbKTcAdTBxPwlnyfI16AEpT__4jwh65vXbQM",
             "tab_name": "On-Hands (BD/SP)",
+            "pokemon_column": "E",
+            "ball_column": "C",
+        },
+    },
+
+    "Ahaserus": {
+        "swsh": {
+            "type": "grid",
+            "key": "1BwwoUdXC0QdBQFJQKF2eM6hjaESz1ZfkcBGpYSpTg7U",
+            "tab_name": "Aprimons",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
+    },
+    "Ahaserus (on-hands)": {
+        "swsh": {
+            "type": "list",
+            "key": "1BwwoUdXC0QdBQFJQKF2eM6hjaESz1ZfkcBGpYSpTg7U",
+            "tab_name": "On-Hands",
             "pokemon_column": "E",
             "ball_column": "C",
         },
