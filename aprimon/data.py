@@ -493,7 +493,7 @@ ALL_SPREADSHEETS = {
         "swsh": {
             "type": "list",
             "key": "1Jgn4ldAC2QUwVU-zauqm2FlJiMUhkhWpxw_rNNWVwzo",
-            "tab_name": "On-hands",
+            "tab_name": "On-hands (SWSH)",
             "pokemon_column": "A",
             "ball_column": "C",
         },
