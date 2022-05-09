@@ -79,4 +79,25 @@ MORE_SPREADSHEETS = {
             "use_formula": False,
         },
     },
+
+    "Acehunter": {
+        "swsh": {
+            "type": "grid",
+            "key": "1J6clJ8jXsMBiSFjGSln0Ly_w2mElZi-5ulGB3sc8Gf0",
+            "tab_name": "Aprimons",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox",
+        },
+    },
+    "Acehunter (on-hands)": {
+        "swsh": {
+            "type": "list",
+            "key": "1J6clJ8jXsMBiSFjGSln0Ly_w2mElZi-5ulGB3sc8Gf0",
+            "tab_name": "On-Hands",
+            "pokemon_column": "E",
+            "ball_column": "C",
+        },
+    },
+
 }
