@@ -414,6 +414,17 @@ ALL_SPREADSHEETS = {
         },
     },
 
+    "OnePointPi (master sheet)": {
+        "swsh": {
+            "type": "grid",
+            "key": "15g1ubG103W077b6RoeVYDLryJWklNJRJzRINDqvKyn8",
+            "tab_name": "Master",
+            "pokemon_column": "C",
+            "ball_columns": "MLEFGHIJKNO",
+            "verify_method": "checkbox",
+            "use_formula": False,
+        },
+    },
     "OnePointPi (on-hands)": {
         "swsh": {
             "type": "list",
