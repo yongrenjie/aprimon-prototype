@@ -413,11 +413,12 @@ ALL_SPREADSHEETS = {
             "verify_method": "checkbox",
         },
     },
+
     "OnePointPi (on-hands)": {
         "swsh": {
             "type": "list",
-            "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
-            "tab_name": "On-Hand SwSh",
+            "key": "15g1ubG103W077b6RoeVYDLryJWklNJRJzRINDqvKyn8",
+            "tab_name": "SwSh On Hand",
             "pokemon_column": "E",
             "ball_column": "C",
         },
