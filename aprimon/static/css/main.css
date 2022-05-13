@@ -70,11 +70,20 @@ h6 { margin-block-start: 2.33em; margin-block-end: 2.33em; font-size: 0.67em; fo
 /* STRUCTURE */
 
 body {
+    margin: 0 0 0px 0; /* override user-agent style sheet */
+    display: flex;
+    justify-content: center;
+}
+
+div#body-wrapper {
+    max-width: 1250px;
+    margin: 20px;
+    flex-grow: 0;
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    margin: 15px 40px;
 }
 
 div#user-info {
@@ -90,6 +99,7 @@ div#user-info {
 
 div#user1, div#user2 {
     min-width: 370px;
+    max-width: 400px;
     flex: 1 1 30%;
 
     border: 1.5px solid #444444;
