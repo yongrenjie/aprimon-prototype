@@ -272,5 +272,16 @@
             "pokemon_column": "C",
             "ball_column": "E"
         }
+    },
+
+    "kpopfan365": {
+        "swsh": {
+            "type": "grid",
+            "key": "1_r4az7Iva0smu1fOG2TZRgISJayanOrcD4MusIB9Q_I",
+            "tab_name": "SWSH",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLMNOP",
+            "verify_method": "checkbox"
+        }
     }
 }
