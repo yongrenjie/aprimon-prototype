@@ -9,10 +9,6 @@ from aprimon.collection import Collection
 from aprimon.data import ALL_SPREADSHEETS
 from aprimon.extra_data import MORE_SPREADSHEETS
 
-# Union operator, 3.9+ only
-ALL_SPREADSHEETS = ALL_SPREADSHEETS | MORE_SPREADSHEETS
-
-
 # Initialise Google Sheets API access
 try:
     # read credentials from the default filepath, which is

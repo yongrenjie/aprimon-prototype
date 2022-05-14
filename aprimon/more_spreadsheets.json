@@ -5,8 +5,8 @@ MORE_SPREADSHEETS = {
             "key": "14N7E48fztE-jtLppd_T7eJbfCiEVYodFDOHcBFm7J9o",
             "tab_name": "On-Hand FT",
             "pokemon_column": "E",
-            "ball_column": "C",
-        },
+            "ball_column": "C"
+        }
     },
     "Cattail (on-hands)": {
         "swsh": {
@@ -15,8 +15,8 @@ MORE_SPREADSHEETS = {
             "tab_name": "On-hands aprimons",
             "pokemon_column": "B",
             "ball_columns": "FEKHILDJGMN",
-            "verify_method": "image",
-        },
+            "verify_method": "image"
+        }
     },
     "asphyxiati0n76": {
         "swsh": {
@@ -25,8 +25,8 @@ MORE_SPREADSHEETS = {
             "tab_name": "Aprimons",
             "pokemon_column": "C",
             "ball_columns": "NMFGHIJKLOP",
-            "verify_method": "checkbox",
-        },
+            "verify_method": "checkbox"
+        }
     },
     "asphyxiati0n76 (on-hands)": {
         "swsh": {
@@ -34,8 +34,8 @@ MORE_SPREADSHEETS = {
             "key": "14GKrT5SfSwTY294W6FSD404H3xk_Nhr0JbbMUKAj6Wg",
             "tab_name": "On-Hands",
             "pokemon_column": "E",
-            "ball_column": "C",
-        },
+            "ball_column": "C"
+        }
     },
     "Funnymann22": {
         "swsh": {
@@ -44,8 +44,8 @@ MORE_SPREADSHEETS = {
             "tab_name": "SWSH",
             "pokemon_column": "E",
             "ball_columns": "NMFGHIJKLOP",
-            "verify_method": "checkbox",
-        },
+            "verify_method": "checkbox"
+        }
     },
 
     "jennweiteh": {
@@ -55,8 +55,8 @@ MORE_SPREADSHEETS = {
             "tab_name": "Aprimons",
             "pokemon_column": "E",
             "ball_columns": "NMFGHIJKLOP",
-            "verify_method": "checkbox",
-        },
+            "verify_method": "checkbox"
+        }
     },
     "jennweiteh (on-hands)": {
         "swsh": {
@@ -64,8 +64,8 @@ MORE_SPREADSHEETS = {
             "key": "1WDm2b9xH71BsY_spEjJ7dQD4NsrZ5c_197xOIb778Gg",
             "tab_name": "On-Hands",
             "pokemon_column": "E",
-            "ball_column": "C",
-        },
+            "ball_column": "C"
+        }
     },
 
 
@@ -76,8 +76,8 @@ MORE_SPREADSHEETS = {
             "tab_name": "Aprimons",
             "pokemon_column": "C",
             "ball_columns": "NMFGHIJKLOP",
-            "verify_method": "checkbox",
-        },
+            "verify_method": "checkbox"
+        }
     },
     "Acehunter (on-hands)": {
         "swsh": {
@@ -85,8 +85,8 @@ MORE_SPREADSHEETS = {
             "key": "1J6clJ8jXsMBiSFjGSln0Ly_w2mElZi-5ulGB3sc8Gf0",
             "tab_name": "On-Hands",
             "pokemon_column": "E",
-            "ball_column": "C",
-        },
-    },
+            "ball_column": "C"
+        }
+    }
 
 }

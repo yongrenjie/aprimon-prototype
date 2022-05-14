@@ -71,3 +71,10 @@ with open(Path(__file__).parent / "pokemon.json") as fp:
 
 with open(Path(__file__).parent / "spreadsheets.json") as fp:
     ALL_SPREADSHEETS = json.load(fp)
+
+# Personal branch - read more spreadsheets
+# Note union operator is 3.9+ only
+
+with open(Path(__file__).parent / "more_spreadsheets.json") as fp:
+    MORE_SPREADSHEETS = json.load(fp)
+ALL_SPREADSHEETS = ALL_SPREADSHEETS | MORE_SPREADSHEETS
