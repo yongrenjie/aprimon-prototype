@@ -1,0 +1,2778 @@
+{
+	"1": {
+		"display_name": "Bulbasaur",
+		"canonical_name": "bulbasaur",
+		"other_names": [],
+		"national_dex": 1,
+		"swsh": true,
+		"bdsp": true
+	},
+	"4": {
+		"display_name": "Charmander",
+		"canonical_name": "charmander",
+		"other_names": [],
+		"national_dex": 4,
+		"swsh": true,
+		"bdsp": true
+	},
+	"7": {
+		"display_name": "Squirtle",
+		"canonical_name": "squirtle",
+		"other_names": [],
+		"national_dex": 7,
+		"swsh": true,
+		"bdsp": true
+	},
+	"10": {
+		"display_name": "Caterpie",
+		"canonical_name": "caterpie",
+		"other_names": [],
+		"national_dex": 10,
+		"swsh": true,
+		"bdsp": true
+	},
+	"13": {
+		"display_name": "Weedle",
+		"canonical_name": "weedle",
+		"other_names": [],
+		"national_dex": 13,
+		"swsh": false,
+		"bdsp": true
+	},
+	"16": {
+		"display_name": "Pidgey",
+		"canonical_name": "pidgey",
+		"other_names": [],
+		"national_dex": 16,
+		"swsh": false,
+		"bdsp": true
+	},
+	"19": {
+		"display_name": "Rattata",
+		"canonical_name": "rattata",
+		"other_names": ["rattataa", "rattataalola", "arattata", "alolanrattata", "rattatak", "rattatakanto", "krattata", "kantorattata"],
+		"national_dex": 19,
+		"swsh": false,
+		"bdsp": true
+	},
+	"21": {
+		"display_name": "Spearow",
+		"canonical_name": "spearow",
+		"other_names": [],
+		"national_dex": 21,
+		"swsh": false,
+		"bdsp": true
+	},
+	"23": {
+		"display_name": "Ekans",
+		"canonical_name": "ekans",
+		"other_names": [],
+		"national_dex": 23,
+		"swsh": false,
+		"bdsp": true
+	},
+	"27": {
+		"display_name": "Sandshrew",
+		"canonical_name": "sandshrew",
+		"other_names": ["sandshrewa", "sandshrewalola", "asandshrew", "alolansandshrew", "sandshrewk", "sandshrewkanto", "ksandshrew", "kantosandshrew"],
+		"national_dex": 27,
+		"swsh": true,
+		"bdsp": true
+	},
+	"29": {
+		"display_name": "Nidoran",
+		"canonical_name": "nidoran-f",
+		"other_names": ["nidoranm", "nidoranf", "nidoran"],
+		"national_dex": 29,
+		"swsh": true,
+		"bdsp": true
+	},
+	"37": {
+		"display_name": "Vulpix",
+		"canonical_name": "vulpix",
+		"other_names": ["vulpixa", "vulpixalola", "avulpix", "alolanvulpix", "vulpixk", "vulpixkanto", "kvulpix", "kantovulpix"],
+		"national_dex": 37,
+		"swsh": true,
+		"bdsp": true
+	},
+	"41": {
+		"display_name": "Zubat",
+		"canonical_name": "zubat",
+		"other_names": [],
+		"national_dex": 41,
+		"swsh": true,
+		"bdsp": true
+	},
+	"43": {
+		"display_name": "Oddish",
+		"canonical_name": "oddish",
+		"other_names": [],
+		"national_dex": 43,
+		"swsh": true,
+		"bdsp": true
+	},
+	"46": {
+		"display_name": "Paras",
+		"canonical_name": "paras",
+		"other_names": [],
+		"national_dex": 46,
+		"swsh": false,
+		"bdsp": true
+	},
+	"48": {
+		"display_name": "Venonat",
+		"canonical_name": "venonat",
+		"other_names": [],
+		"national_dex": 48,
+		"swsh": false,
+		"bdsp": true
+	},
+	"50": {
+		"display_name": "Diglett",
+		"canonical_name": "diglett",
+		"other_names": ["digletta", "diglettalola", "adiglett", "alolandiglett", "diglettk", "diglettkanto", "kdiglett", "kantodiglett"],
+		"national_dex": 50,
+		"swsh": true,
+		"bdsp": true
+	},
+	"52": {
+		"display_name": "Meowth",
+		"canonical_name": "meowth",
+		"other_names": ["meowtha", "meowthalola", "ameowth", "alolanmeowth", "meowthg", "meowthgalar", "gmeowth", "galarianmeowth", "meowthk", "meowthkanto", "kmeowth", "kantomeowth"],
+		"national_dex": 52,
+		"swsh": true,
+		"bdsp": true
+	},
+	"54": {
+		"display_name": "Psyduck",
+		"canonical_name": "psyduck",
+		"other_names": [],
+		"national_dex": 54,
+		"swsh": true,
+		"bdsp": true
+	},
+	"56": {
+		"display_name": "Mankey",
+		"canonical_name": "mankey",
+		"other_names": [],
+		"national_dex": 56,
+		"swsh": false,
+		"bdsp": true
+	},
+	"58": {
+		"display_name": "Growlithe",
+		"canonical_name": "growlithe",
+		"other_names": [],
+		"national_dex": 58,
+		"swsh": true,
+		"bdsp": true
+	},
+	"60": {
+		"display_name": "Poliwag",
+		"canonical_name": "poliwag",
+		"other_names": [],
+		"national_dex": 60,
+		"swsh": true,
+		"bdsp": true
+	},
+	"63": {
+		"display_name": "Abra",
+		"canonical_name": "abra",
+		"other_names": [],
+		"national_dex": 63,
+		"swsh": true,
+		"bdsp": true
+	},
+	"66": {
+		"display_name": "Machop",
+		"canonical_name": "machop",
+		"other_names": [],
+		"national_dex": 66,
+		"swsh": true,
+		"bdsp": true
+	},
+	"69": {
+		"display_name": "Bellsprout",
+		"canonical_name": "bellsprout",
+		"other_names": [],
+		"national_dex": 69,
+		"swsh": false,
+		"bdsp": true
+	},
+	"72": {
+		"display_name": "Tentacool",
+		"canonical_name": "tentacool",
+		"other_names": [],
+		"national_dex": 72,
+		"swsh": true,
+		"bdsp": true
+	},
+	"74": {
+		"display_name": "Geodude",
+		"canonical_name": "geodude",
+		"other_names": ["geodudea", "geodudealola", "ageodude", "alolangeodude", "geodudek", "geodudekanto", "kgeodude", "kantogeodude"],
+		"national_dex": 74,
+		"swsh": false,
+		"bdsp": true
+	},
+	"77": {
+		"display_name": "Ponyta",
+		"canonical_name": "ponyta",
+		"other_names": ["ponytag", "ponytagalar", "gponyta", "galarianponyta", "ponytak", "ponytakanto", "kponyta", "kantoponyta"],
+		"national_dex": 77,
+		"swsh": true,
+		"bdsp": true
+	},
+	"79": {
+		"display_name": "Slowpoke",
+		"canonical_name": "slowpoke",
+		"other_names": ["slowpokeg", "slowpokegalar", "gslowpoke", "galarslowpoke", "slowpokek", "slowpokekanto", "kslowpoke", "kantoslowpoke"],
+		"national_dex": 79,
+		"swsh": true,
+		"bdsp": true
+	},
+	"81": {
+		"display_name": "Magnemite",
+		"canonical_name": "magnemite",
+		"other_names": [],
+		"national_dex": 81,
+		"swsh": true,
+		"bdsp": true
+	},
+	"83": {
+		"display_name": "Farfetch'd",
+		"canonical_name": "farfetchd",
+		"other_names": ["farfetchdg", "farfetchdgalar", "gfarfetchd", "galarianfarfetchd", "farfetchdk", "farfetchdkanto", "kfarfetchd", "kantofarfetchd"],
+		"national_dex": 83,
+		"swsh": true,
+		"bdsp": true
+	},
+	"84": {
+		"display_name": "Doduo",
+		"canonical_name": "doduo",
+		"other_names": [],
+		"national_dex": 84,
+		"swsh": false,
+		"bdsp": true
+	},
+	"86": {
+		"display_name": "Seel",
+		"canonical_name": "seel",
+		"other_names": [],
+		"national_dex": 86,
+		"swsh": false,
+		"bdsp": true
+	},
+	"88": {
+		"display_name": "Grimer",
+		"canonical_name": "grimer",
+		"other_names": ["grimera", "grimeralola", "agrimer", "alolangrimer", "grimerk", "grimerkanto", "kgrimer", "kantogrimer"],
+		"national_dex": 88,
+		"swsh": false,
+		"bdsp": true
+	},
+	"90": {
+		"display_name": "Shellder",
+		"canonical_name": "shellder",
+		"other_names": [],
+		"national_dex": 90,
+		"swsh": true,
+		"bdsp": true
+	},
+	"92": {
+		"display_name": "Gastly",
+		"canonical_name": "gastly",
+		"other_names": [],
+		"national_dex": 92,
+		"swsh": true,
+		"bdsp": true
+	},
+	"95": {
+		"display_name": "Onix",
+		"canonical_name": "onix",
+		"other_names": [],
+		"national_dex": 95,
+		"swsh": true,
+		"bdsp": true
+	},
+	"96": {
+		"display_name": "Drowzee",
+		"canonical_name": "drowzee",
+		"other_names": [],
+		"national_dex": 96,
+		"swsh": false,
+		"bdsp": true
+	},
+	"98": {
+		"display_name": "Krabby",
+		"canonical_name": "krabby",
+		"other_names": [],
+		"national_dex": 98,
+		"swsh": true,
+		"bdsp": true
+	},
+	"100": {
+		"display_name": "Voltorb",
+		"canonical_name": "voltorb",
+		"other_names": [],
+		"national_dex": 100,
+		"swsh": false,
+		"bdsp": true
+	},
+	"102": {
+		"display_name": "Exeggcute",
+		"canonical_name": "exeggcute",
+		"other_names": [],
+		"national_dex": 102,
+		"swsh": true,
+		"bdsp": true
+	},
+	"104": {
+		"display_name": "Cubone",
+		"canonical_name": "cubone",
+		"other_names": [],
+		"national_dex": 104,
+		"swsh": true,
+		"bdsp": true
+	},
+	"108": {
+		"display_name": "Lickitung",
+		"canonical_name": "lickitung",
+		"other_names": [],
+		"national_dex": 108,
+		"swsh": true,
+		"bdsp": true
+	},
+	"109": {
+		"display_name": "Koffing",
+		"canonical_name": "koffing",
+		"other_names": [],
+		"national_dex": 109,
+		"swsh": true,
+		"bdsp": true
+	},
+	"111": {
+		"display_name": "Rhyhorn",
+		"canonical_name": "rhyhorn",
+		"other_names": [],
+		"national_dex": 111,
+		"swsh": true,
+		"bdsp": true
+	},
+	"113": {
+		"display_name": "Chansey",
+		"canonical_name": "chansey",
+		"other_names": ["happiny"],
+		"national_dex": 113,
+		"swsh": true,
+		"bdsp": true
+	},
+	"114": {
+		"display_name": "Tangela",
+		"canonical_name": "tangela",
+		"other_names": [],
+		"national_dex": 114,
+		"swsh": true,
+		"bdsp": true
+	},
+	"115": {
+		"display_name": "Kangaskhan",
+		"canonical_name": "kangaskhan",
+		"other_names": [],
+		"national_dex": 115,
+		"swsh": true,
+		"bdsp": true
+	},
+	"116": {
+		"display_name": "Horsea",
+		"canonical_name": "horsea",
+		"other_names": [],
+		"national_dex": 116,
+		"swsh": true,
+		"bdsp": true
+	},
+	"118": {
+		"display_name": "Goldeen",
+		"canonical_name": "goldeen",
+		"other_names": [],
+		"national_dex": 118,
+		"swsh": true,
+		"bdsp": true
+	},
+	"120": {
+		"display_name": "Staryu",
+		"canonical_name": "staryu",
+		"other_names": [],
+		"national_dex": 120,
+		"swsh": true,
+		"bdsp": true
+	},
+	"122": {
+		"display_name": "Mr. Mime",
+		"canonical_name": "mr-mime",
+		"other_names": ["mrmime", "mrmimeg", "mrmimegalar", "gmrmime", "galarianmrmime", "mrmimek", "mrmimekanto", "kmrmime", "kantomrmime", "mimejr"],
+		"national_dex": 122,
+		"swsh": true,
+		"bdsp": true
+	},
+	"123": {
+		"display_name": "Scyther",
+		"canonical_name": "scyther",
+		"other_names": [],
+		"national_dex": 123,
+		"swsh": true,
+		"bdsp": true
+	},
+	"127": {
+		"display_name": "Pinsir",
+		"canonical_name": "pinsir",
+		"other_names": [],
+		"national_dex": 127,
+		"swsh": true,
+		"bdsp": true
+	},
+	"128": {
+		"display_name": "Tauros",
+		"canonical_name": "tauros",
+		"other_names": [],
+		"national_dex": 128,
+		"swsh": true,
+		"bdsp": true
+	},
+	"129": {
+		"display_name": "Magikarp",
+		"canonical_name": "magikarp",
+		"other_names": [],
+		"national_dex": 129,
+		"swsh": true,
+		"bdsp": true
+	},
+	"131": {
+		"display_name": "Lapras",
+		"canonical_name": "lapras",
+		"other_names": [],
+		"national_dex": 131,
+		"swsh": true,
+		"bdsp": true
+	},
+	"133": {
+		"display_name": "Eevee",
+		"canonical_name": "eevee",
+		"other_names": [],
+		"national_dex": 133,
+		"swsh": true,
+		"bdsp": true
+	},
+	"137": {
+		"display_name": "Porygon",
+		"canonical_name": "porygon",
+		"other_names": [],
+		"national_dex": 137,
+		"swsh": true,
+		"bdsp": true
+	},
+	"138": {
+		"display_name": "Omanyte",
+		"canonical_name": "omanyte",
+		"other_names": [],
+		"national_dex": 138,
+		"swsh": true,
+		"bdsp": true
+	},
+	"140": {
+		"display_name": "Kabuto",
+		"canonical_name": "kabuto",
+		"other_names": [],
+		"national_dex": 140,
+		"swsh": true,
+		"bdsp": true
+	},
+	"142": {
+		"display_name": "Aerodactyl",
+		"canonical_name": "aerodactyl",
+		"other_names": [],
+		"national_dex": 142,
+		"swsh": true,
+		"bdsp": true
+	},
+	"143": {
+		"display_name": "Snorlax",
+		"canonical_name": "snorlax",
+		"other_names": ["munchlax"],
+		"national_dex": 143,
+		"swsh": true,
+		"bdsp": true
+	},
+	"147": {
+		"display_name": "Dratini",
+		"canonical_name": "dratini",
+		"other_names": [],
+		"national_dex": 147,
+		"swsh": true,
+		"bdsp": true
+	},
+    "152": {
+        "display_name": "Chikorita",
+        "canonical_name": "chikorita",
+        "other_names": [],
+        "national_dex": 152,
+        "swsh": false,
+        "bdsp": true
+    },
+    "155": {
+        "display_name": "Cyndaquil",
+        "canonical_name": "cyndaquil",
+        "other_names": [],
+        "national_dex": 155,
+        "swsh": false,
+        "bdsp": true
+    },
+    "158": {
+        "display_name": "Totodile",
+        "canonical_name": "totodile",
+        "other_names": [],
+        "national_dex": 158,
+        "swsh": false,
+        "bdsp": true
+    },
+    "161": {
+        "display_name": "Sentret",
+        "canonical_name": "sentret",
+        "other_names": [],
+        "national_dex": 161,
+        "swsh": false,
+        "bdsp": true
+    },
+	"163": {
+		"display_name": "Hoothoot",
+		"canonical_name": "hoothoot",
+		"other_names": [],
+		"national_dex": 163,
+		"swsh": true,
+		"bdsp": true
+	},
+    "165": {
+        "display_name": "Ledyba",
+        "canonical_name": "ledyba",
+        "other_names": [],
+        "national_dex": 165,
+        "swsh": false,
+        "bdsp": true
+    },
+    "167": {
+        "display_name": "Spinarak",
+        "canonical_name": "spinarak",
+        "other_names": [],
+        "national_dex": 167,
+        "swsh": false,
+        "bdsp": true
+    },
+	"170": {
+		"display_name": "Chinchou",
+		"canonical_name": "chinchou",
+		"other_names": [],
+		"national_dex": 170,
+		"swsh": true,
+		"bdsp": true
+	},
+	"172": {
+		"display_name": "Pichu",
+		"canonical_name": "pichu",
+		"other_names": ["pikachu"],
+		"national_dex": 172,
+		"swsh": true,
+		"bdsp": true
+	},
+	"173": {
+		"display_name": "Cleffa",
+		"canonical_name": "cleffa",
+		"other_names": ["clefairy"],
+		"national_dex": 173,
+		"swsh": true,
+		"bdsp": true
+	},
+	"174": {
+		"display_name": "Igglybuff",
+		"canonical_name": "igglybuff",
+		"other_names": ["jigglypuff"],
+		"national_dex": 174,
+		"swsh": true,
+		"bdsp": true
+	},
+	"175": {
+		"display_name": "Togepi",
+		"canonical_name": "togepi",
+		"other_names": [],
+		"national_dex": 175,
+		"swsh": true,
+		"bdsp": true
+	},
+	"177": {
+		"display_name": "Natu",
+		"canonical_name": "natu",
+		"other_names": [],
+		"national_dex": 177,
+		"swsh": true,
+		"bdsp": true
+	},
+    "179": {
+        "display_name": "Mareep",
+        "canonical_name": "mareep",
+        "other_names": [],
+        "national_dex": 179,
+        "swsh": false,
+        "bdsp": true
+    },
+	"183": {
+		"display_name": "Marill",
+		"canonical_name": "marill",
+		"other_names": ["azurill"],
+		"national_dex": 183,
+		"swsh": true,
+		"bdsp": true
+	},
+	"185": {
+		"display_name": "Sudowoodo",
+		"canonical_name": "sudowoodo",
+		"other_names": ["bonsly"],
+		"national_dex": 185,
+		"swsh": true,
+		"bdsp": true
+	},
+    "187": {
+        "display_name": "Hoppip",
+        "canonical_name": "hoppip",
+        "other_names": [],
+        "national_dex": 187,
+        "swsh": false,
+        "bdsp": true
+    },
+    "190": {
+        "display_name": "Aipom",
+        "canonical_name": "aipom",
+        "other_names": [],
+        "national_dex": 190,
+        "swsh": false,
+        "bdsp": true
+    },
+    "191": {
+        "display_name": "Sunkern",
+        "canonical_name": "sunkern",
+        "other_names": [],
+        "national_dex": 191,
+        "swsh": false,
+        "bdsp": true
+    },
+    "193": {
+        "display_name": "Yanma",
+        "canonical_name": "yanma",
+        "other_names": [],
+        "national_dex": 193,
+        "swsh": false,
+        "bdsp": true
+    },
+	"194": {
+		"display_name": "Wooper",
+		"canonical_name": "wooper",
+		"other_names": [],
+		"national_dex": 194,
+		"swsh": true,
+		"bdsp": true
+	},
+    "198": {
+        "display_name": "Murkrow",
+        "canonical_name": "murkrow",
+        "other_names": [],
+        "national_dex": 198,
+        "swsh": false,
+        "bdsp": true
+    },
+    "200": {
+        "display_name": "Misdreavus",
+        "canonical_name": "misdreavus",
+        "other_names": [],
+        "national_dex": 200,
+        "swsh": false,
+        "bdsp": true
+    },
+	"202": {
+		"display_name": "Wobbuffet",
+		"canonical_name": "wobbuffet",
+		"other_names": ["wynaut"],
+		"national_dex": 202,
+		"swsh": true,
+		"bdsp": true
+	},
+    "203": {
+        "display_name": "Girafarig",
+        "canonical_name": "girafarig",
+        "other_names": [],
+        "national_dex": 203,
+        "swsh": false,
+        "bdsp": true
+    },
+    "204": {
+        "display_name": "Pineco",
+        "canonical_name": "pineco",
+        "other_names": [],
+        "national_dex": 204,
+        "swsh": false,
+        "bdsp": true
+    },
+	"206": {
+		"display_name": "Dunsparce",
+		"canonical_name": "dunsparce",
+		"other_names": [],
+		"national_dex": 206,
+		"swsh": true,
+		"bdsp": true
+	},
+    "207": {
+        "display_name": "Gligar",
+        "canonical_name": "gligar",
+        "other_names": [],
+        "national_dex": 207,
+        "swsh": false,
+        "bdsp": true
+    },
+    "209": {
+        "display_name": "Snubbull",
+        "canonical_name": "snubbull",
+        "other_names": [],
+        "national_dex": 209,
+        "swsh": false,
+        "bdsp": true
+    },
+	"211": {
+		"display_name": "Qwilfish",
+		"canonical_name": "qwilfish",
+		"other_names": [],
+		"national_dex": 211,
+		"swsh": true,
+		"bdsp": true
+	},
+	"213": {
+		"display_name": "Shuckle",
+		"canonical_name": "shuckle",
+		"other_names": [],
+		"national_dex": 213,
+		"swsh": true,
+		"bdsp": true
+	},
+	"214": {
+		"display_name": "Heracross",
+		"canonical_name": "heracross",
+		"other_names": [],
+		"national_dex": 214,
+		"swsh": true,
+		"bdsp": true
+	},
+	"215": {
+		"display_name": "Sneasel",
+		"canonical_name": "sneasel",
+		"other_names": [],
+		"national_dex": 215,
+		"swsh": true,
+		"bdsp": true
+	},
+    "216": {
+        "display_name": "Teddiursa",
+        "canonical_name": "teddiursa",
+        "other_names": [],
+        "national_dex": 216,
+        "swsh": false,
+        "bdsp": true
+    },
+    "218": {
+        "display_name": "Slugma",
+        "canonical_name": "slugma",
+        "other_names": [],
+        "national_dex": 218,
+        "swsh": false,
+        "bdsp": true
+    },
+	"220": {
+		"display_name": "Swinub",
+		"canonical_name": "swinub",
+		"other_names": [],
+		"national_dex": 220,
+		"swsh": true,
+		"bdsp": true
+	},
+	"222": {
+		"display_name": "Corsola",
+		"canonical_name": "corsola",
+		"other_names": ["corsolag", "corsolagalar", "gcorsola", "galariancorsola", "corsolaj", "corsolajohto", "jcorsola", "johtocorsola"],
+		"national_dex": 222,
+		"swsh": true,
+		"bdsp": true
+	},
+	"223": {
+		"display_name": "Remoraid",
+		"canonical_name": "remoraid",
+		"other_names": [],
+		"national_dex": 223,
+		"swsh": true,
+		"bdsp": true
+	},
+	"225": {
+		"display_name": "Delibird",
+		"canonical_name": "delibird",
+		"other_names": [],
+		"national_dex": 225,
+		"swsh": true,
+		"bdsp": true
+	},
+	"226": {
+		"display_name": "Mantine",
+		"canonical_name": "mantine",
+		"other_names": ["mantyke"],
+		"national_dex": 226,
+		"swsh": true,
+		"bdsp": true
+	},
+	"227": {
+		"display_name": "Skarmory",
+		"canonical_name": "skarmory",
+		"other_names": [],
+		"national_dex": 227,
+		"swsh": true,
+		"bdsp": true
+	},
+    "228": {
+        "display_name": "Houndour",
+        "canonical_name": "houndour",
+        "other_names": [],
+        "national_dex": 228,
+        "swsh": false,
+        "bdsp": true
+    },
+    "231": {
+        "display_name": "Phanpy",
+        "canonical_name": "phanpy",
+        "other_names": [],
+        "national_dex": 231,
+        "swsh": false,
+        "bdsp": true
+    },
+    "234": {
+        "display_name": "Stantler",
+        "canonical_name": "stantler",
+        "other_names": [],
+        "national_dex": 234,
+        "swsh": false,
+        "bdsp": true
+    },
+    "235": {
+        "display_name": "Smeargle",
+        "canonical_name": "smeargle",
+        "other_names": [],
+        "national_dex": 235,
+        "swsh": false,
+        "bdsp": true
+    },
+	"236": {
+		"display_name": "Tyrogue",
+		"canonical_name": "tyrogue",
+		"other_names": ["hitmonchan", "hitmonlee", "hitmontop"],
+		"national_dex": 236,
+		"swsh": true,
+		"bdsp": true
+	},
+	"238": {
+		"display_name": "Smoochum",
+		"canonical_name": "smoochum",
+		"other_names": ["jynx"],
+		"national_dex": 238,
+		"swsh": true,
+		"bdsp": true
+	},
+	"239": {
+		"display_name": "Elekid",
+		"canonical_name": "elekid",
+		"other_names": ["electabuzz"],
+		"national_dex": 239,
+		"swsh": true,
+		"bdsp": true
+	},
+	"240": {
+		"display_name": "Magby",
+		"canonical_name": "magby",
+		"other_names": ["magmar"],
+		"national_dex": 240,
+		"swsh": true,
+		"bdsp": true
+	},
+	"241": {
+		"display_name": "Miltank",
+		"canonical_name": "miltank",
+		"other_names": [],
+		"national_dex": 241,
+		"swsh": true,
+		"bdsp": true
+	},
+	"246": {
+		"display_name": "Larvitar",
+		"canonical_name": "larvitar",
+		"other_names": [],
+		"national_dex": 246,
+		"swsh": true,
+		"bdsp": true
+	},
+	"252": {
+		"display_name": "Treecko",
+		"canonical_name": "treecko",
+		"other_names": [],
+		"national_dex": 252,
+		"swsh": true,
+		"bdsp": true
+	},
+	"255": {
+		"display_name": "Torchic",
+		"canonical_name": "torchic",
+		"other_names": [],
+		"national_dex": 255,
+		"swsh": true,
+		"bdsp": true
+	},
+	"258": {
+		"display_name": "Mudkip",
+		"canonical_name": "mudkip",
+		"other_names": [],
+		"national_dex": 258,
+		"swsh": true,
+		"bdsp": true
+	},
+    "261": {
+        "display_name": "Poochyena",
+        "canonical_name": "poochyena",
+        "other_names": [],
+        "national_dex": 261,
+        "swsh": false,
+        "bdsp": true
+    },
+	"263": {
+		"display_name": "Zigzagoon",
+		"canonical_name": "zigzagoon",
+		"other_names": ["zigzagoong", "zigzagoongalar", "gzigzagoon", "galarianzigzagoon", "zigzagoonh", "zigzagoonhoenn", "hzigzagoon", "hoennzigzagoon"],
+		"national_dex": 263,
+		"swsh": true,
+		"bdsp": true
+	},
+    "265": {
+        "display_name": "Wurmple",
+        "canonical_name": "wurmple",
+        "other_names": [],
+        "national_dex": 265,
+        "swsh": false,
+        "bdsp": true
+    },
+	"270": {
+		"display_name": "Lotad",
+		"canonical_name": "lotad",
+		"other_names": [],
+		"national_dex": 270,
+		"swsh": true,
+		"bdsp": true
+	},
+	"273": {
+		"display_name": "Seedot",
+		"canonical_name": "seedot",
+		"other_names": [],
+		"national_dex": 273,
+		"swsh": true,
+		"bdsp": true
+	},
+    "276": {
+        "display_name": "Taillow",
+        "canonical_name": "taillow",
+        "other_names": [],
+        "national_dex": 276,
+        "swsh": false,
+        "bdsp": true
+    },
+	"278": {
+		"display_name": "Wingull",
+		"canonical_name": "wingull",
+		"other_names": [],
+		"national_dex": 278,
+		"swsh": true,
+		"bdsp": true
+	},
+	"280": {
+		"display_name": "Ralts",
+		"canonical_name": "ralts",
+		"other_names": [],
+		"national_dex": 280,
+		"swsh": true,
+		"bdsp": true
+	},
+    "283": {
+        "display_name": "Surskit",
+        "canonical_name": "surskit",
+        "other_names": [],
+        "national_dex": 283,
+        "swsh": false,
+        "bdsp": true
+    },
+    "285": {
+        "display_name": "Shroomish",
+        "canonical_name": "shroomish",
+        "other_names": [],
+        "national_dex": 285,
+        "swsh": false,
+        "bdsp": true
+    },
+    "287": {
+        "display_name": "Slakoth",
+        "canonical_name": "slakoth",
+        "other_names": [],
+        "national_dex": 287,
+        "swsh": false,
+        "bdsp": true
+    },
+	"290": {
+		"display_name": "Nincada",
+		"canonical_name": "nincada",
+		"other_names": [],
+		"national_dex": 290,
+		"swsh": true,
+		"bdsp": true
+	},
+	"293": {
+		"display_name": "Whismur",
+		"canonical_name": "whismur",
+		"other_names": [],
+		"national_dex": 293,
+		"swsh": true,
+		"bdsp": true
+	},
+    "296": {
+        "display_name": "Makuhita",
+        "canonical_name": "makuhita",
+        "other_names": [],
+        "national_dex": 296,
+        "swsh": false,
+        "bdsp": true
+    },
+    "299": {
+        "display_name": "Nosepass",
+        "canonical_name": "nosepass",
+        "other_names": [],
+        "national_dex": 299,
+        "swsh": false,
+        "bdsp": true
+    },
+    "300": {
+        "display_name": "Skitty",
+        "canonical_name": "skitty",
+        "other_names": [],
+        "national_dex": 300,
+        "swsh": false,
+        "bdsp": true
+    },
+	"302": {
+		"display_name": "Sableye",
+		"canonical_name": "sableye",
+		"other_names": [],
+		"national_dex": 302,
+		"swsh": true,
+		"bdsp": true
+	},
+	"303": {
+		"display_name": "Mawile",
+		"canonical_name": "mawile",
+		"other_names": [],
+		"national_dex": 303,
+		"swsh": true,
+		"bdsp": true
+	},
+	"304": {
+		"display_name": "Aron",
+		"canonical_name": "aron",
+		"other_names": [],
+		"national_dex": 304,
+		"swsh": true,
+		"bdsp": true
+	},
+    "307": {
+        "display_name": "Meditite",
+        "canonical_name": "meditite",
+        "other_names": [],
+        "national_dex": 307,
+        "swsh": false,
+        "bdsp": true
+    },
+	"309": {
+		"display_name": "Electrike",
+		"canonical_name": "electrike",
+		"other_names": [],
+		"national_dex": 309,
+		"swsh": true,
+		"bdsp": true
+	},
+    "311": {
+        "display_name": "Plusle",
+        "canonical_name": "plusle",
+        "other_names": [],
+        "national_dex": 311,
+        "swsh": false,
+        "bdsp": true
+    },
+    "312": {
+        "display_name": "Minun",
+        "canonical_name": "minun",
+        "other_names": [],
+        "national_dex": 312,
+        "swsh": false,
+        "bdsp": true
+    },
+    "313": {
+        "display_name": "Volbeat",
+        "canonical_name": "volbeat",
+        "other_names": ["illumise"],
+        "national_dex": 313,
+        "swsh": false,
+        "bdsp": true
+    },
+	"315": {
+		"display_name": "Roselia",
+		"canonical_name": "roselia",
+		"other_names": [],
+		"national_dex": 315,
+		"swsh": true,
+		"bdsp": true
+	},
+    "316": {
+        "display_name": "Gulpin",
+        "canonical_name": "gulpin",
+        "other_names": [],
+        "national_dex": 316,
+        "swsh": false,
+        "bdsp": true
+    },
+	"318": {
+		"display_name": "Carvanha",
+		"canonical_name": "carvanha",
+		"other_names": [],
+		"national_dex": 318,
+		"swsh": true,
+		"bdsp": true
+	},
+	"320": {
+		"display_name": "Wailmer",
+		"canonical_name": "wailmer",
+		"other_names": [],
+		"national_dex": 320,
+		"swsh": true,
+		"bdsp": true
+	},
+    "322": {
+        "display_name": "Numel",
+        "canonical_name": "numel",
+        "other_names": [],
+        "national_dex": 322,
+        "swsh": false,
+        "bdsp": true
+    },
+	"324": {
+		"display_name": "Torkoal",
+		"canonical_name": "torkoal",
+		"other_names": [],
+		"national_dex": 324,
+		"swsh": true,
+		"bdsp": true
+	},
+    "325": {
+        "display_name": "Spoink",
+        "canonical_name": "spoink",
+        "other_names": [],
+        "national_dex": 325,
+        "swsh": false,
+        "bdsp": true
+    },
+    "327": {
+        "display_name": "Spinda",
+        "canonical_name": "spinda",
+        "other_names": [],
+        "national_dex": 327,
+        "swsh": false,
+        "bdsp": true
+    },
+	"328": {
+		"display_name": "Trapinch",
+		"canonical_name": "trapinch",
+		"other_names": [],
+		"national_dex": 328,
+		"swsh": true,
+		"bdsp": true
+	},
+    "331": {
+        "display_name": "Cacnea",
+        "canonical_name": "cacnea",
+        "other_names": [],
+        "national_dex": 331,
+        "swsh": false,
+        "bdsp": true
+    },
+	"333": {
+		"display_name": "Swablu",
+		"canonical_name": "swablu",
+		"other_names": [],
+		"national_dex": 333,
+		"swsh": true,
+		"bdsp": true
+	},
+    "335": {
+        "display_name": "Zangoose",
+        "canonical_name": "zangoose",
+        "other_names": [],
+        "national_dex": 335,
+        "swsh": false,
+        "bdsp": true
+    },
+    "336": {
+        "display_name": "Seviper",
+        "canonical_name": "seviper",
+        "other_names": [],
+        "national_dex": 336,
+        "swsh": false,
+        "bdsp": true
+    },
+	"337": {
+		"display_name": "Lunatone",
+		"canonical_name": "lunatone",
+		"other_names": [],
+		"national_dex": 337,
+		"swsh": true,
+		"bdsp": true
+	},
+	"338": {
+		"display_name": "Solrock",
+		"canonical_name": "solrock",
+		"other_names": [],
+		"national_dex": 338,
+		"swsh": true,
+		"bdsp": true
+	},
+	"339": {
+		"display_name": "Barboach",
+		"canonical_name": "barboach",
+		"other_names": [],
+		"national_dex": 339,
+		"swsh": true,
+		"bdsp": true
+	},
+	"341": {
+		"display_name": "Corphish",
+		"canonical_name": "corphish",
+		"other_names": [],
+		"national_dex": 341,
+		"swsh": true,
+		"bdsp": true
+	},
+	"343": {
+		"display_name": "Baltoy",
+		"canonical_name": "baltoy",
+		"other_names": [],
+		"national_dex": 343,
+		"swsh": true,
+		"bdsp": true
+	},
+	"345": {
+		"display_name": "Lileep",
+		"canonical_name": "lileep",
+		"other_names": [],
+		"national_dex": 345,
+		"swsh": true,
+		"bdsp": true
+	},
+	"347": {
+		"display_name": "Anorith",
+		"canonical_name": "anorith",
+		"other_names": [],
+		"national_dex": 347,
+		"swsh": true,
+		"bdsp": true
+	},
+	"349": {
+		"display_name": "Feebas",
+		"canonical_name": "feebas",
+		"other_names": [],
+		"national_dex": 349,
+		"swsh": true,
+		"bdsp": true
+	},
+    "351": {
+        "display_name": "Castform",
+        "canonical_name": "castform",
+        "other_names": [],
+        "national_dex": 351,
+        "swsh": false,
+        "bdsp": true
+    },
+    "352": {
+        "display_name": "Kecleon",
+        "canonical_name": "kecleon",
+        "other_names": [],
+        "national_dex": 352,
+        "swsh": false,
+        "bdsp": true
+    },
+    "353": {
+        "display_name": "Shuppet",
+        "canonical_name": "shuppet",
+        "other_names": [],
+        "national_dex": 353,
+        "swsh": false,
+        "bdsp": true
+    },
+	"355": {
+		"display_name": "Duskull",
+		"canonical_name": "duskull",
+		"other_names": [],
+		"national_dex": 355,
+		"swsh": true,
+		"bdsp": true
+	},
+    "357": {
+        "display_name": "Tropius",
+        "canonical_name": "tropius",
+        "other_names": [],
+        "national_dex": 357,
+        "swsh": false,
+        "bdsp": true
+    },
+    "358": {
+        "display_name": "Chimecho",
+        "canonical_name": "chimecho",
+        "other_names": ["chingling"],
+        "national_dex": 358,
+        "swsh": false,
+        "bdsp": true
+    },
+	"359": {
+		"display_name": "Absol",
+		"canonical_name": "absol",
+		"other_names": [],
+		"national_dex": 359,
+		"swsh": true,
+		"bdsp": true
+	},
+	"361": {
+		"display_name": "Snorunt",
+		"canonical_name": "snorunt",
+		"other_names": [],
+		"national_dex": 361,
+		"swsh": true,
+		"bdsp": true
+	},
+	"363": {
+		"display_name": "Spheal",
+		"canonical_name": "spheal",
+		"other_names": [],
+		"national_dex": 363,
+		"swsh": true,
+		"bdsp": true
+	},
+    "366": {
+        "display_name": "Clamperl",
+        "canonical_name": "clamperl",
+        "other_names": [],
+        "national_dex": 366,
+        "swsh": false,
+        "bdsp": true
+    },
+	"369": {
+		"display_name": "Relicanth",
+		"canonical_name": "relicanth",
+		"other_names": [],
+		"national_dex": 369,
+		"swsh": true,
+		"bdsp": true
+	},
+    "370": {
+        "display_name": "Luvdisc",
+        "canonical_name": "luvdisc",
+        "other_names": [],
+        "national_dex": 370,
+        "swsh": false,
+        "bdsp": true
+    },
+	"371": {
+		"display_name": "Bagon",
+		"canonical_name": "bagon",
+		"other_names": [],
+		"national_dex": 371,
+		"swsh": true,
+		"bdsp": true
+	},
+	"374": {
+		"display_name": "Beldum",
+		"canonical_name": "beldum",
+		"other_names": [],
+		"national_dex": 374,
+		"swsh": true,
+		"bdsp": true
+	},
+    "387": {
+        "display_name": "Turtwig",
+        "canonical_name": "turtwig",
+        "other_names": [],
+        "national_dex": 387,
+        "swsh": false,
+        "bdsp": true
+    },
+    "390": {
+        "display_name": "Chimchar",
+        "canonical_name": "chimchar",
+        "other_names": [],
+        "national_dex": 390,
+        "swsh": false,
+        "bdsp": true
+    },
+    "393": {
+        "display_name": "Piplup",
+        "canonical_name": "piplup",
+        "other_names": [],
+        "national_dex": 393,
+        "swsh": false,
+        "bdsp": true
+    },
+    "396": {
+        "display_name": "Starly",
+        "canonical_name": "starly",
+        "other_names": [],
+        "national_dex": 396,
+        "swsh": false,
+        "bdsp": true
+    },
+    "399": {
+        "display_name": "Bidoof",
+        "canonical_name": "bidoof",
+        "other_names": [],
+        "national_dex": 399,
+        "swsh": false,
+        "bdsp": true
+    },
+    "401": {
+        "display_name": "Kricketot",
+        "canonical_name": "kricketot",
+        "other_names": [],
+        "national_dex": 401,
+        "swsh": false,
+        "bdsp": true
+    },
+	"403": {
+		"display_name": "Shinx",
+		"canonical_name": "shinx",
+		"other_names": [],
+		"national_dex": 403,
+		"swsh": true,
+		"bdsp": true
+	},
+    "408": {
+        "display_name": "Cranidos",
+        "canonical_name": "cranidos",
+        "other_names": [],
+        "national_dex": 408,
+        "swsh": false,
+        "bdsp": true
+    },
+    "410": {
+        "display_name": "Shieldon",
+        "canonical_name": "shieldon",
+        "other_names": [],
+        "national_dex": 410,
+        "swsh": false,
+        "bdsp": true
+    },
+    "412": {
+        "display_name": "Burmy",
+        "canonical_name": "burmy",
+        "other_names": [],
+        "national_dex": 412,
+        "swsh": false,
+        "bdsp": true
+    },
+	"415": {
+		"display_name": "Combee",
+		"canonical_name": "combee",
+		"other_names": [],
+		"national_dex": 415,
+		"swsh": true,
+		"bdsp": true
+	},
+    "417": {
+        "display_name": "Pachirisu",
+        "canonical_name": "pachirisu",
+        "other_names": [],
+        "national_dex": 417,
+        "swsh": false,
+        "bdsp": true
+    },
+    "418": {
+        "display_name": "Buizel",
+        "canonical_name": "buizel",
+        "other_names": [],
+        "national_dex": 418,
+        "swsh": false,
+        "bdsp": true
+    },
+	"420": {
+		"display_name": "Cherubi",
+		"canonical_name": "cherubi",
+		"other_names": [],
+		"national_dex": 420,
+		"swsh": true,
+		"bdsp": true
+	},
+	"422": {
+		"display_name": "Shellos",
+		"canonical_name": "shellos",
+		"other_names": ["shelloswest", "shelloswestsea", "shelloseast", "shelloseastsea"],
+		"national_dex": 422,
+		"swsh": true,
+		"bdsp": true
+	},
+	"425": {
+		"display_name": "Drifloon",
+		"canonical_name": "drifloon",
+		"other_names": [],
+		"national_dex": 425,
+		"swsh": true,
+		"bdsp": true
+	},
+	"427": {
+		"display_name": "Buneary",
+		"canonical_name": "buneary",
+		"other_names": [],
+		"national_dex": 427,
+		"swsh": true,
+		"bdsp": true
+	},
+    "431": {
+        "display_name": "Glameow",
+        "canonical_name": "glameow",
+        "other_names": [],
+        "national_dex": 431,
+        "swsh": false,
+        "bdsp": true
+    },
+	"434": {
+		"display_name": "Stunky",
+		"canonical_name": "stunky",
+		"other_names": [],
+		"national_dex": 434,
+		"swsh": true,
+		"bdsp": true
+	},
+	"436": {
+		"display_name": "Bronzor",
+		"canonical_name": "bronzor",
+		"other_names": [],
+		"national_dex": 436,
+		"swsh": true,
+		"bdsp": true
+	},
+    "441": {
+        "display_name": "Chatot",
+        "canonical_name": "chatot",
+        "other_names": [],
+        "national_dex": 441,
+        "swsh": false,
+        "bdsp": true
+    },
+	"442": {
+		"display_name": "Spiritomb",
+		"canonical_name": "spiritomb",
+		"other_names": [],
+		"national_dex": 442,
+		"swsh": true,
+		"bdsp": true
+	},
+	"443": {
+		"display_name": "Gible",
+		"canonical_name": "gible",
+		"other_names": [],
+		"national_dex": 443,
+		"swsh": true,
+		"bdsp": true
+	},
+	"447": {
+		"display_name": "Riolu",
+		"canonical_name": "riolu",
+		"other_names": [],
+		"national_dex": 447,
+		"swsh": true,
+		"bdsp": true
+	},
+	"449": {
+		"display_name": "Hippopotas",
+		"canonical_name": "hippopotas",
+		"other_names": [],
+		"national_dex": 449,
+		"swsh": true,
+		"bdsp": false
+	},
+	"451": {
+		"display_name": "Skorupi",
+		"canonical_name": "skorupi",
+		"other_names": [],
+		"national_dex": 451,
+		"swsh": true,
+		"bdsp": false
+	},
+	"453": {
+		"display_name": "Croagunk",
+		"canonical_name": "croagunk",
+		"other_names": [],
+		"national_dex": 453,
+		"swsh": true,
+		"bdsp": false
+	},
+    "455": {
+        "display_name": "Carnivine",
+        "canonical_name": "carnivine",
+        "other_names": [],
+        "national_dex": 455,
+        "swsh": false,
+        "bdsp": true
+    },
+    "456": {
+        "display_name": "Finneon",
+        "canonical_name": "finneon",
+        "other_names": [],
+        "national_dex": 456,
+        "swsh": false,
+        "bdsp": true
+    },
+	"459": {
+		"display_name": "Snover",
+		"canonical_name": "snover",
+		"other_names": [],
+		"national_dex": 459,
+		"swsh": true,
+		"bdsp": false
+	},
+	"479": {
+		"display_name": "Rotom",
+		"canonical_name": "rotom",
+		"other_names": [],
+		"national_dex": 479,
+		"swsh": true,
+		"bdsp": false
+	},
+	"506": {
+		"display_name": "Lillipup",
+		"canonical_name": "lillipup",
+		"other_names": [],
+		"national_dex": 506,
+		"swsh": true,
+		"bdsp": false
+	},
+	"509": {
+		"display_name": "Purrloin",
+		"canonical_name": "purrloin",
+		"other_names": [],
+		"national_dex": 509,
+		"swsh": true,
+		"bdsp": false
+	},
+	"517": {
+		"display_name": "Munna",
+		"canonical_name": "munna",
+		"other_names": [],
+		"national_dex": 517,
+		"swsh": true,
+		"bdsp": false
+	},
+	"519": {
+		"display_name": "Pidove",
+		"canonical_name": "pidove",
+		"other_names": [],
+		"national_dex": 519,
+		"swsh": true,
+		"bdsp": false
+	},
+	"524": {
+		"display_name": "Roggenrola",
+		"canonical_name": "roggenrola",
+		"other_names": [],
+		"national_dex": 524,
+		"swsh": true,
+		"bdsp": false
+	},
+	"527": {
+		"display_name": "Woobat",
+		"canonical_name": "woobat",
+		"other_names": [],
+		"national_dex": 527,
+		"swsh": true,
+		"bdsp": false
+	},
+	"529": {
+		"display_name": "Drilbur",
+		"canonical_name": "drilbur",
+		"other_names": [],
+		"national_dex": 529,
+		"swsh": true,
+		"bdsp": false
+	},
+	"531": {
+		"display_name": "Audino",
+		"canonical_name": "audino",
+		"other_names": [],
+		"national_dex": 531,
+		"swsh": true,
+		"bdsp": false
+	},
+	"532": {
+		"display_name": "Timburr",
+		"canonical_name": "timburr",
+		"other_names": [],
+		"national_dex": 532,
+		"swsh": true,
+		"bdsp": false
+	},
+	"535": {
+		"display_name": "Tympole",
+		"canonical_name": "tympole",
+		"other_names": [],
+		"national_dex": 535,
+		"swsh": true,
+		"bdsp": false
+	},
+	"538": {
+		"display_name": "Throh",
+		"canonical_name": "throh",
+		"other_names": [],
+		"national_dex": 538,
+		"swsh": true,
+		"bdsp": false
+	},
+	"539": {
+		"display_name": "Sawk",
+		"canonical_name": "sawk",
+		"other_names": [],
+		"national_dex": 539,
+		"swsh": true,
+		"bdsp": false
+	},
+	"543": {
+		"display_name": "Venipede",
+		"canonical_name": "venipede",
+		"other_names": [],
+		"national_dex": 543,
+		"swsh": true,
+		"bdsp": false
+	},
+	"546": {
+		"display_name": "Cottonee",
+		"canonical_name": "cottonee",
+		"other_names": [],
+		"national_dex": 546,
+		"swsh": true,
+		"bdsp": false
+	},
+	"548": {
+		"display_name": "Petilil",
+		"canonical_name": "petilil",
+		"other_names": [],
+		"national_dex": 548,
+		"swsh": true,
+		"bdsp": false
+	},
+	"550": {
+		"display_name": "Basculin",
+		"canonical_name": "basculin",
+		"other_names": ["basculinblue", "basculinbluestriped", "basculinred", "basculinredstriped"],
+		"national_dex": 550,
+		"swsh": true,
+		"bdsp": false
+	},
+	"551": {
+		"display_name": "Sandile",
+		"canonical_name": "sandile",
+		"other_names": [],
+		"national_dex": 551,
+		"swsh": true,
+		"bdsp": false
+	},
+	"554": {
+		"display_name": "Darumaka",
+		"canonical_name": "darumaka",
+		"other_names": ["darumakag", "darumakagalar", "gdarumaka", "galariandarumaka", "darumakau", "darumakaunova", "udarumaka", "unovadarumaka"],
+		"national_dex": 554,
+		"swsh": true,
+		"bdsp": false
+	},
+	"556": {
+		"display_name": "Maractus",
+		"canonical_name": "maractus",
+		"other_names": [],
+		"national_dex": 556,
+		"swsh": true,
+		"bdsp": false
+	},
+	"557": {
+		"display_name": "Dwebble",
+		"canonical_name": "dwebble",
+		"other_names": [],
+		"national_dex": 557,
+		"swsh": true,
+		"bdsp": false
+	},
+	"559": {
+		"display_name": "Scraggy",
+		"canonical_name": "scraggy",
+		"other_names": [],
+		"national_dex": 559,
+		"swsh": true,
+		"bdsp": false
+	},
+	"561": {
+		"display_name": "Sigilyph",
+		"canonical_name": "sigilyph",
+		"other_names": [],
+		"national_dex": 561,
+		"swsh": true,
+		"bdsp": false
+	},
+	"562": {
+		"display_name": "Yamask",
+		"canonical_name": "yamask",
+		"other_names": ["yamaskg", "yamaskgalar", "gyamask", "galarianyamask", "yamasku", "yamaskunova", "uyamask", "unovayamask"],
+		"national_dex": 562,
+		"swsh": true,
+		"bdsp": false
+	},
+	"564": {
+		"display_name": "Tirtouga",
+		"canonical_name": "tirtouga",
+		"other_names": [],
+		"national_dex": 564,
+		"swsh": true,
+		"bdsp": false
+	},
+	"566": {
+		"display_name": "Archen",
+		"canonical_name": "archen",
+		"other_names": [],
+		"national_dex": 566,
+		"swsh": true,
+		"bdsp": false
+	},
+	"568": {
+		"display_name": "Trubbish",
+		"canonical_name": "trubbish",
+		"other_names": [],
+		"national_dex": 568,
+		"swsh": true,
+		"bdsp": false
+	},
+	"570": {
+		"display_name": "Zorua",
+		"canonical_name": "zorua",
+		"other_names": [],
+		"national_dex": 570,
+		"swsh": true,
+		"bdsp": false
+	},
+	"572": {
+		"display_name": "Minccino",
+		"canonical_name": "minccino",
+		"other_names": [],
+		"national_dex": 572,
+		"swsh": true,
+		"bdsp": false
+	},
+	"574": {
+		"display_name": "Gothita",
+		"canonical_name": "gothita",
+		"other_names": [],
+		"national_dex": 574,
+		"swsh": true,
+		"bdsp": false
+	},
+	"577": {
+		"display_name": "Solosis",
+		"canonical_name": "solosis",
+		"other_names": [],
+		"national_dex": 577,
+		"swsh": true,
+		"bdsp": false
+	},
+	"582": {
+		"display_name": "Vanillite",
+		"canonical_name": "vanillite",
+		"other_names": [],
+		"national_dex": 582,
+		"swsh": true,
+		"bdsp": false
+	},
+	"587": {
+		"display_name": "Emolga",
+		"canonical_name": "emolga",
+		"other_names": [],
+		"national_dex": 587,
+		"swsh": true,
+		"bdsp": false
+	},
+	"588": {
+		"display_name": "Karrablast",
+		"canonical_name": "karrablast",
+		"other_names": [],
+		"national_dex": 588,
+		"swsh": true,
+		"bdsp": false
+	},
+	"590": {
+		"display_name": "Foongus",
+		"canonical_name": "foongus",
+		"other_names": [],
+		"national_dex": 590,
+		"swsh": true,
+		"bdsp": false
+	},
+	"592": {
+		"display_name": "Frillish",
+		"canonical_name": "frillish",
+		"other_names": [],
+		"national_dex": 592,
+		"swsh": true,
+		"bdsp": false
+	},
+	"595": {
+		"display_name": "Joltik",
+		"canonical_name": "joltik",
+		"other_names": [],
+		"national_dex": 595,
+		"swsh": true,
+		"bdsp": false
+	},
+	"597": {
+		"display_name": "Ferroseed",
+		"canonical_name": "ferroseed",
+		"other_names": [],
+		"national_dex": 597,
+		"swsh": true,
+		"bdsp": false
+	},
+	"599": {
+		"display_name": "Klink",
+		"canonical_name": "klink",
+		"other_names": [],
+		"national_dex": 599,
+		"swsh": true,
+		"bdsp": false
+	},
+	"605": {
+		"display_name": "Elgyem",
+		"canonical_name": "elgyem",
+		"other_names": [],
+		"national_dex": 605,
+		"swsh": true,
+		"bdsp": false
+	},
+	"607": {
+		"display_name": "Litwick",
+		"canonical_name": "litwick",
+		"other_names": [],
+		"national_dex": 607,
+		"swsh": true,
+		"bdsp": false
+	},
+	"610": {
+		"display_name": "Axew",
+		"canonical_name": "axew",
+		"other_names": [],
+		"national_dex": 610,
+		"swsh": true,
+		"bdsp": false
+	},
+	"613": {
+		"display_name": "Cubchoo",
+		"canonical_name": "cubchoo",
+		"other_names": [],
+		"national_dex": 613,
+		"swsh": true,
+		"bdsp": false
+	},
+	"615": {
+		"display_name": "Cryogonal",
+		"canonical_name": "cryogonal",
+		"other_names": [],
+		"national_dex": 615,
+		"swsh": true,
+		"bdsp": false
+	},
+	"616": {
+		"display_name": "Shelmet",
+		"canonical_name": "shelmet",
+		"other_names": [],
+		"national_dex": 616,
+		"swsh": true,
+		"bdsp": false
+	},
+	"618": {
+		"display_name": "Stunfisk",
+		"canonical_name": "stunfisk",
+		"other_names": ["stunfiskg", "stunfiskgalar", "gstunfisk", "galarianstunfisk", "stunfisku", "stunfiskunova", "ustunfisk", "unovastunfisk"],
+		"national_dex": 618,
+		"swsh": true,
+		"bdsp": false
+	},
+	"619": {
+		"display_name": "Mienfoo",
+		"canonical_name": "mienfoo",
+		"other_names": [],
+		"national_dex": 619,
+		"swsh": true,
+		"bdsp": false
+	},
+	"621": {
+		"display_name": "Druddigon",
+		"canonical_name": "druddigon",
+		"other_names": [],
+		"national_dex": 621,
+		"swsh": true,
+		"bdsp": false
+	},
+	"622": {
+		"display_name": "Golett",
+		"canonical_name": "golett",
+		"other_names": [],
+		"national_dex": 622,
+		"swsh": true,
+		"bdsp": false
+	},
+	"624": {
+		"display_name": "Pawniard",
+		"canonical_name": "pawniard",
+		"other_names": [],
+		"national_dex": 624,
+		"swsh": true,
+		"bdsp": false
+	},
+	"626": {
+		"display_name": "Bouffalant",
+		"canonical_name": "bouffalant",
+		"other_names": [],
+		"national_dex": 626,
+		"swsh": true,
+		"bdsp": false
+	},
+	"627": {
+		"display_name": "Rufflet",
+		"canonical_name": "rufflet",
+		"other_names": [],
+		"national_dex": 627,
+		"swsh": true,
+		"bdsp": false
+	},
+	"629": {
+		"display_name": "Vullaby",
+		"canonical_name": "vullaby",
+		"other_names": [],
+		"national_dex": 629,
+		"swsh": true,
+		"bdsp": false
+	},
+	"631": {
+		"display_name": "Heatmor",
+		"canonical_name": "heatmor",
+		"other_names": [],
+		"national_dex": 631,
+		"swsh": true,
+		"bdsp": false
+	},
+	"632": {
+		"display_name": "Durant",
+		"canonical_name": "durant",
+		"other_names": [],
+		"national_dex": 632,
+		"swsh": true,
+		"bdsp": false
+	},
+	"633": {
+		"display_name": "Deino",
+		"canonical_name": "deino",
+		"other_names": [],
+		"national_dex": 633,
+		"swsh": true,
+		"bdsp": false
+	},
+	"636": {
+		"display_name": "Larvesta",
+		"canonical_name": "larvesta",
+		"other_names": [],
+		"national_dex": 636,
+		"swsh": true,
+		"bdsp": false
+	},
+	"659": {
+		"display_name": "Bunnelby",
+		"canonical_name": "bunnelby",
+		"other_names": [],
+		"national_dex": 659,
+		"swsh": true,
+		"bdsp": false
+	},
+	"661": {
+		"display_name": "Fletchling",
+		"canonical_name": "fletchling",
+		"other_names": [],
+		"national_dex": 661,
+		"swsh": true,
+		"bdsp": false
+	},
+	"674": {
+		"display_name": "Pancham",
+		"canonical_name": "pancham",
+		"other_names": [],
+		"national_dex": 674,
+		"swsh": true,
+		"bdsp": false
+	},
+	"677": {
+		"display_name": "Espurr",
+		"canonical_name": "espurr",
+		"other_names": [],
+		"national_dex": 677,
+		"swsh": true,
+		"bdsp": false
+	},
+	"679": {
+		"display_name": "Honedge",
+		"canonical_name": "honedge",
+		"other_names": [],
+		"national_dex": 679,
+		"swsh": true,
+		"bdsp": false
+	},
+	"682": {
+		"display_name": "Spritzee",
+		"canonical_name": "spritzee",
+		"other_names": [],
+		"national_dex": 682,
+		"swsh": true,
+		"bdsp": false
+	},
+	"684": {
+		"display_name": "Swirlix",
+		"canonical_name": "swirlix",
+		"other_names": [],
+		"national_dex": 684,
+		"swsh": true,
+		"bdsp": false
+	},
+	"686": {
+		"display_name": "Inkay",
+		"canonical_name": "inkay",
+		"other_names": [],
+		"national_dex": 686,
+		"swsh": true,
+		"bdsp": false
+	},
+	"688": {
+		"display_name": "Binacle",
+		"canonical_name": "binacle",
+		"other_names": [],
+		"national_dex": 688,
+		"swsh": true,
+		"bdsp": false
+	},
+	"690": {
+		"display_name": "Skrelp",
+		"canonical_name": "skrelp",
+		"other_names": [],
+		"national_dex": 690,
+		"swsh": true,
+		"bdsp": false
+	},
+	"692": {
+		"display_name": "Clauncher",
+		"canonical_name": "clauncher",
+		"other_names": [],
+		"national_dex": 692,
+		"swsh": true,
+		"bdsp": false
+	},
+	"694": {
+		"display_name": "Helioptile",
+		"canonical_name": "helioptile",
+		"other_names": [],
+		"national_dex": 694,
+		"swsh": true,
+		"bdsp": false
+	},
+	"696": {
+		"display_name": "Tyrunt",
+		"canonical_name": "tyrunt",
+		"other_names": [],
+		"national_dex": 696,
+		"swsh": true,
+		"bdsp": false
+	},
+	"698": {
+		"display_name": "Amaura",
+		"canonical_name": "amaura",
+		"other_names": [],
+		"national_dex": 698,
+		"swsh": true,
+		"bdsp": false
+	},
+	"701": {
+		"display_name": "Hawlucha",
+		"canonical_name": "hawlucha",
+		"other_names": [],
+		"national_dex": 701,
+		"swsh": true,
+		"bdsp": false
+	},
+	"702": {
+		"display_name": "Dedenne",
+		"canonical_name": "dedenne",
+		"other_names": [],
+		"national_dex": 702,
+		"swsh": true,
+		"bdsp": false
+	},
+	"703": {
+		"display_name": "Carbink",
+		"canonical_name": "carbink",
+		"other_names": [],
+		"national_dex": 703,
+		"swsh": true,
+		"bdsp": false
+	},
+	"704": {
+		"display_name": "Goomy",
+		"canonical_name": "goomy",
+		"other_names": [],
+		"national_dex": 704,
+		"swsh": true,
+		"bdsp": false
+	},
+	"707": {
+		"display_name": "Klefki",
+		"canonical_name": "klefki",
+		"other_names": [],
+		"national_dex": 707,
+		"swsh": true,
+		"bdsp": false
+	},
+	"708": {
+		"display_name": "Phantump",
+		"canonical_name": "phantump",
+		"other_names": [],
+		"national_dex": 708,
+		"swsh": true,
+		"bdsp": false
+	},
+	"710": {
+		"display_name": "Pumpkaboo",
+		"canonical_name": "pumpkaboo",
+		"other_names": ["pumpkabooaverage", "pumpkaboosmall", "pumpkaboolarge", "pumpkaboosuper"],
+		"national_dex": 710,
+		"swsh": true,
+		"bdsp": false
+	},
+	"712": {
+		"display_name": "Bergmite",
+		"canonical_name": "bergmite",
+		"other_names": [],
+		"national_dex": 712,
+		"swsh": true,
+		"bdsp": false
+	},
+	"714": {
+		"display_name": "Noibat",
+		"canonical_name": "noibat",
+		"other_names": [],
+		"national_dex": 714,
+		"swsh": true,
+		"bdsp": false
+	},
+	"722": {
+		"display_name": "Rowlet",
+		"canonical_name": "rowlet",
+		"other_names": [],
+		"national_dex": 722,
+		"swsh": true,
+		"bdsp": false
+	},
+	"725": {
+		"display_name": "Litten",
+		"canonical_name": "litten",
+		"other_names": [],
+		"national_dex": 725,
+		"swsh": true,
+		"bdsp": false
+	},
+	"728": {
+		"display_name": "Popplio",
+		"canonical_name": "popplio",
+		"other_names": [],
+		"national_dex": 728,
+		"swsh": true,
+		"bdsp": false
+	},
+	"736": {
+		"display_name": "Grubbin",
+		"canonical_name": "grubbin",
+		"other_names": [],
+		"national_dex": 736,
+		"swsh": true,
+		"bdsp": false
+	},
+	"742": {
+		"display_name": "Cutiefly",
+		"canonical_name": "cutiefly",
+		"other_names": [],
+		"national_dex": 742,
+		"swsh": true,
+		"bdsp": false
+	},
+	"744": {
+		"display_name": "Rockruff",
+		"canonical_name": "rockruff",
+		"other_names": ["rockruffdusk", "duskrockruff", "owntemporockruff", "rockruffowntempo"],
+		"national_dex": 744,
+		"swsh": true,
+		"bdsp": false
+	},
+	"746": {
+		"display_name": "Wishiwashi",
+		"canonical_name": "wishiwashi",
+		"other_names": [],
+		"national_dex": 746,
+		"swsh": true,
+		"bdsp": false
+	},
+	"747": {
+		"display_name": "Mareanie",
+		"canonical_name": "mareanie",
+		"other_names": [],
+		"national_dex": 747,
+		"swsh": true,
+		"bdsp": false
+	},
+	"749": {
+		"display_name": "Mudbray",
+		"canonical_name": "mudbray",
+		"other_names": [],
+		"national_dex": 749,
+		"swsh": true,
+		"bdsp": false
+	},
+	"751": {
+		"display_name": "Dewpider",
+		"canonical_name": "dewpider",
+		"other_names": [],
+		"national_dex": 751,
+		"swsh": true,
+		"bdsp": false
+	},
+	"753": {
+		"display_name": "Fomantis",
+		"canonical_name": "fomantis",
+		"other_names": [],
+		"national_dex": 753,
+		"swsh": true,
+		"bdsp": false
+	},
+	"755": {
+		"display_name": "Morelull",
+		"canonical_name": "morelull",
+		"other_names": [],
+		"national_dex": 755,
+		"swsh": true,
+		"bdsp": false
+	},
+	"757": {
+		"display_name": "Salandit",
+		"canonical_name": "salandit",
+		"other_names": [],
+		"national_dex": 757,
+		"swsh": true,
+		"bdsp": false
+	},
+	"759": {
+		"display_name": "Stufful",
+		"canonical_name": "stufful",
+		"other_names": [],
+		"national_dex": 759,
+		"swsh": true,
+		"bdsp": false
+	},
+	"761": {
+		"display_name": "Bounsweet",
+		"canonical_name": "bounsweet",
+		"other_names": [],
+		"national_dex": 761,
+		"swsh": true,
+		"bdsp": false
+	},
+	"764": {
+		"display_name": "Comfey",
+		"canonical_name": "comfey",
+		"other_names": [],
+		"national_dex": 764,
+		"swsh": true,
+		"bdsp": false
+	},
+	"765": {
+		"display_name": "Oranguru",
+		"canonical_name": "oranguru",
+		"other_names": [],
+		"national_dex": 765,
+		"swsh": true,
+		"bdsp": false
+	},
+	"766": {
+		"display_name": "Passimian",
+		"canonical_name": "passimian",
+		"other_names": [],
+		"national_dex": 766,
+		"swsh": true,
+		"bdsp": false
+	},
+	"767": {
+		"display_name": "Wimpod",
+		"canonical_name": "wimpod",
+		"other_names": [],
+		"national_dex": 767,
+		"swsh": true,
+		"bdsp": false
+	},
+	"769": {
+		"display_name": "Sandygast",
+		"canonical_name": "sandygast",
+		"other_names": [],
+		"national_dex": 769,
+		"swsh": true,
+		"bdsp": false
+	},
+	"771": {
+		"display_name": "Pyukumuku",
+		"canonical_name": "pyukumuku",
+		"other_names": [],
+		"national_dex": 771,
+		"swsh": true,
+		"bdsp": false
+	},
+	"776": {
+		"display_name": "Turtonator",
+		"canonical_name": "turtonator",
+		"other_names": [],
+		"national_dex": 776,
+		"swsh": true,
+		"bdsp": false
+	},
+	"777": {
+		"display_name": "Togedemaru",
+		"canonical_name": "togedemaru",
+		"other_names": [],
+		"national_dex": 777,
+		"swsh": true,
+		"bdsp": false
+	},
+	"778": {
+		"display_name": "Mimikyu",
+		"canonical_name": "mimikyu",
+		"other_names": [],
+		"national_dex": 778,
+		"swsh": true,
+		"bdsp": false
+	},
+	"780": {
+		"display_name": "Drampa",
+		"canonical_name": "drampa",
+		"other_names": [],
+		"national_dex": 780,
+		"swsh": true,
+		"bdsp": false
+	},
+	"781": {
+		"display_name": "Dhelmise",
+		"canonical_name": "dhelmise",
+		"other_names": [],
+		"national_dex": 781,
+		"swsh": true,
+		"bdsp": false
+	},
+	"782": {
+		"display_name": "Jangmo-o",
+		"canonical_name": "jangmo-o",
+		"other_names": ["jangmoo"],
+		"national_dex": 782,
+		"swsh": true,
+		"bdsp": false
+	},
+	"810": {
+		"display_name": "Grookey",
+		"canonical_name": "grookey",
+		"other_names": [],
+		"national_dex": 810,
+		"swsh": true,
+		"bdsp": false
+	},
+	"813": {
+		"display_name": "Scorbunny",
+		"canonical_name": "scorbunny",
+		"other_names": [],
+		"national_dex": 813,
+		"swsh": true,
+		"bdsp": false
+	},
+	"816": {
+		"display_name": "Sobble",
+		"canonical_name": "sobble",
+		"other_names": [],
+		"national_dex": 816,
+		"swsh": true,
+		"bdsp": false
+	},
+	"819": {
+		"display_name": "Skwovet",
+		"canonical_name": "skwovet",
+		"other_names": [],
+		"national_dex": 819,
+		"swsh": true,
+		"bdsp": false
+	},
+	"821": {
+		"display_name": "Rookidee",
+		"canonical_name": "rookidee",
+		"other_names": [],
+		"national_dex": 821,
+		"swsh": true,
+		"bdsp": false
+	},
+	"824": {
+		"display_name": "Blipbug",
+		"canonical_name": "blipbug",
+		"other_names": [],
+		"national_dex": 824,
+		"swsh": true,
+		"bdsp": false
+	},
+	"827": {
+		"display_name": "Nickit",
+		"canonical_name": "nickit",
+		"other_names": [],
+		"national_dex": 827,
+		"swsh": true,
+		"bdsp": false
+	},
+	"829": {
+		"display_name": "Gossifleur",
+		"canonical_name": "gossifleur",
+		"other_names": [],
+		"national_dex": 829,
+		"swsh": true,
+		"bdsp": false
+	},
+	"831": {
+		"display_name": "Wooloo",
+		"canonical_name": "wooloo",
+		"other_names": [],
+		"national_dex": 831,
+		"swsh": true,
+		"bdsp": false
+	},
+	"833": {
+		"display_name": "Chewtle",
+		"canonical_name": "chewtle",
+		"other_names": [],
+		"national_dex": 833,
+		"swsh": true,
+		"bdsp": false
+	},
+	"835": {
+		"display_name": "Yamper",
+		"canonical_name": "yamper",
+		"other_names": [],
+		"national_dex": 835,
+		"swsh": true,
+		"bdsp": false
+	},
+	"837": {
+		"display_name": "Rolycoly",
+		"canonical_name": "rolycoly",
+		"other_names": [],
+		"national_dex": 837,
+		"swsh": true,
+		"bdsp": false
+	},
+	"840": {
+		"display_name": "Applin",
+		"canonical_name": "applin",
+		"other_names": [],
+		"national_dex": 840,
+		"swsh": true,
+		"bdsp": false
+	},
+	"843": {
+		"display_name": "Silicobra",
+		"canonical_name": "silicobra",
+		"other_names": [],
+		"national_dex": 843,
+		"swsh": true,
+		"bdsp": false
+	},
+	"845": {
+		"display_name": "Cramorant",
+		"canonical_name": "cramorant",
+		"other_names": [],
+		"national_dex": 845,
+		"swsh": true,
+		"bdsp": false
+	},
+	"846": {
+		"display_name": "Arrokuda",
+		"canonical_name": "arrokuda",
+		"other_names": [],
+		"national_dex": 846,
+		"swsh": true,
+		"bdsp": false
+	},
+	"848": {
+		"display_name": "Toxel",
+		"canonical_name": "toxel",
+		"other_names": [],
+		"national_dex": 848,
+		"swsh": true,
+		"bdsp": false
+	},
+	"850": {
+		"display_name": "Sizzlipede",
+		"canonical_name": "sizzlipede",
+		"other_names": [],
+		"national_dex": 850,
+		"swsh": true,
+		"bdsp": false
+	},
+	"852": {
+		"display_name": "Clobbopus",
+		"canonical_name": "clobbopus",
+		"other_names": [],
+		"national_dex": 852,
+		"swsh": true,
+		"bdsp": false
+	},
+	"854": {
+		"display_name": "Sinistea",
+		"canonical_name": "sinistea",
+		"other_names": [],
+		"national_dex": 854,
+		"swsh": true,
+		"bdsp": false
+	},
+	"856": {
+		"display_name": "Hatenna",
+		"canonical_name": "hatenna",
+		"other_names": [],
+		"national_dex": 856,
+		"swsh": true,
+		"bdsp": false
+	},
+	"859": {
+		"display_name": "Impidimp",
+		"canonical_name": "impidimp",
+		"other_names": [],
+		"national_dex": 859,
+		"swsh": true,
+		"bdsp": false
+	},
+	"868": {
+		"display_name": "Milcery",
+		"canonical_name": "milcery",
+		"other_names": [],
+		"national_dex": 868,
+		"swsh": true,
+		"bdsp": false
+	},
+	"870": {
+		"display_name": "Falinks",
+		"canonical_name": "falinks",
+		"other_names": [],
+		"national_dex": 870,
+		"swsh": true,
+		"bdsp": false
+	},
+	"871": {
+		"display_name": "Pincurchin",
+		"canonical_name": "pincurchin",
+		"other_names": [],
+		"national_dex": 871,
+		"swsh": true,
+		"bdsp": false
+	},
+	"872": {
+		"display_name": "Snom",
+		"canonical_name": "snom",
+		"other_names": [],
+		"national_dex": 872,
+		"swsh": true,
+		"bdsp": false
+	},
+	"874": {
+		"display_name": "Stonjourner",
+		"canonical_name": "stonjourner",
+		"other_names": [],
+		"national_dex": 874,
+		"swsh": true,
+		"bdsp": false
+	},
+	"875": {
+		"display_name": "Eiscue",
+		"canonical_name": "eiscue",
+		"other_names": [],
+		"national_dex": 875,
+		"swsh": true,
+		"bdsp": false
+	},
+	"876": {
+		"display_name": "Indeedee",
+		"canonical_name": "indeedee",
+		"other_names": ["indeedeef", "indeedeefemale", "indeedeem", "indeedeemale"],
+		"national_dex": 876,
+		"swsh": true,
+		"bdsp": false
+	},
+	"877": {
+		"display_name": "Morpeko",
+		"canonical_name": "morpeko",
+		"other_names": [],
+		"national_dex": 877,
+		"swsh": true,
+		"bdsp": false
+	},
+	"878": {
+		"display_name": "Cufant",
+		"canonical_name": "cufant",
+		"other_names": [],
+		"national_dex": 878,
+		"swsh": true,
+		"bdsp": false
+	},
+	"884": {
+		"display_name": "Duraludon",
+		"canonical_name": "duraludon",
+		"other_names": [],
+		"national_dex": 884,
+		"swsh": true,
+		"bdsp": false
+	},
+	"885": {
+		"display_name": "Dreepy",
+		"canonical_name": "dreepy",
+		"other_names": [],
+		"national_dex": 885,
+		"swsh": true,
+		"bdsp": false
+	}
+}

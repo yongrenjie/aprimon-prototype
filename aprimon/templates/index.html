@@ -11,160 +11,162 @@
 
 
     <body>
-        <div id="title">
-            <h1>Welcome!</h1>
-            <p>This website will (try to) determine what Aprimon you can request from a trading partner, i.e. what they have but you don't have.</p>
-            <ul>
-                <li><p>If you want the opposite (i.e. what you can offer them) please use the swap button and submit again</p></li>
-                <li><p><b>BDSP doesn't work for now</b>, I need to manually enter legality for each Pokemon.....</p></li>
-                <li><p>Please note that this only checks a spreadsheet for the presence of a ticked box &mdash; it doesn't do anything fancy such as looking for HA availability or pending trades. It is still your responsibility to check for this (if it matters to you, e.g. for genderless/monogender species), or even better, inform your trade partner if you don't have HA on something!</p></li>
-                <li><p>The comparison also combines entries from regional forms (e.g. Kanto and Alola Vulpix) and other things which can be crossbred (e.g. Basculin colours or Nidoran gender)</p></li>
-                <li><p>This is rather preliminary &mdash; if there are any issues please let me know &mdash; my Reddit username is <a href="https://reddit.com/u/orthocresol">/u/orthocresol</a>.</p></li>
-                <li><p>You can find the source code on <a href="https://github.com/yongrenjie/aprimon-prototype">GitHub</a> too (please feel free to submit issues or pull requests there if you are thus inclined!).</p></li>
-            </ul>
-        </div>
-
-        <div id="game">
-            <div id="left-sprite" class="top-sprite centered-content"></div>
-            <input type="radio" name="game-radio" value="swsh" id="game-radio-swsh" checked />
-            <label for="game-radio-swsh">Sw/Sh</label>
-            <input type="radio" name="game-radio" value="bdsp" id="game-radio-bdsp" />
-            <label for="game-radio-bdsp">BD/SP</label>
-            <!-- <input type="radio" name="game-radio" value="sv" id="game-radio-sv" /> -->
-            <!-- <label for="game-radio-sv">S/V</label> -->
-            <div id="right-sprite" class="top-sprite centered-content"></div>
-        </div>
-
-        <div id="user-info">
-
-            <div id="user1">
-                <div class="twocols"><b>You</b></div>
-
-                <div>Spreadsheet</div>
-                <div id="user1a-choice">
-                    <select name="user1a-select" id="user1a-select"></select>
-                    <div id="user1a-text" class="initially-hidden">
-                        <textarea rows="6" id="user1a-textarea"></textarea><br />
-                        <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
-                    </div>
-                    <div id="user1a-sheet-link" class="small-text initially-hidden"></div>
-                </div>
-
-                <div id="user1b-text" class="initially-hidden">Any extras?</div>
-                <div id="user1b" class="initially-hidden">
-                    <input type="checkbox" id="user1-extra">
-                    <div id="user1b-textarea">
-                        <textarea rows="6" id="user1b-textarea"></textarea><br />
-                        <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="filters">
-                <div>Sort by</div>
-                <div>
-                    <input type="radio" name="sort-radio" value="dex" id="sort-radio-dex" checked></input>
-                    <label for="sort-radio-dex">National Dex number</label>
-                    <br />
-                    <input type="radio" name="sort-radio" value="alpha" id="sort-radio-alpha"></input>
-                    <label for="sort-radio-alpha">Alphabetical</label>
-                </div>
-
-                <div>Filter generations</div>
-                <div id="filter-generations">
-                    <div class="centered-content"><input type="checkbox" id="gen1" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="gen2" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="gen3" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="gen4" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="gen5" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="gen6" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="gen7" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="gen8" checked></div>
-                    <div class="small-text centered-content">1</div>
-                    <div class="small-text centered-content">2</div>
-                    <div class="small-text centered-content">3</div>
-                    <div class="small-text centered-content">4</div>
-                    <div class="small-text centered-content">5</div>
-                    <div class="small-text centered-content">6</div>
-                    <div class="small-text centered-content">7</div>
-                    <div class="small-text centered-content">8</div>
-                </div>
-
-                <div>Filter balls</div>
-                <div id="filter-balls">
-                    <div class="centered-content"><input type="checkbox" id="ball-beast" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-dream" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-fast" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-friend" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-heavy" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-level" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-love" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-lure" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-moon" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-safari" checked></div>
-                    <div class="centered-content"><input type="checkbox" id="ball-sport" checked></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/beast.png"  width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/dream.png"  width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/fast.png"   width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/friend.png" width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/heavy.png"  width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/level.png"  width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/love.png"   width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/lure.png"   width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/moon.png"   width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/safari.png" width="23px" /></div>
-                    <div class="small-text centered-content"><img src="/static/sprites/sport.png"  width="23px" /></div>
-                </div>
+        <div id="body-wrapper">
+            <div id="title">
+                <h1>Welcome!</h1>
+                <p>This website will (try to) determine what Aprimon you can request from a trading partner, i.e. what they have but you don't have.</p>
+                <ul>
+                    <li><p>If you want the opposite (i.e. what you can offer them) please use the swap button and submit again</p></li>
+                    <li><p><b>14/5/22: BDSP technically works now, but note that HOME compatibility for BDSP is imminent and will likely shake up how things work...</b></p></li>
+                    <li><p>Please note that this only checks a spreadsheet for the presence of a ticked box &mdash; it doesn't do anything fancy such as looking for HA availability or pending trades. It is still your responsibility to check for this (if it matters to you, e.g. for genderless/monogender species), or even better, inform your trade partner if you don't have HA on something!</p></li>
+                    <li><p>The comparison also combines entries from regional forms (e.g. Kanto and Alola Vulpix) and other things which can be crossbred (e.g. Basculin colours or Nidoran gender)</p></li>
+                    <li><p>This is rather preliminary &mdash; if there are any issues please let me know &mdash; my Reddit username is <a href="https://reddit.com/u/orthocresol">/u/orthocresol</a>.</p></li>
+                    <li><p>You can find the source code on <a href="https://github.com/yongrenjie/aprimon-prototype">GitHub</a> too (please feel free to submit issues or pull requests there if you are thus inclined!).</p></li>
+                </ul>
             </div>
 
-            <div id="user2">
-                <div class="twocols"><b>Your trading partner</b></div>
+            <div id="game">
+                <div id="left-sprite" class="top-sprite centered-content"></div>
+                <input type="radio" name="game-radio" value="swsh" id="game-radio-swsh" checked />
+                <label for="game-radio-swsh">Sw/Sh</label>
+                <input type="radio" name="game-radio" value="bdsp" id="game-radio-bdsp" />
+                <label for="game-radio-bdsp">BD/SP</label>
+                <!-- <input type="radio" name="game-radio" value="sv" id="game-radio-sv" /> -->
+                <!-- <label for="game-radio-sv">S/V</label> -->
+                <div id="right-sprite" class="top-sprite centered-content"></div>
+            </div>
 
-                <div>Spreadsheet</div>
-                <div id="user2a-choice">
-                    <select name="user2a-select" id="user2a-select"></select>
-                    <div id="user2a-text" class="initially-hidden">
-                        <textarea rows="6" id="user2a-textarea"></textarea><br />
-                        <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+            <div id="user-info">
+
+                <div id="user1">
+                    <div class="twocols"><b>You</b></div>
+
+                    <div>Spreadsheet</div>
+                    <div id="user1a-choice">
+                        <select name="user1a-select" id="user1a-select"></select>
+                        <div id="user1a-text" class="initially-hidden">
+                            <textarea rows="6" id="user1a-textarea"></textarea><br />
+                            <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+                        </div>
+                        <div id="user1a-sheet-link" class="small-text initially-hidden"></div>
                     </div>
-                    <div id="user2a-sheet-link" class="small-text initially-hidden"></div>
+
+                    <div id="user1b-text" class="initially-hidden">Any extras?</div>
+                    <div id="user1b" class="initially-hidden">
+                        <input type="checkbox" id="user1-extra">
+                        <div id="user1b-textarea">
+                            <textarea rows="6" id="user1b-textarea"></textarea><br />
+                            <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="filters">
+                    <div>Sort by</div>
+                    <div>
+                        <input type="radio" name="sort-radio" value="dex" id="sort-radio-dex" checked></input>
+                        <label for="sort-radio-dex">National Dex number</label>
+                        <br />
+                        <input type="radio" name="sort-radio" value="alpha" id="sort-radio-alpha"></input>
+                        <label for="sort-radio-alpha">Alphabetical</label>
+                    </div>
+
+                    <div>Filter generations</div>
+                    <div id="filter-generations">
+                        <div class="centered-content"><input type="checkbox" id="gen1" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="gen2" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="gen3" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="gen4" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="gen5" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="gen6" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="gen7" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="gen8" checked></div>
+                        <div class="small-text centered-content">1</div>
+                        <div class="small-text centered-content">2</div>
+                        <div class="small-text centered-content">3</div>
+                        <div class="small-text centered-content">4</div>
+                        <div class="small-text centered-content">5</div>
+                        <div class="small-text centered-content">6</div>
+                        <div class="small-text centered-content">7</div>
+                        <div class="small-text centered-content">8</div>
+                    </div>
+
+                    <div>Filter balls</div>
+                    <div id="filter-balls">
+                        <div class="centered-content"><input type="checkbox" id="ball-beast" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-dream" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-fast" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-friend" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-heavy" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-level" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-love" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-lure" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-moon" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-safari" checked></div>
+                        <div class="centered-content"><input type="checkbox" id="ball-sport" checked></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/beast.png"  width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/dream.png"  width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/fast.png"   width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/friend.png" width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/heavy.png"  width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/level.png"  width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/love.png"   width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/lure.png"   width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/moon.png"   width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/safari.png" width="23px" /></div>
+                        <div class="small-text centered-content"><img src="/static/sprites/sport.png"  width="23px" /></div>
+                    </div>
                 </div>
 
-                <div id="user2b-text" class="initially-hidden">Any extras?</div>
-                <div id="user2b" class="initially-hidden">
-                    <input type="checkbox" id="user2-extra">
-                    <div id="user2b-textarea">
-                        <textarea rows="6" id="user2b-textarea"></textarea><br />
-                        <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+                <div id="user2">
+                    <div class="twocols"><b>Your trading partner</b></div>
+
+                    <div>Spreadsheet</div>
+                    <div id="user2a-choice">
+                        <select name="user2a-select" id="user2a-select"></select>
+                        <div id="user2a-text" class="initially-hidden">
+                            <textarea rows="6" id="user2a-textarea"></textarea><br />
+                            <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+                        </div>
+                        <div id="user2a-sheet-link" class="small-text initially-hidden"></div>
+                    </div>
+
+                    <div id="user2b-text" class="initially-hidden">Any extras?</div>
+                    <div id="user2b" class="initially-hidden">
+                        <input type="checkbox" id="user2-extra">
+                        <div id="user2b-textarea">
+                            <textarea rows="6" id="user2b-textarea"></textarea><br />
+                            <a class="small-text" href="{{ url_for('static', filename='format.txt') }}" target="_blank">(format?)</a>
+                        </div>
                     </div>
                 </div>
+
+
+                <div id="user1-error"></div>
+
+                <div id="buttons">
+                    <div><input id="swap-button" type="button" value="<-- Swap -->"></div>
+                    <div id="submit"><input id="submit-button" type="button" value="Submit"></div>
+                    <div id="loading" class="initially-hidden"><img src="/static/porygon.gif" height="100%" /></div>
+                </div>
+
+                <div id="user1-error"></div>
             </div>
 
 
-            <div id="user1-error"></div>
 
-            <div id="buttons">
-                <div><input id="swap-button" type="button" value="<-- Swap -->"></div>
-                <div id="submit"><input id="submit-button" type="button" value="Submit"></div>
-                <div id="loading" class="initially-hidden"><img src="/static/porygon.gif" height="100%" /></div>
-            </div>
-
-            <div id="user1-error"></div>
-        </div>
-
-
-
-        <div id="results">   <!-- display: flex -->
-            <div id="results-wrapper"> <!-- margin-left: auto; margin-right: auto -->
-                <div id="results-aprimon"></div>
-                <div id="results-selector" class="initially-hidden">
-                    <ul id="instructions">
-                        <li>Click on an individual cell to add it to the textbox below...</li>
-                        <li>...or on a Pokemon name/sprite to add/remove an entire row...</li>
-                        <li>...or these buttons to <input id="select-all-button" type="button" value="Select all"> or <input id="clear-all-button" type="button" value="Clear all">
-                    </ul>
-                    <input id="copy-button" type="button" value="Copy text to clipboard"><span id="copy-message" class="small-text"></span>
-                    <textarea readonly id="results-selector-textarea"></textarea>
+            <div id="results">   <!-- display: flex -->
+                <div id="results-wrapper"> <!-- margin-left: auto; margin-right: auto -->
+                    <div id="results-aprimon"></div>
+                    <div id="results-selector" class="initially-hidden">
+                        <ul id="instructions">
+                            <li>Click on an individual cell to add it to the textbox below...</li>
+                            <li>...or on a Pokemon name/sprite to add/remove an entire row...</li>
+                            <li>...or these buttons to <input id="select-all-button" type="button" value="Select all"> or <input id="clear-all-button" type="button" value="Clear all">
+                        </ul>
+                        <input id="copy-button" type="button" value="Copy text to clipboard"><span id="copy-message" class="small-text"></span>
+                        <textarea readonly id="results-selector-textarea"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
