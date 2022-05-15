@@ -7,7 +7,6 @@ import json
 from aprimon import app
 from aprimon.collection import Collection
 from aprimon.data import ALL_SPREADSHEETS
-from aprimon.extra_data import MORE_SPREADSHEETS
 
 # Initialise Google Sheets API access
 try:
