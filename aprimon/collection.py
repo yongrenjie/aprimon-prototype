@@ -135,6 +135,9 @@ class Collection:
         COLUMN_DELIMITER = ','
         if COLUMN_DELIMITER in ball_columns:
             ball_columns = ball_columns.split(COLUMN_DELIMITER)
+        if len(ball_columns) != 11:
+            raise ValueError(f"{len(ball_columns)} columns for balls"
+                             " were given; expected 11")
 
         # Parse the spreadsheet
         for row in data:
