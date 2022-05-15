@@ -280,7 +280,7 @@
             "key": "1_r4az7Iva0smu1fOG2TZRgISJayanOrcD4MusIB9Q_I",
             "tab_name": "SWSH",
             "pokemon_column": "C",
-            "ball_columns": "NMFGHIJKLMNOP",
+            "ball_columns": "NMFGHIJKLOP",
             "verify_method": "checkbox"
         }
     }
