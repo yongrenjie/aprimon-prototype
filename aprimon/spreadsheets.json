@@ -283,5 +283,17 @@
             "ball_columns": "NMFGHIJKLOP",
             "verify_method": "checkbox"
         }
+    },
+
+    "Tee_heehee224": {
+        "swsh": {
+            "type": "grid",
+            "key": "11GolKiEGy9UAEXSjA8RMvqg6hL-M8ipcKkqjt--dtmU",
+            "tab_name": "SWSH Aprimons",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox"
+        }
     }
+
 }
