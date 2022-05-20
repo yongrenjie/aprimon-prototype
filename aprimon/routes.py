@@ -30,10 +30,15 @@ def index():
 @app.route('/_all_users', methods=['GET'])
 def _all_users():
     game = request.args.get('game')
-    all_users = {user: ALL_SPREADSHEETS[user][game]["key"]
-                 for user in ALL_SPREADSHEETS.keys()
-                 if game in ALL_SPREADSHEETS[user]}
-    return jsonify({"allUsers": all_users})
+
+    all_usernames = sorted(ALL_SPREADSHEETS.keys(), key=str.lower)
+
+    def make_user_data(user):
+        return {sheet_type: sheet_data['key']
+                for sheet_type, sheet_data in ALL_SPREADSHEETS[user].items()}
+
+    data = {user: make_user_data(user) for user in all_usernames}
+    return jsonify({'allUsers': data})
 
 
 @app.route('/_calculate_aprimon', methods=['POST'])
@@ -41,18 +46,22 @@ def _calculate_aprimon():
     j = request.get_json()
     game = j['game']
 
-    if "username" in j['user1']:
-        c1 = Collection.read(gc, ALL_SPREADSHEETS[j['user1']['username']][game])
-    elif "list" in j['user1']:
+    if 'username' in j['user1'] and 'spreadsheet' in j['user1']:
+        u = j['user1']['username']
+        s = j['user1']['spreadsheet']
+        c1 = Collection.read(gc, ALL_SPREADSHEETS[u][s])
+    elif 'list' in j['user1']:
         c1 = Collection.from_manual(j['user1']['list'])
-    if "extra_list" in j['user1']:
+    if 'extra_list' in j['user1']:
         c1 = c1 + Collection.from_manual(j['user1']['extra_list'])
 
-    if "username" in j['user2']:
-        c2 = Collection.read(gc, ALL_SPREADSHEETS[j['user2']['username']][game])
-    elif "list" in j['user2']:
+    if 'username' in j['user2'] and 'spreadsheet' in j['user2']:
+        u = j['user2']['username']
+        s = j['user2']['spreadsheet']
+        c2 = Collection.read(gc, ALL_SPREADSHEETS[u][s])
+    elif 'list' in j['user2']:
         c2 = Collection.from_manual(j['user2']['list'])
-    if "extra_list" in j['user2']:
+    if 'extra_list' in j['user2']:
         c2 = c2 + Collection.from_manual(j['user2']['extra_list'])
 
     diff = c2 - c1

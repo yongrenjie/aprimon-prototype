@@ -76,7 +76,7 @@ body {
 }
 
 div#body-wrapper {
-    max-width: 1250px;
+    max-width: 1350px;
     margin: 20px;
     flex-grow: 0;
 
@@ -97,9 +97,17 @@ div#user-info {
     margin-bottom: 30px;
 }
 
+select {
+    width: 270px;
+}
+textarea#user1a-textarea, textarea#user2a-textarea, textarea#user1b-textarea, textarea#user2b-textarea {
+    font-size: 80%;
+    width: 270px;
+}
+
 div#user1, div#user2 {
-    min-width: 370px;
-    max-width: 400px;
+    min-width: 402px;
+    max-width: 420px;
     flex: 1 1 30%;
 
     border: 1.5px solid #444444;

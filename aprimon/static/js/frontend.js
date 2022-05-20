@@ -16,34 +16,91 @@ function populateUserDropdowns() {
         dataType: "json",
         contentType: "application/json",
         success: function (response) {
-            // Store as global variable
+            // Store in a global variable for later use
             window.allUsers = response["allUsers"];
-
-            let listOfUsernames = Object.keys(allUsers);
+            // Even though the data is correctly sorted on the Python side,
+            // I don't know why I have to sort it again here (otherwise it
+            // comes out with a case-sensitive sort, capitalised usernames
+            // come first before uncapitalised)
+            let listOfUsernames = Object.keys(window.allUsers);
             listOfUsernames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-            listOfUsernames.unshift(MANUALLY_LIST_APRIMON);
-            listOfUsernames.unshift(SELECT_AN_ENTRY);
-            $("#user1a-select").html("");
-            $("#user2a-select").html("");
+
+            let select_data = [
+                {
+                    // Empty entry for the placeholder
+                    id: "",
+                },
+                {
+                    // Manual list
+                    id: MANUALLY_LIST_APRIMON,
+                    text: MANUALLY_LIST_APRIMON,
+                }
+            ]
+
+            // Add in the spreadsheets
             for (let user of listOfUsernames) {
-                $("#user1a-select").append("<option>" + user + "</option>");
-                $("#user2a-select").append("<option>" + user + "</option>");
+                console.log(user);
+                let this_user_data = {
+                    id: user,
+                    text: user,
+                    children: [],
+                }
+                for (let spreadsheet of Object.keys(window.allUsers[user])) {
+                    this_user_data.children.push({
+                        id: `${user}:${spreadsheet}`,
+                        text: `${spreadsheet}`
+                    });
+                }
+                select_data.push(this_user_data);
             }
-            // Preserve username choices when switching games (if available)
-            if (listOfUsernames.includes(user1a_prev_selected)) {
-                $("#user1a-select").val(user1a_prev_selected).trigger('change');
+
+            function makeDisplayText (state) {
+                // for the empty placeholder
+                if (state.id.length == 0) return state.text;
+                // for everything else
+                return state.id;
             }
-            if (listOfUsernames.includes(user2a_prev_selected)) {
-                $("#user2a-select").val(user2a_prev_selected).trigger('change');
+            console.log(select_data);
+
+            // allow text searches to match optgroups instead of options
+            // https://github.com/select2/select2/issues/3034#issuecomment-700259072
+            function matchCustom(params, data) {
+                var original_matcher = $.fn.select2.defaults.defaults.matcher;
+                var result = original_matcher(params, data);
+                if (result && data.children && result.children && data.children.length != result.children.length && data.text.toLowerCase().includes(params.term.toLowerCase()) ) {
+                    result.children = data.children;
+                }
+                return result;
             }
+
+            // Convert to beautiful select2 dropdowns.
+            // width='element' makes it take the width from the CSS
+            $("#user1a-select").select2({
+                data: select_data,
+                placeholder: SELECT_AN_ENTRY,
+                templateSelection: makeDisplayText,
+                matcher: matchCustom,
+                width: 'element',
+            });
+            $("#user2a-select").select2({
+                data: select_data,
+                placeholder: SELECT_AN_ENTRY,
+                templateSelection: makeDisplayText,
+                matcher: matchCustom,
+                width: 'element',
+            });
+
+            // Focus text fields -- seems to be weird interaction with jQuery 3.6.0
+            // https://stackoverflow.com/a/67363568/7115316
+            $(document).on('select2:open', () => {
+                document.querySelector('.select2-search__field').focus();
+            });
         }
     });
     // }}}1
 }
 // On page load
 populateUserDropdowns();
-// When changing the game at the top
-$("#game>input").on("click", populateUserDropdowns);
 
 
 function showOrHideExtras() {
@@ -55,23 +112,24 @@ function showOrHideExtras() {
     const user2 = $("select#user2a-select").val();
 
     // Helper function to display link to spreadsheet underneath the dropdown
-    function showSpreadsheetLink(divSelector, key) {
+    function showSpreadsheetLink(divSelector, user) {
+        let info = user.split(":");
+        let username = info[0];
+        let sheet_type = info[1];
+        let key = window.allUsers[username][sheet_type];
         $(divSelector).show();
         $(divSelector).html(`<a target="_blank" href="https://docs.google.com/spreadsheets/d/${key}/edit">(view on Google Sheets)</a>`);
     }
 
-    // If user1 is a real spreadsheet
-    if (user1 in window.allUsers) {
-        // Hide the manual entry textarea
+    // If nothing is selected
+    if (user1 == "") {
+        // Nothing selected, just hide everything
         $("div#user1a-text").hide();
-        // Show the spreadsheet
-        showSpreadsheetLink("div#user1a-sheet-link", window.allUsers[user1]);
-        // Prompt for extras
-        $("div#user1b-text").show();
-        $("div#user1b").show();
-        // Show the extras textarea if the input is checked
-        $("div#user1b-textarea").toggle(!!$("input#user1-extra").is(":checked"));
+        $("div#user1a-sheet-link").hide();
+        $("div#user1b-text").hide();
+        $("div#user1b").hide();
     }
+    // If manual Aprimon list is requested
     else if (user1 == MANUALLY_LIST_APRIMON) {
         // Show the manual entry textarea
         $("div#user1a-text").show();
@@ -80,25 +138,26 @@ function showOrHideExtras() {
         $("div#user1b-text").hide();
         $("div#user1b").hide();
     }
+    // If user1 is a real spreadsheet
     else {
-        // Nothing selected, just hide everything
+        // Hide the manual entry textarea
         $("div#user1a-text").hide();
-        $("div#user1a-sheet-link").hide();
-        $("div#user1b-text").hide();
-        $("div#user1b").hide();
+        // Show the spreadsheet
+        showSpreadsheetLink("div#user1a-sheet-link", user1);
+        // Prompt for extras
+        $("div#user1b-text").show();
+        $("div#user1b").show();
+        // Show the extras textarea if the input is checked
+        $("div#user1b-textarea").toggle(!!$("input#user1-extra").is(":checked"));
     }
 
     // Same for user2
-    if (user2 in window.allUsers) {
-        // Hide the manual entry textarea
+    if (user2 == "") {
+        // Nothing selected, just hide everything
         $("div#user2a-text").hide();
-        // Show the spreadsheet
-        showSpreadsheetLink("div#user2a-sheet-link", window.allUsers[user2]);
-        // Prompt for extras
-        $("div#user2b-text").show();
-        $("div#user2b").show();
-        // Show the extras textarea if the input is checked
-        $("div#user2b-textarea").toggle(!!$("input#user2-extra").is(":checked"));
+        $("div#user2a-sheet-link").empty();
+        $("div#user2b-text").hide();
+        $("div#user2b").hide();
     }
     else if (user2 == MANUALLY_LIST_APRIMON) {
         // Show the manual entry textarea
@@ -109,11 +168,15 @@ function showOrHideExtras() {
         $("div#user2b").hide();
     }
     else {
-        // Nothing selected, just hide everything
+        // Hide the manual entry textarea
         $("div#user2a-text").hide();
-        $("div#user2a-sheet-link").empty();
-        $("div#user2b-text").hide();
-        $("div#user2b").hide();
+        // Show the spreadsheet
+        showSpreadsheetLink("div#user2a-sheet-link", user2);
+        // Prompt for extras
+        $("div#user2b-text").show();
+        $("div#user2b").show();
+        // Show the extras textarea if the input is checked
+        $("div#user2b-textarea").toggle(!!$("input#user2-extra").is(":checked"));
     }
     // }}}1
 }
@@ -133,12 +196,16 @@ function calculateAprimon() {
     // Determine user 1 type
     let user1 = $("select#user1a-select").val();
     let user1_data;
-    if (user1 == SELECT_AN_ENTRY) return;
+    if (user1 == "") return;
     else if (user1 == MANUALLY_LIST_APRIMON) {
         user1_data = {"list": $("textarea#user1a-textarea").val().split(/\r?\n/)};
     }
     else {
-        user1_data = {"username": user1};
+        let info = user1.split(":");
+        user1_data = {
+            "username": info[0],
+            "spreadsheet": info[1]
+        };
     }
     // Check for user 1 extras
     if ($("input#user1-extra").is(":checked")) {
@@ -148,12 +215,16 @@ function calculateAprimon() {
     // Determine user 2 type
     let user2 = $("select#user2a-select").val();
     let user2_data;
-    if (user2 == SELECT_AN_ENTRY) return;
+    if (user2 == "") return;
     else if (user2 == MANUALLY_LIST_APRIMON) {
         user2_data = {"list": $("textarea#user2a-textarea").val().split(/\r?\n/)};
     }
     else {
-        user2_data = {"username": user2};
+        let info = user2.split(":");
+        user2_data = {
+            "username": info[0],
+            "spreadsheet": info[1]
+        };
     }
     // Check for user 2 extras
     if ($("input#user2-extra").is(":checked")) {
@@ -308,6 +379,8 @@ function displayCollection() {
     makeTableDynamic();
     // }}}1
 }
+// When changing the game at the top
+$("#game>input").on("click", displayCollection);
 // When changing any of the generation filters
 $("div#filter-generations input").each(function () {
     $(this).on("click", displayCollection);
