@@ -21,19 +21,19 @@
     "asphyxiati0n76": {
         "swsh": {
             "type": "grid",
-            "key": "14GKrT5SfSwTY294W6FSD404H3xk_Nhr0JbbMUKAj6Wg",
-            "tab_name": "Aprimons",
+            "key": "1zSTho4pGA2-ONVSf5TnmzsMk66FeQwwyZ1TYM3F3xPw",
+            "tab_name": "Aprimon",
             "pokemon_column": "C",
-            "ball_columns": "NMFGHIJKLOP",
+            "ball_columns": "FGHIJKLMNOP",
             "verify_method": "checkbox"
         }
     },
     "asphyxiati0n76 (on-hands)": {
         "swsh": {
             "type": "list",
-            "key": "14GKrT5SfSwTY294W6FSD404H3xk_Nhr0JbbMUKAj6Wg",
-            "tab_name": "On-Hands",
-            "pokemon_column": "E",
+            "key": "1zSTho4pGA2-ONVSf5TnmzsMk66FeQwwyZ1TYM3F3xPw",
+            "tab_name": "On-hands",
+            "pokemon_column": "A",
             "ball_column": "C"
         }
     },
