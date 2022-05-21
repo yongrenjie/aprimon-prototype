@@ -44,7 +44,10 @@ function populateUserDropdowns() {
                     text: user,
                     children: [],
                 }
-                for (let spreadsheet of Object.keys(window.allUsers[user])) {
+                // Get all spreadsheets available for a user and sort
+                let spreadsheets = Object.keys(window.allUsers[user]);
+                spreadsheets.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+                for (let spreadsheet of spreadsheets) {
                     this_user_data.children.push({
                         id: `${user}:${spreadsheet}`,
                         text: `${spreadsheet}`

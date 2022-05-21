@@ -11,23 +11,7 @@
     },
 
     "OnePointPi": {
-        "SwSh": {
-            "type": "grid",
-            "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
-            "tab_name": "SwSh/Home",
-            "pokemon_column": "C",
-            "ball_columns": "NMFGHIJKLOP",
-            "verify_method": "checkbox"
-        },
-        "BDSP": {
-            "type": "grid",
-            "key": "1V2uPApY6JDJZln_YwJ7aHG0ITw5d5jqFSdmIMPTmNb4",
-            "tab_name": "BDSP",
-            "pokemon_column": "C",
-            "ball_columns": "NMFGHIJKLOP",
-            "verify_method": "checkbox"
-        },
-        "master": {
+        "SwSh+BDSP": {
             "type": "grid",
             "key": "15g1ubG103W077b6RoeVYDLryJWklNJRJzRINDqvKyn8",
             "tab_name": "Master",
