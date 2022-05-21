@@ -1,6 +1,6 @@
 {
-    "CrazyNek0 (on-hands)": {
-        "swsh": {
+    "CrazyNek0": {
+        "SwSh (OH)": {
             "type": "list",
             "key": "14N7E48fztE-jtLppd_T7eJbfCiEVYodFDOHcBFm7J9o",
             "tab_name": "On-Hand FT",
@@ -8,8 +8,9 @@
             "ball_column": "C"
         }
     },
-    "Cattail (on-hands)": {
-        "swsh": {
+
+    "Cattail": {
+        "SwSh (OH)": {
             "type": "grid",
             "key": "1TsLc8CiVw9RlFVidTMZCtI2-EIkiW3InKLqSh7jKmXQ",
             "tab_name": "On-hands aprimons",
@@ -18,18 +19,17 @@
             "verify_method": "image"
         }
     },
+
     "asphyxiati0n76": {
-        "swsh": {
+        "SwSh": {
             "type": "grid",
             "key": "1zSTho4pGA2-ONVSf5TnmzsMk66FeQwwyZ1TYM3F3xPw",
             "tab_name": "Aprimon",
             "pokemon_column": "C",
             "ball_columns": "FGHIJKLMNOP",
             "verify_method": "checkbox"
-        }
-    },
-    "asphyxiati0n76 (on-hands)": {
-        "swsh": {
+        },
+        "SwSh (OH)": {
             "type": "list",
             "key": "1zSTho4pGA2-ONVSf5TnmzsMk66FeQwwyZ1TYM3F3xPw",
             "tab_name": "On-hands",
@@ -37,8 +37,9 @@
             "ball_column": "C"
         }
     },
+
     "Funnymann22": {
-        "swsh": {
+        "SwSh": {
             "type": "grid",
             "key": "1o3TuqOCKOmgFUFZWDmKuh62iZ9V-0RfnS4IWyYPcHF8",
             "tab_name": "SWSH",
@@ -49,17 +50,15 @@
     },
 
     "jennweiteh": {
-        "swsh": {
+        "SwSh": {
             "type": "grid",
             "key": "1WDm2b9xH71BsY_spEjJ7dQD4NsrZ5c_197xOIb778Gg",
             "tab_name": "Aprimons",
             "pokemon_column": "E",
             "ball_columns": "NMFGHIJKLOP",
             "verify_method": "checkbox"
-        }
-    },
-    "jennweiteh (on-hands)": {
-        "swsh": {
+        },
+        "SwSh (OH)": {
             "type": "grid",
             "key": "1WDm2b9xH71BsY_spEjJ7dQD4NsrZ5c_197xOIb778Gg",
             "tab_name": "On-Hands",
@@ -68,19 +67,16 @@
         }
     },
 
-
     "Acehunter": {
-        "swsh": {
+        "SwSh": {
             "type": "grid",
             "key": "1J6clJ8jXsMBiSFjGSln0Ly_w2mElZi-5ulGB3sc8Gf0",
             "tab_name": "Aprimons",
             "pokemon_column": "C",
             "ball_columns": "NMFGHIJKLOP",
             "verify_method": "checkbox"
-        }
-    },
-    "Acehunter (on-hands)": {
-        "swsh": {
+        },
+        "SwSh (OH)": {
             "type": "list",
             "key": "1J6clJ8jXsMBiSFjGSln0Ly_w2mElZi-5ulGB3sc8Gf0",
             "tab_name": "On-Hands",
