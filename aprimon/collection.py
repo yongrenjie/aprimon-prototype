@@ -40,14 +40,17 @@ def get_ball(entry):
         return entry
     # Case 2: Dream Ball (note that index 0 cannot error)
     s = entry.split()
-    if s[0] in ALL_BALLS:
+    if len(s) > 0 and s[0] in ALL_BALLS:
         return s[0]
     # Case 3: =image(.../dream.png"...)
     if "image" in entry and ".png" in entry:
-        s = entry.split(".png")[0]
-        s = s.split("/")[-1]
-        if s in ALL_BALLS:
-            return s
+        try:
+            s = entry.split(".png")[0]
+            s = s.split("/")[-1]
+            if s in ALL_BALLS:
+                return s
+        except IndexError:
+            pass
     # Failed to parse
     return None
 
@@ -215,8 +218,7 @@ class Collection:
             except KeyError:
                 warnings.warn(f'pokemon <{name_in_spreadsheet}> was not found')
             else:
-                ball_entry = row[col_to_index(ball_column)].lower()
-                ball = get_ball(ball_entry)
+                ball = get_ball(row[col_to_index(ball_column)])
                 if ball is not None:
                     entry = Entry(pokemon, [ball])
                     if pokemon.national_dex in collection:
