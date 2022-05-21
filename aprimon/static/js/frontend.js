@@ -39,7 +39,6 @@ function populateUserDropdowns() {
 
             // Add in the spreadsheets
             for (let user of listOfUsernames) {
-                console.log(user);
                 let this_user_data = {
                     id: user,
                     text: user,
@@ -60,7 +59,6 @@ function populateUserDropdowns() {
                 // for everything else
                 return state.id;
             }
-            console.log(select_data);
 
             // allow text searches to match optgroups instead of options
             // https://github.com/select2/select2/issues/3034#issuecomment-700259072
