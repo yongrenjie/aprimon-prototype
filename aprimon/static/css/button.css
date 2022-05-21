@@ -64,11 +64,11 @@
 }
 
 #output-format {
+    width: 185px;
     height: 40px;
 	display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-right: 15px;
 }
 
 #output-format input {
