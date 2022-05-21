@@ -557,13 +557,38 @@ function updateRowHighlighting(canonical_name) {
 
 function updateSelectionText() {
     // Update textarea {{{1
+    let outputFormat = getOutputFormat();
     let s = "";
-    let number = 0;
     sortCollection(window.selectedAprimon);
-    for (let entry of window.selectedAprimon) {
-        for (let ball of entry.balls) {
-            number = number + 1;
-            s = s + `${number}. ${capitaliseFirst(ball)} ${entry.display_name}\n`;
+
+    if (outputFormat == "ol") {
+        let number = 0;
+        for (let entry of window.selectedAprimon) {
+            for (let ball of entry.balls) {
+                number = number + 1;
+                s = s + `${number}. ${capitaliseFirst(ball)} ${entry.display_name}\n`;
+            }
+        }
+    }
+    else if (outputFormat == "ul") {
+        for (let entry of window.selectedAprimon) {
+            for (let ball of entry.balls) {
+                s = s + `- ${capitaliseFirst(ball)} ${entry.display_name}\n`;
+            }
+        }
+    }
+    else if (outputFormat == "csv") {
+        let first = true;
+        for (let entry of window.selectedAprimon) {
+            for (let ball of entry.balls) {
+                if (first) {
+                    s = s + `${capitaliseFirst(ball)} ${entry.display_name}`;
+                    first = false;
+                }
+                else {
+                    s = s + `, ${capitaliseFirst(ball)} ${entry.display_name}`;
+                }
+            }
         }
     }
     $("textarea#results-selector-textarea").val(s);
@@ -572,6 +597,7 @@ function updateSelectionText() {
 // When changing any of the sort types
 $("input#sort-radio-dex").on("click", updateSelectionText);
 $("input#sort-radio-alpha").on("click", updateSelectionText);
+$("#output-format>input").on("click", updateSelectionText);
 
 
 function changeGameSprites() {
@@ -742,6 +768,11 @@ function getGame() {
 
 function getSortMode() {
     return $("input[name='sort-radio']:checked").val();
+}
+
+
+function getOutputFormat() {
+    return $("input[name='output-radio']:checked").val();
 }
 
 
