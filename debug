@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-gunicorn -b "0.0.0.0:${PORT:=80}" aprimon:app --reload
+gunicorn -b "0.0.0.0:${PORT:=80}" aprimon:app --reload --reload-extra-file aprimon/templates/index.html

@@ -4,9 +4,13 @@
     <head>
         <title>Aprimon v2</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <script src="{{ url_for('static', filename='js/frontend.js') }}" type="module"></script>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/button.css') }}">
+
     </head>
 
 
@@ -14,14 +18,12 @@
         <div id="body-wrapper">
             <div id="title">
                 <h1>Welcome!</h1>
-                <p>This website will (try to) determine what Aprimon you can request from a trading partner, i.e. what they have but you don't have.</p>
+                <p>This website will (try to) determine what Aprimon you can request from a trading partner, i.e. what they have but you don't have. If you want the opposite (i.e. what you can offer them) please use the swap button and submit again</p>
                 <ul>
-                    <li><p>If you want the opposite (i.e. what you can offer them) please use the swap button and submit again</p></li>
-                    <li><p><b>14/5/22: BDSP technically works now, but note that HOME compatibility for BDSP is imminent and will likely shake up how things work...</b></p></li>
+                    <li><p><b>20/5/22: HOME UPDATE</b>&mdash;the game selection at the top no longer changes the list of spreadsheets (since in theory mons can be moved between games). It instead restricts the displayed list to the Pokémon which can legally be traded in the chosen game.</p></li>
                     <li><p>Please note that this only checks a spreadsheet for the presence of a ticked box &mdash; it doesn't do anything fancy such as looking for HA availability or pending trades. It is still your responsibility to check for this (if it matters to you, e.g. for genderless/monogender species), or even better, inform your trade partner if you don't have HA on something!</p></li>
                     <li><p>The comparison also combines entries from regional forms (e.g. Kanto and Alola Vulpix) and other things which can be crossbred (e.g. Basculin colours or Nidoran gender)</p></li>
-                    <li><p>This is rather preliminary &mdash; if there are any issues please let me know &mdash; my Reddit username is <a href="https://reddit.com/u/orthocresol">/u/orthocresol</a>.</p></li>
-                    <li><p>You can find the source code on <a href="https://github.com/yongrenjie/aprimon-prototype">GitHub</a> too (please feel free to submit issues or pull requests there if you are thus inclined!).</p></li>
+                    <li><p>Please let me know (<a href="https://www.reddit.com/r/pokemontrades/comments/u3loma">drop a comment here</a>) if you have any issues; I've added plenty of spreadsheets so far and it's likely that most bugs can be fixed!</p></li>
                 </ul>
             </div>
 
@@ -162,9 +164,20 @@
                         <ul id="instructions">
                             <li>Click on an individual cell to add it to the textbox below...</li>
                             <li>...or on a Pokemon name/sprite to add/remove an entire row...</li>
-                            <li>...or these buttons to <input id="select-all-button" type="button" value="Select all"> or <input id="clear-all-button" type="button" value="Clear all">
+                            <li>...or these buttons to <input id="select-all-button" type="button" value="Select all"> or <input id="clear-all-button" type="button" value="Clear all"></li>
                         </ul>
-                        <input id="copy-button" type="button" value="Copy text to clipboard"><span id="copy-message" class="small-text"></span>
+
+                        <div id="output-and-copy">
+                            <div id="output-format">
+                                <input type="radio" name="output-radio" value="ol" id="output-radio-ol" checked />
+                                <label for="output-radio-ol">1. X</label>
+                                <input type="radio" name="output-radio" value="ul" id="output-radio-ul" />
+                                <label for="output-radio-ul">• X</label>
+                                <input type="radio" name="output-radio" value="csv" id="output-radio-csv" />
+                                <label for="output-radio-csv">X, Y</label>
+                            </div>
+                            <input id="copy-button" type="button" value="Copy text to clipboard"><span id="copy-message" class="small-text"></span>
+                        </div>
                         <textarea readonly id="results-selector-textarea"></textarea>
                     </div>
                 </div>

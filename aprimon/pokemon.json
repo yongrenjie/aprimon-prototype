@@ -37,7 +37,19 @@
 		"other_names": [],
 		"national_dex": 13,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": true
+		}
 	},
 	"16": {
 		"display_name": "Pidgey",
@@ -45,7 +57,19 @@
 		"other_names": [],
 		"national_dex": 16,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"19": {
 		"display_name": "Rattata",
@@ -53,7 +77,19 @@
 		"other_names": ["rattataa", "rattataalola", "arattata", "alolanrattata", "rattatak", "rattatakanto", "krattata", "kantorattata"],
 		"national_dex": 19,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"21": {
 		"display_name": "Spearow",
@@ -61,7 +97,19 @@
 		"other_names": [],
 		"national_dex": 21,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"23": {
 		"display_name": "Ekans",
@@ -69,7 +117,19 @@
 		"other_names": [],
 		"national_dex": 23,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"27": {
 		"display_name": "Sandshrew",
@@ -125,7 +185,19 @@
 		"other_names": [],
 		"national_dex": 48,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": true
+		}
 	},
 	"50": {
 		"display_name": "Diglett",
@@ -157,7 +229,19 @@
 		"other_names": [],
 		"national_dex": 56,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
 	},
 	"58": {
 		"display_name": "Growlithe",
@@ -197,7 +281,19 @@
 		"other_names": [],
 		"national_dex": 69,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"72": {
 		"display_name": "Tentacool",
@@ -213,7 +309,19 @@
 		"other_names": ["geodudea", "geodudealola", "ageodude", "alolangeodude", "geodudek", "geodudekanto", "kgeodude", "kantogeodude"],
 		"national_dex": 74,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"77": {
 		"display_name": "Ponyta",
@@ -253,7 +361,19 @@
 		"other_names": [],
 		"national_dex": 84,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"86": {
 		"display_name": "Seel",
@@ -261,7 +381,19 @@
 		"other_names": [],
 		"national_dex": 86,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
 	},
 	"88": {
 		"display_name": "Grimer",
@@ -269,7 +401,19 @@
 		"other_names": ["grimera", "grimeralola", "agrimer", "alolangrimer", "grimerk", "grimerkanto", "kgrimer", "kantogrimer"],
 		"national_dex": 88,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"90": {
 		"display_name": "Shellder",
@@ -301,7 +445,19 @@
 		"other_names": [],
 		"national_dex": 96,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"98": {
 		"display_name": "Krabby",
@@ -317,7 +473,19 @@
 		"other_names": [],
 		"national_dex": 100,
 		"swsh": false,
-		"bdsp": true
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
 	},
 	"102": {
 		"display_name": "Exeggcute",
@@ -511,38 +679,86 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "152": {
-        "display_name": "Chikorita",
-        "canonical_name": "chikorita",
-        "other_names": [],
-        "national_dex": 152,
-        "swsh": false,
-        "bdsp": true
-    },
-    "155": {
-        "display_name": "Cyndaquil",
-        "canonical_name": "cyndaquil",
-        "other_names": [],
-        "national_dex": 155,
-        "swsh": false,
-        "bdsp": true
-    },
-    "158": {
-        "display_name": "Totodile",
-        "canonical_name": "totodile",
-        "other_names": [],
-        "national_dex": 158,
-        "swsh": false,
-        "bdsp": true
-    },
-    "161": {
-        "display_name": "Sentret",
-        "canonical_name": "sentret",
-        "other_names": [],
-        "national_dex": 161,
-        "swsh": false,
-        "bdsp": true
-    },
+	"152": {
+		"display_name": "Chikorita",
+		"canonical_name": "chikorita",
+		"other_names": [],
+		"national_dex": 152,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": false,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"155": {
+		"display_name": "Cyndaquil",
+		"canonical_name": "cyndaquil",
+		"other_names": [],
+		"national_dex": 155,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": false,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"158": {
+		"display_name": "Totodile",
+		"canonical_name": "totodile",
+		"other_names": [],
+		"national_dex": 158,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": false,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"161": {
+		"display_name": "Sentret",
+		"canonical_name": "sentret",
+		"other_names": [],
+		"national_dex": 161,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"163": {
 		"display_name": "Hoothoot",
 		"canonical_name": "hoothoot",
@@ -551,22 +767,46 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "165": {
-        "display_name": "Ledyba",
-        "canonical_name": "ledyba",
-        "other_names": [],
-        "national_dex": 165,
-        "swsh": false,
-        "bdsp": true
-    },
-    "167": {
-        "display_name": "Spinarak",
-        "canonical_name": "spinarak",
-        "other_names": [],
-        "national_dex": 167,
-        "swsh": false,
-        "bdsp": true
-    },
+	"165": {
+		"display_name": "Ledyba",
+		"canonical_name": "ledyba",
+		"other_names": [],
+		"national_dex": 165,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"167": {
+		"display_name": "Spinarak",
+		"canonical_name": "spinarak",
+		"other_names": [],
+		"national_dex": 167,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"170": {
 		"display_name": "Chinchou",
 		"canonical_name": "chinchou",
@@ -615,14 +855,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "179": {
-        "display_name": "Mareep",
-        "canonical_name": "mareep",
-        "other_names": [],
-        "national_dex": 179,
-        "swsh": false,
-        "bdsp": true
-    },
+	"179": {
+		"display_name": "Mareep",
+		"canonical_name": "mareep",
+		"other_names": [],
+		"national_dex": 179,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"183": {
 		"display_name": "Marill",
 		"canonical_name": "marill",
@@ -639,38 +891,86 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "187": {
-        "display_name": "Hoppip",
-        "canonical_name": "hoppip",
-        "other_names": [],
-        "national_dex": 187,
-        "swsh": false,
-        "bdsp": true
-    },
-    "190": {
-        "display_name": "Aipom",
-        "canonical_name": "aipom",
-        "other_names": [],
-        "national_dex": 190,
-        "swsh": false,
-        "bdsp": true
-    },
-    "191": {
-        "display_name": "Sunkern",
-        "canonical_name": "sunkern",
-        "other_names": [],
-        "national_dex": 191,
-        "swsh": false,
-        "bdsp": true
-    },
-    "193": {
-        "display_name": "Yanma",
-        "canonical_name": "yanma",
-        "other_names": [],
-        "national_dex": 193,
-        "swsh": false,
-        "bdsp": true
-    },
+	"187": {
+		"display_name": "Hoppip",
+		"canonical_name": "hoppip",
+		"other_names": [],
+		"national_dex": 187,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"190": {
+		"display_name": "Aipom",
+		"canonical_name": "aipom",
+		"other_names": [],
+		"national_dex": 190,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"191": {
+		"display_name": "Sunkern",
+		"canonical_name": "sunkern",
+		"other_names": [],
+		"national_dex": 191,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"193": {
+		"display_name": "Yanma",
+		"canonical_name": "yanma",
+		"other_names": [],
+		"national_dex": 193,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"194": {
 		"display_name": "Wooper",
 		"canonical_name": "wooper",
@@ -679,22 +979,46 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "198": {
-        "display_name": "Murkrow",
-        "canonical_name": "murkrow",
-        "other_names": [],
-        "national_dex": 198,
-        "swsh": false,
-        "bdsp": true
-    },
-    "200": {
-        "display_name": "Misdreavus",
-        "canonical_name": "misdreavus",
-        "other_names": [],
-        "national_dex": 200,
-        "swsh": false,
-        "bdsp": true
-    },
+	"198": {
+		"display_name": "Murkrow",
+		"canonical_name": "murkrow",
+		"other_names": [],
+		"national_dex": 198,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"200": {
+		"display_name": "Misdreavus",
+		"canonical_name": "misdreavus",
+		"other_names": [],
+		"national_dex": 200,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"202": {
 		"display_name": "Wobbuffet",
 		"canonical_name": "wobbuffet",
@@ -703,22 +1027,46 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "203": {
-        "display_name": "Girafarig",
-        "canonical_name": "girafarig",
-        "other_names": [],
-        "national_dex": 203,
-        "swsh": false,
-        "bdsp": true
-    },
-    "204": {
-        "display_name": "Pineco",
-        "canonical_name": "pineco",
-        "other_names": [],
-        "national_dex": 204,
-        "swsh": false,
-        "bdsp": true
-    },
+	"203": {
+		"display_name": "Girafarig",
+		"canonical_name": "girafarig",
+		"other_names": [],
+		"national_dex": 203,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"204": {
+		"display_name": "Pineco",
+		"canonical_name": "pineco",
+		"other_names": [],
+		"national_dex": 204,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"206": {
 		"display_name": "Dunsparce",
 		"canonical_name": "dunsparce",
@@ -727,22 +1075,46 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "207": {
-        "display_name": "Gligar",
-        "canonical_name": "gligar",
-        "other_names": [],
-        "national_dex": 207,
-        "swsh": false,
-        "bdsp": true
-    },
-    "209": {
-        "display_name": "Snubbull",
-        "canonical_name": "snubbull",
-        "other_names": [],
-        "national_dex": 209,
-        "swsh": false,
-        "bdsp": true
-    },
+	"207": {
+		"display_name": "Gligar",
+		"canonical_name": "gligar",
+		"other_names": [],
+		"national_dex": 207,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"209": {
+		"display_name": "Snubbull",
+		"canonical_name": "snubbull",
+		"other_names": [],
+		"national_dex": 209,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"211": {
 		"display_name": "Qwilfish",
 		"canonical_name": "qwilfish",
@@ -775,22 +1147,46 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "216": {
-        "display_name": "Teddiursa",
-        "canonical_name": "teddiursa",
-        "other_names": [],
-        "national_dex": 216,
-        "swsh": false,
-        "bdsp": true
-    },
-    "218": {
-        "display_name": "Slugma",
-        "canonical_name": "slugma",
-        "other_names": [],
-        "national_dex": 218,
-        "swsh": false,
-        "bdsp": true
-    },
+	"216": {
+		"display_name": "Teddiursa",
+		"canonical_name": "teddiursa",
+		"other_names": [],
+		"national_dex": 216,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"218": {
+		"display_name": "Slugma",
+		"canonical_name": "slugma",
+		"other_names": [],
+		"national_dex": 218,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"220": {
 		"display_name": "Swinub",
 		"canonical_name": "swinub",
@@ -839,38 +1235,86 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "228": {
-        "display_name": "Houndour",
-        "canonical_name": "houndour",
-        "other_names": [],
-        "national_dex": 228,
-        "swsh": false,
-        "bdsp": true
-    },
-    "231": {
-        "display_name": "Phanpy",
-        "canonical_name": "phanpy",
-        "other_names": [],
-        "national_dex": 231,
-        "swsh": false,
-        "bdsp": true
-    },
-    "234": {
-        "display_name": "Stantler",
-        "canonical_name": "stantler",
-        "other_names": [],
-        "national_dex": 234,
-        "swsh": false,
-        "bdsp": true
-    },
-    "235": {
-        "display_name": "Smeargle",
-        "canonical_name": "smeargle",
-        "other_names": [],
-        "national_dex": 235,
-        "swsh": false,
-        "bdsp": true
-    },
+	"228": {
+		"display_name": "Houndour",
+		"canonical_name": "houndour",
+		"other_names": [],
+		"national_dex": 228,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"231": {
+		"display_name": "Phanpy",
+		"canonical_name": "phanpy",
+		"other_names": [],
+		"national_dex": 231,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"234": {
+		"display_name": "Stantler",
+		"canonical_name": "stantler",
+		"other_names": [],
+		"national_dex": 234,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"235": {
+		"display_name": "Smeargle",
+		"canonical_name": "smeargle",
+		"other_names": [],
+		"national_dex": 235,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"236": {
 		"display_name": "Tyrogue",
 		"canonical_name": "tyrogue",
@@ -943,14 +1387,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "261": {
-        "display_name": "Poochyena",
-        "canonical_name": "poochyena",
-        "other_names": [],
-        "national_dex": 261,
-        "swsh": false,
-        "bdsp": true
-    },
+	"261": {
+		"display_name": "Poochyena",
+		"canonical_name": "poochyena",
+		"other_names": [],
+		"national_dex": 261,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"263": {
 		"display_name": "Zigzagoon",
 		"canonical_name": "zigzagoon",
@@ -959,14 +1415,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "265": {
-        "display_name": "Wurmple",
-        "canonical_name": "wurmple",
-        "other_names": [],
-        "national_dex": 265,
-        "swsh": false,
-        "bdsp": true
-    },
+	"265": {
+		"display_name": "Wurmple",
+		"canonical_name": "wurmple",
+		"other_names": [],
+		"national_dex": 265,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": true
+		}
+	},
 	"270": {
 		"display_name": "Lotad",
 		"canonical_name": "lotad",
@@ -983,14 +1451,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "276": {
-        "display_name": "Taillow",
-        "canonical_name": "taillow",
-        "other_names": [],
-        "national_dex": 276,
-        "swsh": false,
-        "bdsp": true
-    },
+	"276": {
+		"display_name": "Taillow",
+		"canonical_name": "taillow",
+		"other_names": [],
+		"national_dex": 276,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"278": {
 		"display_name": "Wingull",
 		"canonical_name": "wingull",
@@ -1007,30 +1487,66 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "283": {
-        "display_name": "Surskit",
-        "canonical_name": "surskit",
-        "other_names": [],
-        "national_dex": 283,
-        "swsh": false,
-        "bdsp": true
-    },
-    "285": {
-        "display_name": "Shroomish",
-        "canonical_name": "shroomish",
-        "other_names": [],
-        "national_dex": 285,
-        "swsh": false,
-        "bdsp": true
-    },
-    "287": {
-        "display_name": "Slakoth",
-        "canonical_name": "slakoth",
-        "other_names": [],
-        "national_dex": 287,
-        "swsh": false,
-        "bdsp": true
-    },
+	"283": {
+		"display_name": "Surskit",
+		"canonical_name": "surskit",
+		"other_names": [],
+		"national_dex": 283,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"285": {
+		"display_name": "Shroomish",
+		"canonical_name": "shroomish",
+		"other_names": [],
+		"national_dex": 285,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"287": {
+		"display_name": "Slakoth",
+		"canonical_name": "slakoth",
+		"other_names": [],
+		"national_dex": 287,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"290": {
 		"display_name": "Nincada",
 		"canonical_name": "nincada",
@@ -1047,30 +1563,66 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "296": {
-        "display_name": "Makuhita",
-        "canonical_name": "makuhita",
-        "other_names": [],
-        "national_dex": 296,
-        "swsh": false,
-        "bdsp": true
-    },
-    "299": {
-        "display_name": "Nosepass",
-        "canonical_name": "nosepass",
-        "other_names": [],
-        "national_dex": 299,
-        "swsh": false,
-        "bdsp": true
-    },
-    "300": {
-        "display_name": "Skitty",
-        "canonical_name": "skitty",
-        "other_names": [],
-        "national_dex": 300,
-        "swsh": false,
-        "bdsp": true
-    },
+	"296": {
+		"display_name": "Makuhita",
+		"canonical_name": "makuhita",
+		"other_names": [],
+		"national_dex": 296,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"299": {
+		"display_name": "Nosepass",
+		"canonical_name": "nosepass",
+		"other_names": [],
+		"national_dex": 299,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"300": {
+		"display_name": "Skitty",
+		"canonical_name": "skitty",
+		"other_names": [],
+		"national_dex": 300,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"302": {
 		"display_name": "Sableye",
 		"canonical_name": "sableye",
@@ -1095,14 +1647,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "307": {
-        "display_name": "Meditite",
-        "canonical_name": "meditite",
-        "other_names": [],
-        "national_dex": 307,
-        "swsh": false,
-        "bdsp": true
-    },
+	"307": {
+		"display_name": "Meditite",
+		"canonical_name": "meditite",
+		"other_names": [],
+		"national_dex": 307,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"309": {
 		"display_name": "Electrike",
 		"canonical_name": "electrike",
@@ -1111,30 +1675,66 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "311": {
-        "display_name": "Plusle",
-        "canonical_name": "plusle",
-        "other_names": [],
-        "national_dex": 311,
-        "swsh": false,
-        "bdsp": true
-    },
-    "312": {
-        "display_name": "Minun",
-        "canonical_name": "minun",
-        "other_names": [],
-        "national_dex": 312,
-        "swsh": false,
-        "bdsp": true
-    },
-    "313": {
-        "display_name": "Volbeat",
-        "canonical_name": "volbeat",
-        "other_names": ["illumise"],
-        "national_dex": 313,
-        "swsh": false,
-        "bdsp": true
-    },
+	"311": {
+		"display_name": "Plusle",
+		"canonical_name": "plusle",
+		"other_names": [],
+		"national_dex": 311,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"312": {
+		"display_name": "Minun",
+		"canonical_name": "minun",
+		"other_names": [],
+		"national_dex": 312,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"313": {
+		"display_name": "Volbeat",
+		"canonical_name": "volbeat",
+		"other_names": ["illumise"],
+		"national_dex": 313,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": true
+		}
+	},
 	"315": {
 		"display_name": "Roselia",
 		"canonical_name": "roselia",
@@ -1143,14 +1743,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "316": {
-        "display_name": "Gulpin",
-        "canonical_name": "gulpin",
-        "other_names": [],
-        "national_dex": 316,
-        "swsh": false,
-        "bdsp": true
-    },
+	"316": {
+		"display_name": "Gulpin",
+		"canonical_name": "gulpin",
+		"other_names": [],
+		"national_dex": 316,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"318": {
 		"display_name": "Carvanha",
 		"canonical_name": "carvanha",
@@ -1167,14 +1779,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "322": {
-        "display_name": "Numel",
-        "canonical_name": "numel",
-        "other_names": [],
-        "national_dex": 322,
-        "swsh": false,
-        "bdsp": true
-    },
+	"322": {
+		"display_name": "Numel",
+		"canonical_name": "numel",
+		"other_names": [],
+		"national_dex": 322,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"324": {
 		"display_name": "Torkoal",
 		"canonical_name": "torkoal",
@@ -1183,22 +1807,46 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "325": {
-        "display_name": "Spoink",
-        "canonical_name": "spoink",
-        "other_names": [],
-        "national_dex": 325,
-        "swsh": false,
-        "bdsp": true
-    },
-    "327": {
-        "display_name": "Spinda",
-        "canonical_name": "spinda",
-        "other_names": [],
-        "national_dex": 327,
-        "swsh": false,
-        "bdsp": true
-    },
+	"325": {
+		"display_name": "Spoink",
+		"canonical_name": "spoink",
+		"other_names": [],
+		"national_dex": 325,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"327": {
+		"display_name": "Spinda",
+		"canonical_name": "spinda",
+		"other_names": [],
+		"national_dex": 327,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": false,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"328": {
 		"display_name": "Trapinch",
 		"canonical_name": "trapinch",
@@ -1207,14 +1855,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "331": {
-        "display_name": "Cacnea",
-        "canonical_name": "cacnea",
-        "other_names": [],
-        "national_dex": 331,
-        "swsh": false,
-        "bdsp": true
-    },
+	"331": {
+		"display_name": "Cacnea",
+		"canonical_name": "cacnea",
+		"other_names": [],
+		"national_dex": 331,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"333": {
 		"display_name": "Swablu",
 		"canonical_name": "swablu",
@@ -1223,22 +1883,46 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "335": {
-        "display_name": "Zangoose",
-        "canonical_name": "zangoose",
-        "other_names": [],
-        "national_dex": 335,
-        "swsh": false,
-        "bdsp": true
-    },
-    "336": {
-        "display_name": "Seviper",
-        "canonical_name": "seviper",
-        "other_names": [],
-        "national_dex": 336,
-        "swsh": false,
-        "bdsp": true
-    },
+	"335": {
+		"display_name": "Zangoose",
+		"canonical_name": "zangoose",
+		"other_names": [],
+		"national_dex": 335,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"336": {
+		"display_name": "Seviper",
+		"canonical_name": "seviper",
+		"other_names": [],
+		"national_dex": 336,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"337": {
 		"display_name": "Lunatone",
 		"canonical_name": "lunatone",
@@ -1303,30 +1987,66 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "351": {
-        "display_name": "Castform",
-        "canonical_name": "castform",
-        "other_names": [],
-        "national_dex": 351,
-        "swsh": false,
-        "bdsp": true
-    },
-    "352": {
-        "display_name": "Kecleon",
-        "canonical_name": "kecleon",
-        "other_names": [],
-        "national_dex": 352,
-        "swsh": false,
-        "bdsp": true
-    },
-    "353": {
-        "display_name": "Shuppet",
-        "canonical_name": "shuppet",
-        "other_names": [],
-        "national_dex": 353,
-        "swsh": false,
-        "bdsp": true
-    },
+	"351": {
+		"display_name": "Castform",
+		"canonical_name": "castform",
+		"other_names": [],
+		"national_dex": 351,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"352": {
+		"display_name": "Kecleon",
+		"canonical_name": "kecleon",
+		"other_names": [],
+		"national_dex": 352,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"353": {
+		"display_name": "Shuppet",
+		"canonical_name": "shuppet",
+		"other_names": [],
+		"national_dex": 353,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"355": {
 		"display_name": "Duskull",
 		"canonical_name": "duskull",
@@ -1335,22 +2055,46 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "357": {
-        "display_name": "Tropius",
-        "canonical_name": "tropius",
-        "other_names": [],
-        "national_dex": 357,
-        "swsh": false,
-        "bdsp": true
-    },
-    "358": {
-        "display_name": "Chimecho",
-        "canonical_name": "chimecho",
-        "other_names": ["chingling"],
-        "national_dex": 358,
-        "swsh": false,
-        "bdsp": true
-    },
+	"357": {
+		"display_name": "Tropius",
+		"canonical_name": "tropius",
+		"other_names": [],
+		"national_dex": 357,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"358": {
+		"display_name": "Chimecho",
+		"canonical_name": "chimecho",
+		"other_names": ["chingling"],
+		"national_dex": 358,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"359": {
 		"display_name": "Absol",
 		"canonical_name": "absol",
@@ -1375,14 +2119,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "366": {
-        "display_name": "Clamperl",
-        "canonical_name": "clamperl",
-        "other_names": [],
-        "national_dex": 366,
-        "swsh": false,
-        "bdsp": true
-    },
+	"366": {
+		"display_name": "Clamperl",
+		"canonical_name": "clamperl",
+		"other_names": [],
+		"national_dex": 366,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"369": {
 		"display_name": "Relicanth",
 		"canonical_name": "relicanth",
@@ -1391,14 +2147,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "370": {
-        "display_name": "Luvdisc",
-        "canonical_name": "luvdisc",
-        "other_names": [],
-        "national_dex": 370,
-        "swsh": false,
-        "bdsp": true
-    },
+	"370": {
+		"display_name": "Luvdisc",
+		"canonical_name": "luvdisc",
+		"other_names": [],
+		"national_dex": 370,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"371": {
 		"display_name": "Bagon",
 		"canonical_name": "bagon",
@@ -1415,54 +2183,126 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "387": {
-        "display_name": "Turtwig",
-        "canonical_name": "turtwig",
-        "other_names": [],
-        "national_dex": 387,
-        "swsh": false,
-        "bdsp": true
-    },
-    "390": {
-        "display_name": "Chimchar",
-        "canonical_name": "chimchar",
-        "other_names": [],
-        "national_dex": 390,
-        "swsh": false,
-        "bdsp": true
-    },
-    "393": {
-        "display_name": "Piplup",
-        "canonical_name": "piplup",
-        "other_names": [],
-        "national_dex": 393,
-        "swsh": false,
-        "bdsp": true
-    },
-    "396": {
-        "display_name": "Starly",
-        "canonical_name": "starly",
-        "other_names": [],
-        "national_dex": 396,
-        "swsh": false,
-        "bdsp": true
-    },
-    "399": {
-        "display_name": "Bidoof",
-        "canonical_name": "bidoof",
-        "other_names": [],
-        "national_dex": 399,
-        "swsh": false,
-        "bdsp": true
-    },
-    "401": {
-        "display_name": "Kricketot",
-        "canonical_name": "kricketot",
-        "other_names": [],
-        "national_dex": 401,
-        "swsh": false,
-        "bdsp": true
-    },
+	"387": {
+		"display_name": "Turtwig",
+		"canonical_name": "turtwig",
+		"other_names": [],
+		"national_dex": 387,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"390": {
+		"display_name": "Chimchar",
+		"canonical_name": "chimchar",
+		"other_names": [],
+		"national_dex": 390,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"393": {
+		"display_name": "Piplup",
+		"canonical_name": "piplup",
+		"other_names": [],
+		"national_dex": 393,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"396": {
+		"display_name": "Starly",
+		"canonical_name": "starly",
+		"other_names": [],
+		"national_dex": 396,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"399": {
+		"display_name": "Bidoof",
+		"canonical_name": "bidoof",
+		"other_names": [],
+		"national_dex": 399,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"401": {
+		"display_name": "Kricketot",
+		"canonical_name": "kricketot",
+		"other_names": [],
+		"national_dex": 401,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": true
+		}
+	},
 	"403": {
 		"display_name": "Shinx",
 		"canonical_name": "shinx",
@@ -1471,30 +2311,66 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "408": {
-        "display_name": "Cranidos",
-        "canonical_name": "cranidos",
-        "other_names": [],
-        "national_dex": 408,
-        "swsh": false,
-        "bdsp": true
-    },
-    "410": {
-        "display_name": "Shieldon",
-        "canonical_name": "shieldon",
-        "other_names": [],
-        "national_dex": 410,
-        "swsh": false,
-        "bdsp": true
-    },
-    "412": {
-        "display_name": "Burmy",
-        "canonical_name": "burmy",
-        "other_names": [],
-        "national_dex": 412,
-        "swsh": false,
-        "bdsp": true
-    },
+	"408": {
+		"display_name": "Cranidos",
+		"canonical_name": "cranidos",
+		"other_names": [],
+		"national_dex": 408,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": false,
+			"friend": false,
+			"heavy": false,
+			"level": false,
+			"love": false,
+			"lure": false,
+			"moon": false,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"410": {
+		"display_name": "Shieldon",
+		"canonical_name": "shieldon",
+		"other_names": [],
+		"national_dex": 410,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": false,
+			"friend": false,
+			"heavy": false,
+			"level": false,
+			"love": false,
+			"lure": false,
+			"moon": false,
+			"safari": false,
+			"sport": false
+		}
+	},
+	"412": {
+		"display_name": "Burmy",
+		"canonical_name": "burmy",
+		"other_names": [],
+		"national_dex": 412,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"415": {
 		"display_name": "Combee",
 		"canonical_name": "combee",
@@ -1503,22 +2379,46 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "417": {
-        "display_name": "Pachirisu",
-        "canonical_name": "pachirisu",
-        "other_names": [],
-        "national_dex": 417,
-        "swsh": false,
-        "bdsp": true
-    },
-    "418": {
-        "display_name": "Buizel",
-        "canonical_name": "buizel",
-        "other_names": [],
-        "national_dex": 418,
-        "swsh": false,
-        "bdsp": true
-    },
+	"417": {
+		"display_name": "Pachirisu",
+		"canonical_name": "pachirisu",
+		"other_names": [],
+		"national_dex": 417,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"418": {
+		"display_name": "Buizel",
+		"canonical_name": "buizel",
+		"other_names": [],
+		"national_dex": 418,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
 	"420": {
 		"display_name": "Cherubi",
 		"canonical_name": "cherubi",
@@ -1551,14 +2451,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "431": {
-        "display_name": "Glameow",
-        "canonical_name": "glameow",
-        "other_names": [],
-        "national_dex": 431,
-        "swsh": false,
-        "bdsp": true
-    },
+	"431": {
+		"display_name": "Glameow",
+		"canonical_name": "glameow",
+		"other_names": [],
+		"national_dex": 431,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"434": {
 		"display_name": "Stunky",
 		"canonical_name": "stunky",
@@ -1575,14 +2487,26 @@
 		"swsh": true,
 		"bdsp": true
 	},
-    "441": {
-        "display_name": "Chatot",
-        "canonical_name": "chatot",
-        "other_names": [],
-        "national_dex": 441,
-        "swsh": false,
-        "bdsp": true
-    },
+	"441": {
+		"display_name": "Chatot",
+		"canonical_name": "chatot",
+		"other_names": [],
+		"national_dex": 441,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"442": {
 		"display_name": "Spiritomb",
 		"canonical_name": "spiritomb",
@@ -1613,7 +2537,7 @@
 		"other_names": [],
 		"national_dex": 449,
 		"swsh": true,
-		"bdsp": false
+		"bdsp": true
 	},
 	"451": {
 		"display_name": "Skorupi",
@@ -1621,7 +2545,7 @@
 		"other_names": [],
 		"national_dex": 451,
 		"swsh": true,
-		"bdsp": false
+		"bdsp": true
 	},
 	"453": {
 		"display_name": "Croagunk",
@@ -1629,31 +2553,55 @@
 		"other_names": [],
 		"national_dex": 453,
 		"swsh": true,
-		"bdsp": false
+		"bdsp": true
 	},
-    "455": {
-        "display_name": "Carnivine",
-        "canonical_name": "carnivine",
-        "other_names": [],
-        "national_dex": 455,
-        "swsh": false,
-        "bdsp": true
-    },
-    "456": {
-        "display_name": "Finneon",
-        "canonical_name": "finneon",
-        "other_names": [],
-        "national_dex": 456,
-        "swsh": false,
-        "bdsp": true
-    },
+	"455": {
+		"display_name": "Carnivine",
+		"canonical_name": "carnivine",
+		"other_names": [],
+		"national_dex": 455,
+		"swsh": false,
+		"bdsp": {
+			"beast": false,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": true,
+			"sport": false
+		}
+	},
+	"456": {
+		"display_name": "Finneon",
+		"canonical_name": "finneon",
+		"other_names": [],
+		"national_dex": 456,
+		"swsh": false,
+		"bdsp": {
+			"beast": true,
+			"dream": true,
+			"fast": true,
+			"friend": true,
+			"heavy": true,
+			"level": true,
+			"love": true,
+			"lure": true,
+			"moon": true,
+			"safari": false,
+			"sport": false
+		}
+	},
 	"459": {
 		"display_name": "Snover",
 		"canonical_name": "snover",
 		"other_names": [],
 		"national_dex": 459,
 		"swsh": true,
-		"bdsp": false
+		"bdsp": true
 	},
 	"479": {
 		"display_name": "Rotom",
@@ -1661,7 +2609,7 @@
 		"other_names": [],
 		"national_dex": 479,
 		"swsh": true,
-		"bdsp": false
+		"bdsp": true
 	},
 	"506": {
 		"display_name": "Lillipup",
