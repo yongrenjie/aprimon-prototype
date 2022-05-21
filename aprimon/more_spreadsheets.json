@@ -83,6 +83,24 @@
             "pokemon_column": "E",
             "ball_column": "C"
         }
+    },
+
+    "friendguard": {
+        "master": {
+            "type": "grid",
+            "key": "1EexnQhz7qZe49UkwDPq5qu_5BKPp1PbAFg81SqhlUIc",
+            "tab_name": "Aprimon",
+            "pokemon_column": "D",
+            "ball_columns": "NFGHIJKLMPO",
+            "verify_method": "image"
+        },
+        "SwSh (OH)": {
+            "type": "list",
+            "key": "1EexnQhz7qZe49UkwDPq5qu_5BKPp1PbAFg81SqhlUIc",
+            "tab_name": "SWSH On-hands",
+            "pokemon_column": "B",
+            "ball_column": "D"
+        }
     }
 
 }
