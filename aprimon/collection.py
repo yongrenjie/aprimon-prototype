@@ -30,6 +30,28 @@ def get_pokemon(name):
     raise KeyError(f"A Pokemon entry was not found for: '{search_string}'")
 
 
+def get_ball(entry):
+    """(Crudely) attempt to determine the ball type from a spreadsheet entry.
+    Yes regexes would be cleaner, but I don't really care. PRs welcome!"""
+    entry = entry.lower()
+
+    # Case 1: Dream
+    if entry in ALL_BALLS:
+        return entry
+    # Case 2: Dream Ball (note that index 0 cannot error)
+    s = entry.split()
+    if s[0] in ALL_BALLS:
+        return s[0]
+    # Case 3: =image(.../dream.png"...)
+    if "image" in entry and ".png" in entry:
+        s = entry.split(".png")[0]
+        s = s.split("/")[-1]
+        if s in ALL_BALLS:
+            return s
+    # Failed to parse
+    return None
+
+
 class Entry:
     """An Entry represents one Pokemon in a collection of Aprimon."""
     def __init__(self, pokemon, balls):
@@ -193,9 +215,9 @@ class Collection:
             except KeyError:
                 warnings.warn(f'pokemon <{name_in_spreadsheet}> was not found')
             else:
-                ball = row[col_to_index(ball_column)].lower()
-                ball = ball.split()[0]   # cover for e.g. 'Beast Ball'
-                if ball in ALL_BALLS:
+                ball_entry = row[col_to_index(ball_column)].lower()
+                ball = get_ball(ball_entry)
+                if ball is not None:
                     entry = Entry(pokemon, [ball])
                     if pokemon.national_dex in collection:
                         collection[pokemon.national_dex] = entry + collection[pokemon.national_dex]
