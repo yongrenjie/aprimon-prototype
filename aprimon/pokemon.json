@@ -2430,7 +2430,7 @@
 	"422": {
 		"display_name": "Shellos",
 		"canonical_name": "shellos",
-		"other_names": ["shelloswest", "shelloswestsea", "shelloseast", "shelloseastsea"],
+		"other_names": ["shelloswest", "shelloswestsea", "shelloseast", "shelloseastsea", "shellosw", "shellose"],
 		"national_dex": 422,
 		"swsh": true,
 		"bdsp": true
