@@ -230,33 +230,92 @@ class Collection:
 
     @classmethod
     def from_manual(cls, lines):
-        """lines: list of str, each one being of the form <BALL> <SPECIES>"""
+        """
+        Read Aprimon data from a list of lines.
+
+        Parameters
+        ----------
+        lines : list of str
+
+        TODO: Document accepted formats
+        """
         collection = {}
 
-        for line in lines:
-            try:
-                [ball, name] = line.split(maxsplit=1)
-            except ValueError:
-                continue
+        def parse_one_line(original_line):
+            line = original_line.lower()
+            # Remove anything in parentheses (assume it's not needed)
+            line = re.sub(r'\(.*?\)', '', line)
+            # Strip 'x1' or '1x' from the end of the line
+            line = re.sub(r'\s*(\d+x|x\d+)$', '', line)
+            # Remove non-alphabetical characters from both ends
+            line = re.sub(r'[^a-z]*$', '', line)
+            line = re.sub(r'^[^a-z]*', '', line)
+            # Remove 'ball' and 'ha'
+            line = re.sub(r'\bball\b', '', line)
+            line = re.sub(r'\bha\b', '', line)
+            if line == '':
+                return None
 
-            ball = ball.lower()
-            try:
-                pokemon = get_pokemon(name)
-            except KeyError:
-                warnings.warn(f'pokemon <{name}> was not found')
+            def make_entry(ball, name):
+                # Returns an Entry with the Pokemon and ball combination if it
+                # can be found
+                ball = re.sub(r'[^a-z]*$', '', ball)
+                ball = re.sub(r'^[^a-z]*', '', ball)
+                try:
+                    pokemon = get_pokemon(name)
+                except KeyError:
+                    return None
+                else:
+                    if ball in ALL_BALLS:
+                        return Entry(pokemon, [ball])
+
+            words = line.split()
+            if len(words) == 2:
+                result = make_entry(words[0], words[1]) \
+                    or make_entry(words[1], words[0])
+            elif len(words) > 2:
+                # TODO: Check here if the line is of the form 'BALL: Pkmn1,
+                # Pkmn2, ...'
+
+                # Otherwise, try various combinations of the input and see if
+                # one sticks.
+                result = make_entry(words[0], ' '.join(words[1:])) \
+                    or make_entry(' '.join(words[:-1]), words[-1]) \
+                    or make_entry(words[0], words[1]) \
+                    or make_entry(words[1], words[0]) \
+                    or make_entry(words[1], words[2]) \
+                    or make_entry(words[2], words[1])
             else:
-                if ball in ALL_BALLS:
-                    entry = Entry(pokemon, [ball])
-                    if pokemon.national_dex in collection:
-                        collection[pokemon.national_dex] = entry + collection[pokemon.national_dex]
-                    else:
-                        collection[pokemon.national_dex] = entry
+                result = None
 
+            if result is None:
+                warnings.warn(f'Could not parse line: <{original_line}>')
+            return result
+
+        for line in lines:
+            entry = parse_one_line(line)
+            if entry is not None:
+                pokemon = entry.pokemon
+                if pokemon.national_dex in collection:
+                    collection[pokemon.national_dex] = entry + collection[pokemon.national_dex]
+                else:
+                    collection[pokemon.national_dex] = entry
         return Collection(collection).remove_empty()
         
     def __add__(self, other):
-        """c1 + c2 gives you the aprimon which are in either c1 or c2;
-        basically a set union."""
+        """
+        c1 + c2 gives you the aprimon which are in either c1 or c2;
+        basically a set union.
+
+        Parameters
+        ----------
+        self : `Collection`
+        other : `Collection` or `Entry`
+
+        Returns
+        -------
+        The `Collection` which represents the sum of the inputs.
+        """
         if isinstance(other, Collection):
             sum_data = deepcopy(self.data)
             for national_dex, other_entry in other.data.items():
@@ -277,9 +336,20 @@ class Collection:
             return NotImplemented
 
     def __sub__(self, other):
-        """c1 - c2 gives you the aprimon which are in c1 but not in c2;
+        """
+        c1 - c2 gives you the aprimon which are in c1 but not in c2;
         basically a set difference, or the relative complement of c1 with
-        respect to c2."""
+        respect to c2.
+
+        Parameters
+        ----------
+        self : `Collection`
+        other : `Collection` or `Entry`
+
+        Returns
+        -------
+        The `Collection` which represents the difference of the inputs.
+        """
         if isinstance(other, Collection):
             difference_data = deepcopy(self.data)
             for national_dex, other_entry in other.data.items():
