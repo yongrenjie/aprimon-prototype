@@ -3464,7 +3464,7 @@
 		"canonical_name": "grookey",
 		"other_names": [],
 		"national_dex": 810,
-		"swsh": true,
+		"swsh": false,
 		"bdsp": false
 	},
 	"813": {
@@ -3472,7 +3472,7 @@
 		"canonical_name": "scorbunny",
 		"other_names": [],
 		"national_dex": 813,
-		"swsh": true,
+		"swsh": false,
 		"bdsp": false
 	},
 	"816": {
@@ -3480,7 +3480,7 @@
 		"canonical_name": "sobble",
 		"other_names": [],
 		"national_dex": 816,
-		"swsh": true,
+		"swsh": false,
 		"bdsp": false
 	},
 	"819": {
