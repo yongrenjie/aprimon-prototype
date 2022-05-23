@@ -280,6 +280,43 @@
             "pokemon_column": "A",
             "ball_column": "C"
         }
+    },
+
+    "FoiledFeline": {
+        "SwSh+BDSP": {
+            "type": "grid",
+            "key": "1CH6i29890wdfDH1ASlpJ6r9HD6M7Q-lVP2fPlul4avk",
+            "tab_name": "SpecialBalls Combined",
+            "pokemon_column": "C",
+            "ball_columns": "AQ,AP,AI,AJ,AK,AL,AM,AN,AO,AG,AH",
+            "verify_method": "nonempty",
+            "use_formula": false
+        },
+        "SwSh": {
+            "type": "grid",
+            "key": "1CH6i29890wdfDH1ASlpJ6r9HD6M7Q-lVP2fPlul4avk",
+            "tab_name": "SpecialBalls SWSH",
+            "pokemon_column": "C",
+            "ball_columns": "AQ,AP,AI,AJ,AK,AL,AM,AN,AO,AG,AH",
+            "verify_method": "nonempty",
+            "use_formula": false
+        },
+        "BDSP": {
+            "type": "grid",
+            "key": "1CH6i29890wdfDH1ASlpJ6r9HD6M7Q-lVP2fPlul4avk",
+            "tab_name": "SpecialBalls BDSP",
+            "pokemon_column": "C",
+            "ball_columns": "AQ,AP,AI,AJ,AK,AL,AM,AN,AO,AG,AH",
+            "verify_method": "nonempty",
+            "use_formula": false
+        },
+        "SwSh (OH)": {
+            "type": "list",
+            "key": "1CH6i29890wdfDH1ASlpJ6r9HD6M7Q-lVP2fPlul4avk",
+            "tab_name": "On-Hands",
+            "pokemon_column": "C",
+            "ball_column": "E"
+        }
     }
 
 }
