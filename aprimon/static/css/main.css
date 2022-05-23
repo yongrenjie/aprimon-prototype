@@ -43,8 +43,9 @@ html {
     font-size: 18px;
 
     background-color: #f0f0f0;
-    background-image: url('../togekiss.png');
-    background-color: rgba(255, 255, 255, 0.90);
+    /* https://twitter.com/nomEliM091/status/1528738108677599233 */
+    background-image: url('../kiss3.jpeg');
+    background-color: rgba(255, 255, 255, 0.85);
     background-size: cover;
     background-blend-mode: overlay;
     background-attachment: fixed;
@@ -271,7 +272,7 @@ td.selected {
 }
 
 td.unselected {
-    background-color: none;
+    background-color: rgba(238, 244, 250, 0.50);
 }
 
 td.unselected:hover {
