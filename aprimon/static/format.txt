@@ -1,13 +1,32 @@
-Aprimon should be listed one per line as <BALL> <SPECIES>, e.g.
+aprimon should be listed one per line. The standard format is <BALL> <SPECIES>,
+e.g.
 
-Beast Magikarp
-Dream Togepi
+    Beast Togepi
+    Dream Togepi
 
-Capitalisation as well as punctuation is ignored, but the parser is sensitive to typos in names so please ensure that everything is spelt correctly.
+Capitalisation as well as punctuation is ignored, but the parser is sensitive
+to typos in names so please ensure that everything is spelt correctly.
 
-Regional forms can be entered in several different ways. All of the following should work (plus any form of punctuation or none):
+It does try to remove things such as non-alphabetical characters where
+possible. It also removes strings such as 'HA' or 'Ball', or anything in
+parentheses. So, the following (or various combinations thereof) will all work:
 
-Diglett A
-Diglett Alola
-A Diglett
-Alolan Diglett
+    1. Fast Togepi
+    Friend Togepi (x9)
+    Heavy Ball Togepi
+    Level HA Togepi
+
+or combinations thereof (hopefully less obnoxious than this example):
+
+    13. Love Ball HA Togepi (x10000)
+
+Regional forms can be entered in several different ways. All of the following
+should work (plus any form of punctuation or none):
+
+    Beast Diglett (Alola)
+    Dream Ball Alolan Diglett
+    Fast Diglett-A (2x)
+
+Note, however, that the website doesn't treat regional forms any differently
+from the standard forms, because these can all be crossbred. So, if you enter
+'Lure Diglett-Alola', it will still display as 'Lure Diglett'.
