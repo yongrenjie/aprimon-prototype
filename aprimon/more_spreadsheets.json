@@ -68,7 +68,7 @@
     },
 
     "friendguard": {
-        "master": {
+        "SwSh+BDSP": {
             "type": "grid",
             "key": "1EexnQhz7qZe49UkwDPq5qu_5BKPp1PbAFg81SqhlUIc",
             "tab_name": "Aprimon",
@@ -82,6 +82,18 @@
             "tab_name": "SWSH On-hands",
             "pokemon_column": "B",
             "ball_column": "D"
+        }
+    },
+
+    "Domin0e": {
+        "SwSh+BDSP": {
+            "type": "grid",
+            "key": "1L7R1ZLuufwGg5D4G3Pq34_YF9rkLmNACqJRkKY5q4m8",
+            "tab_name": "List",
+            "pokemon_column": "A",
+            "ball_columns": "IKNHPGQORLM",
+            "verify_method": "nonempty",
+            "use_formula": false
         }
     }
 
