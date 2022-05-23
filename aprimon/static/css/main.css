@@ -41,12 +41,18 @@ html {
     font-family: "Source Sans Pro", sans-serif;
     box-sizing: border-box;
     font-size: 18px;
+
     background-color: #f0f0f0;
+    background-image: url('../togekiss.png');
+    background-color: rgba(255, 255, 255, 0.90);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
 
     /* these lines makes sure that the scrollbar appearing doesn't cause layout changes */
     /* https://stackoverflow.com/a/39289453 */
-    overflow-x: hidden;
-    margin-right: calc(-1 * (100vw - 100%));
+    overflow-x: auto;
+    padding-left: calc(1 * (100vw - 100%));
 }
 
 *, *:before, *:after {
