@@ -358,10 +358,10 @@ function displayCollection() {
                 if (entry.balls.includes(ball)) {
                     const index = getIndexFromSelection(entry.canonical_name);
                     if (index !== -1 && window.selectedAprimon[index].balls.includes(ball)) {
-                        row = row + `<td class="collection-entry active-entry selected" id="${canonical_id}">${makeSpriteImgTag(ball)}</td>`;
+                        row = row + `<td class="collection-entry active-entry selected" id="${canonical_id}">${makeSpriteImgTagLarger(ball)}</td>`;
                     }
                     else {
-                        row = row + `<td class="collection-entry active-entry unselected" id="${canonical_id}">${makeSpriteImgTag(ball)}</td>`;
+                        row = row + `<td class="collection-entry active-entry unselected" id="${canonical_id}">${makeSpriteImgTagLarger(ball)}</td>`;
                     }
                 }
                 else {
@@ -756,6 +756,9 @@ function makeSpriteImgTag(name) {
     return `<img src="static/sprites/${name}.png" />`;
 }
 
+function makeSpriteImgTagLarger(name) {
+    return `<img src="static/sprites/${name}.png" height="35" />`;
+}
 
 function makeSpriteImgTagSmall(name) {
     return `<img src="static/sprites/${name}.png" class="constrained-height" />`;
