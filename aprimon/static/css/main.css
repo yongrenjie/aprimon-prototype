@@ -3,10 +3,9 @@ html {
     box-sizing: border-box;
     font-size: 18px;
 
-    background-color: #f0f0f0;
-    /* https://twitter.com/nomEliM091/status/1528738108677599233 */
-    background-image: url('../kiss3.jpeg');
-    background-color: rgba(255, 255, 255, 0.85);
+    /* https://www.deviantart.com/aquabluu/art/Togekiss-299249274 */
+    background-image: url('../kiss4.jpeg');
+    background-color: rgba(255, 255, 255, 0.88);
     background-size: cover;
     background-blend-mode: overlay;
     background-attachment: fixed;
@@ -68,6 +67,11 @@ div#user-info {
 select {
     width: 270px;
 }
+
+textarea {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
 textarea#user1a-textarea, textarea#user2a-textarea, textarea#user1b-textarea, textarea#user2b-textarea {
     font-size: 80%;
     width: 270px;
@@ -195,6 +199,7 @@ textarea#results-selector-textarea {
     width: 100%;
     height: calc(95% - 120px);
     resize: none;
+    background-color: rgba(255, 255, 252, 0.60);
 }
 
 /* TABLE STYLING */
@@ -233,7 +238,7 @@ td.selected {
 }
 
 td.unselected {
-    background-color: rgba(238, 244, 250, 0.50);
+    background-color: rgba(255, 255, 252, 0.60);
 }
 
 td.unselected:hover {
