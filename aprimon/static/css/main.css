@@ -12,7 +12,7 @@ html {
     background-attachment: fixed;
 
     /* these lines makes sure that the scrollbar appearing doesn't cause layout changes */
-    /* https://stackoverflow.com/a/39289453 */
+    /* https://stackoverflow.com/a/30293718 */
     overflow-x: auto;
     padding-left: calc(1 * (100vw - 100%));
 }
