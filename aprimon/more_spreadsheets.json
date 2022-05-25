@@ -95,6 +95,25 @@
             "verify_method": "nonempty",
             "use_formula": false
         }
+    },
+
+    "iviGhost69": {
+        "SwSh": {
+            "type": "grid",
+            "key": "1rST-g29rgbHKeipKIPgJGV4Qb-rDiJy9TZUrtaJxByE",
+            "tab_name": "SpecialBalls",
+            "pokemon_column": "C",
+            "ball_columns": "AQ,AP,AI,AJ,AK,AL,AM,AN,AO,AG,AH",
+            "verify_method": "nonempty",
+            "use_formula": false
+        },
+        "SwSh (OH)": {
+            "type": "list",
+            "key": "1rST-g29rgbHKeipKIPgJGV4Qb-rDiJy9TZUrtaJxByE",
+            "tab_name": "On-Hands",
+            "pokemon_column": "C",
+            "ball_column": "E"
+        }
     }
 
 }
