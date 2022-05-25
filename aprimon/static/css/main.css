@@ -183,11 +183,15 @@ div#results-selector {
     position: sticky;
     top: 20px;
     height: 95vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
 }
 
 textarea#results-selector-textarea {
-    width: 100%;
-    height: calc(100% - 92px);
+    width: 500px;
+    height: calc(100% - 90px);
     resize: none;
 }
 
@@ -195,6 +199,7 @@ textarea#results-selector-textarea {
 
 table.collection{
     font-size: 14px;
+    gap: 20px;
     border: 1px solid black;
     border-collapse: collapse;
 }
