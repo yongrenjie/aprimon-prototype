@@ -8,7 +8,6 @@ from aprimon import app
 from aprimon.collection import Collection
 from aprimon.data import ALL_SPREADSHEETS
 
-
 # Initialise Google Sheets API access
 try:
     # read credentials from the default filepath, which is

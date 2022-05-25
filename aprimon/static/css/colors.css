@@ -1,0 +1,60 @@
+:root {
+    /* larger = more opaque */
+    --page-alpha: 0.5;
+    --box-alpha: 0.85;
+}
+
+html {
+    /* https://www.deviantart.com/aquabluu/art/Togekiss-299249274 */
+    background-image: url('../kiss4.jpeg');
+    background-color: rgba(255, 255, 255, var(--page-alpha));
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+div#title {
+    background-color: rgba(255, 255, 255, var(--box-alpha));
+}
+
+div#user1 {
+    background-color: rgba(218, 235, 245, var(--box-alpha));
+}
+
+div#user2 {
+    background-color: rgba(242, 217, 213, var(--box-alpha));
+}
+
+div#filters {
+    background-color: rgba(255, 255, 255, var(--box-alpha));
+}
+
+
+td.inactive-entry {
+    /* entries that can't be selected, greyed out */
+    background-color: #707070;
+}
+
+td.selected {
+    background-color: #4fc957;
+}
+
+th, td.unselected {
+    background-color: rgba(255, 255, 252, var(--box-alpha));
+}
+
+td.unselected:hover {
+    background-color: #d8f2d9;
+}
+ 
+/* make it fade */
+@supports (transition-property: background-color) {
+    td {
+        transition-property: background-color;
+        transition-duration: 0.2s;
+    }
+}
+
+textarea#results-selector-textarea {
+    background-color: rgba(255, 255, 252, var(--box-alpha));
+}

@@ -376,6 +376,7 @@ function displayCollection() {
     $("div#results-aprimon").html(h);
     $("div#results-aprimon-container").show();
     
+    $("div#results").css('display', 'flex');
     $("div#results-selector").show();
     makeTableDynamic();
     // }}}1

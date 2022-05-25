@@ -2,7 +2,6 @@ html {
     font-family: "Source Sans Pro", sans-serif;
     box-sizing: border-box;
     font-size: 18px;
-    background-color: #f0f0f0;
 
     /* these lines makes sure that the scrollbar appearing doesn't cause layout changes */
     /* https://stackoverflow.com/a/30293718 */
@@ -22,18 +21,24 @@ h4 { margin-block-start: 1.33em; margin-block-end: 1.33em; font-size: 1.00em; fo
 h5 { margin-block-start: 1.67em; margin-block-end: 1.67em; font-size: 0.83em; font-weight: bold; }
 h6 { margin-block-start: 2.33em; margin-block-end: 2.33em; font-size: 0.67em; font-weight: bold; }
 
-
-
-
-
-
-
-/* STRUCTURE */
+.welcome {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    font-size: 1.50em;
+    font-weight: bold;
+}
 
 body {
     margin: 0 0 0px 0; /* override user-agent style sheet */
     display: flex;
     justify-content: center;
+}
+
+div#title {
+    border: 1.5px solid #444444;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 div#body-wrapper {
@@ -54,13 +59,18 @@ div#user-info {
     column-gap: 50px;
     align-items: stretch;
 
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 select {
     width: 270px;
 }
+
+textarea {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
 textarea#user1a-textarea, textarea#user2a-textarea, textarea#user1b-textarea, textarea#user2b-textarea {
     font-size: 80%;
     width: 270px;
@@ -84,13 +94,6 @@ div#user1, div#user2 {
     align-content: start;
 }
 
-div#user1 {
-    background-color: #daebf5;
-}
-
-div#user2 {
-    background-color: #f2d9d5;
-}
 
 .small-text {
     font-size: 80%;
@@ -121,7 +124,7 @@ div#filters {
 
 
 div#buttons {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -129,14 +132,12 @@ div#buttons {
 
 div#submit {
     height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 div#loading {
     height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 div#filter-generations {
@@ -158,8 +159,8 @@ div.twocols {
 
 div#results {
     width: 100%;
-    display: flex;
-    margin-bottom: 30px;
+    display: none; /* changed to flex later */
+    padding-top: 30px;
 }
 
 div#results-wrapper {
@@ -180,13 +181,13 @@ div#results-selector {
     min-width: 350px;
     flex-grow: 1;
     position: sticky;
-    top: 0px;
+    top: 20px;
     height: 95vh;
 }
 
 textarea#results-selector-textarea {
     width: 100%;
-    height: calc(95% - 120px);
+    height: calc(100% - 92px);
     resize: none;
 }
 
@@ -203,7 +204,7 @@ input, select {
 }
 
 th {
-    border: 1px solid black;
+    border: 1.5px solid black;
     border-collapse: collapse;
 }
 
@@ -213,36 +214,12 @@ tr.collection-row {
 }
 
 td.collection-entry {
-    border: 1px solid black;
+    border: 1.5px solid black;
     border-collapse: collapse;
     vertical-align: middle;
     text-align: center;
     min-width: 45px;
     width: 45px;
-}
-
-td.selected {
-    background-color: #4fc957;
-}
-
-td.unselected {
-    background-color: none;
-}
-
-td.unselected:hover {
-    background-color: #d8f2d9;
-}
- 
-/* make it fade */
-@supports (transition-property: background-color) {
-    td {
-        transition-property: background-color;
-        transition-duration: 0.2s;
-    }
-}
-
-td.inactive-entry {
-    background-color: #707070;
 }
 
 
@@ -269,4 +246,8 @@ span#copy-message {
 ul#instructions li {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+input#select-all-button {
+    margin-right: 20px;
 }

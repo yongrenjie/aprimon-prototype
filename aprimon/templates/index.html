@@ -10,7 +10,8 @@
         <script src="{{ url_for('static', filename='js/frontend.js') }}" type="module"></script>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/fonts.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/button.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/colors.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/radio_button.css') }}">
 
     </head>
 
@@ -18,14 +19,14 @@
     <body>
         <div id="body-wrapper">
             <div id="title">
-                <h1>Welcome!</h1>
-                <p>This website will (try to) determine what Aprimon you can request from a trading partner, i.e. what they have but you don't have. If you want the opposite (i.e. what you can offer them) please use the swap button and submit again</p>
+                <span class="welcome">Welcome!</span>
+                <p>This website will (try to) determine what Aprimon you can request from a trading partner, i.e. what they have but you don't have. If you want the opposite (i.e. what you can offer them) please use the swap button and submit again.</p>
+                <p>Please note that this only checks a spreadsheet for the presence of a ticked box &mdash; it doesn't do anything fancy such as looking for HA availability or pending trades. It is still your responsibility to check for this (if it matters to you, e.g. for genderless/monogender species), or even better, inform your trade partner if you don't have HA on something!</p>
+                <p>Please let me know (<a href="https://www.reddit.com/r/pokemontrades/comments/u3loma">drop a comment here</a>) if you have any issues; I've added plenty of spreadsheets so far and it's likely that most bugs can be fixed.</p>
                 <ul>
-                    <li><p><b>23/5/22:</b> the &lsquo;manually list Aprimon&rsquo; option has been upgraded to try to detect <a href="{{ url_for('static', filename='format.txt') }}" target="_blank">several more cases</a>.</p></li>
-                    <li><p><b>20/5/22: HOME UPDATE</b>&mdash;the game selection at the top no longer changes the list of spreadsheets (since in theory mons can be moved between games). It instead restricts the displayed list to the Pokémon which can legally be traded in the chosen game.</p></li>
-                    <li><p>Please note that this only checks a spreadsheet for the presence of a ticked box &mdash; it doesn't do anything fancy such as looking for HA availability or pending trades. It is still your responsibility to check for this (if it matters to you, e.g. for genderless/monogender species), or even better, inform your trade partner if you don't have HA on something!</p></li>
-                    <li><p>The comparison also combines entries from regional forms (e.g. Kanto and Alola Vulpix) and other things which can be crossbred (e.g. Basculin colours or Nidoran gender)</p></li>
-                    <li><p>Please let me know (<a href="https://www.reddit.com/r/pokemontrades/comments/u3loma">drop a comment here</a>) if you have any issues; I've added plenty of spreadsheets so far and it's likely that most bugs can be fixed!</p></li>
+                    <li><b>25/5/22</b>: The Togekiss art I used for the background is by <a href="https://www.deviantart.com/aquabluu/art/Togekiss-Day-373148134" target="_blank">aquabluu</a>!</li>
+                    <li><b>23/5/22:</b> the &lsquo;manually list Aprimon&rsquo; option has been upgraded to try to detect <a href="{{ url_for('static', filename='format.txt') }}" target="_blank">several more cases</a>.</li>
+                    <li><b>20/5/22: HOME UPDATE</b>&mdash;the game selection at the top no longer changes the list of spreadsheets (since in theory mons can be moved between games). It instead restricts the displayed list to the Pokémon which can legally be traded in the chosen game.</li>
                 </ul>
             </div>
 
@@ -163,12 +164,11 @@
                 <div id="results-wrapper"> <!-- margin-left: auto; margin-right: auto -->
                     <div id="results-aprimon"></div>
                     <div id="results-selector" class="initially-hidden">
-                        <ul id="instructions">
-                            <li>Click on an individual cell to add it to the textbox below...</li>
-                            <li>...or on a Pokemon name/sprite to add/remove an entire row...</li>
-                            <li>...or these buttons to <input id="select-all-button" type="button" value="Select all"> or <input id="clear-all-button" type="button" value="Clear all"></li>
-                        </ul>
-
+                        <div>
+                            <input id="select-all-button" type="button" value="Select all">
+                            <input id="clear-all-button" type="button" value="Clear all">
+                        </div>
+                        <br />
                         <div id="output-and-copy">
                             <div id="output-format">
                                 <input type="radio" name="output-radio" value="ol" id="output-radio-ol" checked />
