@@ -207,10 +207,10 @@ function calculateAprimon() {
             "username": info[0],
             "spreadsheet": info[1]
         };
-    }
-    // Check for user 1 extras
-    if ($("input#user1-extra").is(":checked")) {
-        user1_data["extra_list"] = $("textarea#user1b-textarea").val().split(/\r?\n/);
+        // Check for user 1 extras
+        if ($("input#user1-extra").is(":checked")) {
+            user1_data["extra_list"] = $("textarea#user1b-textarea").val().split(/\r?\n/);
+        }
     }
 
     // Determine user 2 type
@@ -226,10 +226,10 @@ function calculateAprimon() {
             "username": info[0],
             "spreadsheet": info[1]
         };
-    }
-    // Check for user 2 extras
-    if ($("input#user2-extra").is(":checked")) {
-        user2_data["extra_list"] = $("textarea#user2b-textarea").val().split(/\r?\n/);
+        // Check for user 2 extras
+        if ($("input#user2-extra").is(":checked")) {
+            user2_data["extra_list"] = $("textarea#user2b-textarea").val().split(/\r?\n/);
+        }
     }
 
     // Construct HTTP request
