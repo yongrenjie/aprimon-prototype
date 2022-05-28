@@ -379,6 +379,7 @@ function displayCollection() {
     $("div#results").css('display', 'flex');
     $("div#results-selector").show();
     makeTableDynamic();
+    updateAllRowHighlighting();
     // }}}1
 }
 // When changing the game at the top
@@ -555,6 +556,13 @@ function updateRowHighlighting(canonical_name) {
     }
     // }}}1
 }
+function updateAllRowHighlighting() {
+    // Update all rows at once; this function is called by displayCollection() {{{1
+    for (let entry of window.selectedAprimon) {
+        updateRowHighlighting(entry.canonical_name);
+    }
+    // }}}1
+}
 
 
 function updateSelectionText() {
@@ -591,6 +599,28 @@ function updateSelectionText() {
                     s = s + `, ${capitaliseFirst(ball)} ${entry.display_name}`;
                 }
             }
+        }
+    }
+    else if (outputFormat == "species") {
+        s = "";
+        for (let entry of window.selectedAprimon) {
+            let balls_string = entry.balls.map(capitaliseFirst).join(', ');
+            s = s + `- ${entry.display_name}: ${balls_string}\n`;
+        }
+    }
+    else if (outputFormat == "ball") {
+        // initialise Object with empty list for every ball
+        let d = Object.fromEntries(ALL_BALLS.map(b => [b, []]));
+        // tabulate entries
+        for (let entry of window.selectedAprimon) {
+            for (let ball of entry.balls) {
+                d[ball].push(entry.display_name);
+            }
+        }
+        // generate string
+        s = "";
+        for (let ball of ALL_BALLS) {
+            s = s + `- ${capitaliseFirst(ball)}: ${d[ball].join(', ')}\n`;
         }
     }
     $("textarea#results-selector-textarea").val(s);

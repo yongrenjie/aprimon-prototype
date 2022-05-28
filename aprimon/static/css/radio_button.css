@@ -64,7 +64,7 @@
 }
 
 #output-format {
-    width: 185px;
+    width: 450px;
     height: 40px;
 	display: flex;
     align-items: center;
@@ -100,7 +100,7 @@
 }
 
 #output-format input:checked + label {
-	background-color: #a5dc86;
+	background-color: #91e1fa;
 	box-shadow: none;
     font-weight: bold;
 }
