@@ -620,7 +620,9 @@ function updateSelectionText() {
         // generate string
         s = "";
         for (let ball of ALL_BALLS) {
-            s = s + `- ${capitaliseFirst(ball)}: ${d[ball].join(', ')}\n`;
+            if (d[ball].length > 0) {
+                s = s + `- ${capitaliseFirst(ball)}: ${d[ball].join(', ')}\n`;
+            }
         }
     }
     $("textarea#results-selector-textarea").val(s);
