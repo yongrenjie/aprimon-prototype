@@ -11,7 +11,7 @@
     },
 
     "OnePointPi": {
-        "SwSh+BDSP": {
+        "BDSP+SwSh": {
             "type": "grid",
             "key": "15g1ubG103W077b6RoeVYDLryJWklNJRJzRINDqvKyn8",
             "tab_name": "Master",
@@ -19,6 +19,13 @@
             "ball_columns": "MLEFGHIJKNO",
             "verify_method": "checkbox",
             "use_formula": false
+        },
+        "BDSP (OH)": {
+            "type": "list",
+            "key": "15g1ubG103W077b6RoeVYDLryJWklNJRJzRINDqvKyn8",
+            "tab_name": "BDSP On Hand",
+            "pokemon_column": "E",
+            "ball_column": "C"
         },
         "SwSh (OH)": {
             "type": "list",
