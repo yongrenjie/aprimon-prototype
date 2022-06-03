@@ -261,10 +261,26 @@
     },
 
     "Tee_heehee224": {
+        "BDSP+SwSh": {
+            "type": "grid",
+            "key": "12QBEUNAf6amO3nMzpf8J5i1d_OVdvnOaEDHDcn-AtM0",
+            "tab_name": "Masterlist",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox"
+        },
         "SwSh": {
             "type": "grid",
-            "key": "11GolKiEGy9UAEXSjA8RMvqg6hL-M8ipcKkqjt--dtmU",
+            "key": "12QBEUNAf6amO3nMzpf8J5i1d_OVdvnOaEDHDcn-AtM0",
             "tab_name": "SWSH Aprimons",
+            "pokemon_column": "C",
+            "ball_columns": "NMFGHIJKLOP",
+            "verify_method": "checkbox"
+        },
+        "BDSP": {
+            "type": "grid",
+            "key": "12QBEUNAf6amO3nMzpf8J5i1d_OVdvnOaEDHDcn-AtM0",
+            "tab_name": "BDSP Aprimons",
             "pokemon_column": "C",
             "ball_columns": "NMFGHIJKLOP",
             "verify_method": "checkbox"
