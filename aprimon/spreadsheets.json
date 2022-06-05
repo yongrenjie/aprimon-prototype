@@ -40,7 +40,7 @@
         "SwSh": {
             "type": "grid",
             "key": "1gbRtsdIxN9X43mhyaMw5QTlPQodpwyzaGGyXqvClxho",
-            "tab_name": "Aprimon",
+            "tab_name": "SwSh",
             "pokemon_column": "C",
             "ball_columns": "FGHIJKLMNOP",
             "verify_method": "checkbox"
