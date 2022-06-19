@@ -107,6 +107,20 @@
             "tab_name": "On-hands (SWSH)",
             "pokemon_column": "A",
             "ball_column": "C"
+        },
+        "BDSP (OH)": {
+            "type": "list",
+            "key": "1Jgn4ldAC2QUwVU-zauqm2FlJiMUhkhWpxw_rNNWVwzo",
+            "tab_name": "On-hands (BDSP)",
+            "pokemon_column": "A",
+            "ball_column": "C"
+        },
+        "USUM (OH)": {
+            "type": "list",
+            "key": "1Jgn4ldAC2QUwVU-zauqm2FlJiMUhkhWpxw_rNNWVwzo",
+            "tab_name": "On-hands (USUM)",
+            "pokemon_column": "A",
+            "ball_column": "C"
         }
     },
 
