@@ -354,6 +354,18 @@
             "pokemon_column": "C",
             "ball_column": "E"
         }
+    },
+
+    "Touchdown_Moses": {
+        "SwSh+SM": {
+            "type": "grid",
+            "key": "1QY9jP4U_nCv2BNb4cdExf3p6s7uKwApIPCNr18-kkXo",
+            "tab_name": "Master",
+            "pokemon_column": "B",
+            "ball_columns": "POFGHIJKLMN",
+            "verify_method": "point99OrMore",
+            "use_formula": false
+        }
     }
 
 }

@@ -150,6 +150,13 @@ class Collection:
                 # Checks that the cell isn't empty
                 return spreadsheet_value is not None \
                     and len(spreadsheet_value) > 0
+            elif verify_method == 'point99OrMore':
+                # Checks that the cell has a value of 0.99 or 1
+                try:
+                    value = float(spreadsheet_value)
+                    return value > 0.985
+                except Exception:
+                    return False
             else:
                 raise ValueError(f'method {method} not supported')
 

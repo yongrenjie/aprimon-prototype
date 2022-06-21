@@ -334,7 +334,7 @@
 	"79": {
 		"display_name": "Slowpoke",
 		"canonical_name": "slowpoke",
-		"other_names": ["slowpokeg", "slowpokegalar", "gslowpoke", "galarslowpoke", "slowpokek", "slowpokekanto", "kslowpoke", "kantoslowpoke"],
+		"other_names": ["slowpokeg", "slowpokegalar", "gslowpoke", "galarslowpoke", "slowpokek", "slowpokekanto", "kslowpoke", "kantoslowpoke", "galarianslowpoke"],
 		"national_dex": 79,
 		"swsh": true,
 		"bdsp": true
@@ -1238,7 +1238,7 @@
 	"228": {
 		"display_name": "Houndour",
 		"canonical_name": "houndour",
-		"other_names": [],
+		"other_names": ["houndoor"],
 		"national_dex": 228,
 		"swsh": false,
 		"bdsp": {
@@ -1738,7 +1738,7 @@
 	"315": {
 		"display_name": "Roselia",
 		"canonical_name": "roselia",
-		"other_names": [],
+		"other_names": ["budew"],
 		"national_dex": 315,
 		"swsh": true,
 		"bdsp": true
@@ -2430,7 +2430,7 @@
 	"422": {
 		"display_name": "Shellos",
 		"canonical_name": "shellos",
-		"other_names": ["shelloswest", "shelloswestsea", "shelloseast", "shelloseastsea", "shellosw", "shellose"],
+		"other_names": ["shelloswest", "shelloswestsea", "shelloseast", "shelloseastsea", "shellosw", "shellose", "shelloswestpink", "shelloseastblue"],
 		"national_dex": 422,
 		"swsh": true,
 		"bdsp": true
