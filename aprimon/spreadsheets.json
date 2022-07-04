@@ -59,6 +59,15 @@
             "pokemon_column": "C",
             "ball_columns": "FGHIJKLMNOP",
             "verify_method": "checkbox"
+        },
+        "BDSP+SwSh": {
+            "type": "grid",
+            "key": "1gbRtsdIxN9X43mhyaMw5QTlPQodpwyzaGGyXqvClxho",
+            "tab_name": "Combined by ND",
+            "pokemon_column": "C",
+            "ball_columns": "FGHIJKLMNOP",
+            "verify_method": "checkbox",
+            "use_formula": false
         }
     },
 
